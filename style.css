@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #ff601c; /* Set your desired color value */
+  --secondary-color: #ffd3b2; /* Set your desired color value */
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ******************** Header *********************** */
+
+.header-logo {
+  width: 220px;
+}
+.primary-nav {
+  max-width: 300px;
+  width: 100%;
+}
+.primary-nav li {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.actionButtons {
+  max-width: 380px;
+  width: 100%;
+  margin-right: 2.5rem;
+}
+
+.actionButtons button {
+  font-size: 1.125rem;
+  cursor: pointer;
+}
+
+.actionButtons-1 {
+  width: 180px;
+  height: 49px;
+  color: #fff;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 15px;
+}
+
+.actionButtons-2 {
+  width: 47px;
+  height: 49px;
+  background-color: #fff;
+  border: none;
+  font-size: 2.2rem !important;
+}
+
+.actionButtons-3 {
+  width: 108px;
+  height: 42px;
+  color: #fff;
+  background-color: #000;
+  border-radius: 15px;
+}
+
+/* ******************** Hero Section *********************** */
+
+.hero-img {
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+}
+
+main {
+  margin-bottom: 10rem;
+}
+main div {
+  width: 55%;
+  max-width: 775px;
+  color: #fff;
+  background-color: var(--primary-color);
+  text-align: center;
+  padding: 0 4.5em 0 0.9em;
+  border-top-right-radius: 200px;
+  /* position: relative;
+  left: 6%;
+  transform: translate(0, -80%); */
+  position: absolute;
+  left: 6%;
+  bottom: -20%;
+}
+
+main h1 {
+  font-size: 3.375rem;
+  padding: 0.657em 0 0.32em 0;
+}
+
+main p {
+  font-size: 1.125rem;
+}
+
+main button {
+  width: 40%;
+  font-size: 1.125rem;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: var(--primary-color);
+  margin: 2rem 0 1rem 0;
+  padding: 0.4em 0 0.4em 0;
+}
+
+/* ******************** Cities Section *********************** */
+
+.Cities {
+  text-align: center;
+}
+
+.Cities h1 {
+  font-size: 3.375rem;
+  margin: 16rem 0 7rem 0;
+}
+
+.city {
+  justify-content: space-evenly;
+  text-align: left;
+}
+
+.city-detail {
+  position: relative;
+  bottom: 190px;
+  color: #fff;
+  padding: 0 3em 0 1em;
+}
+
+.city-detail h2 {
+  font-size: 3.5rem;
+
+  margin-bottom: 0.3rem;
+}
+
+.city-detail p {
+  font-size: 1.125rem;
+}
+
+.city-detail a {
+  font-size: 3.375rem;
+  color: white;
+}
+
+.city-desc {
+  padding-left: 1em;
+}
+
+.city-2 img {
+  border-radius: 15px;
+}
+
+/* ******************** Cal-to-Action Section *********************** */
+
+.CTA {
+  background-color: var(--secondary-color);
+  padding: 0 2.5rem;
+}
+
+.CTA h2 {
+  font-size: 2.25rem;
+}
+
+.news {
+  width: 60%;
+}
+.news p {
+  font-size: 1.125rem;
+  margin: 0.3.375rem 0 1rem 0;
+}
+
+.news input {
+  width: 70%;
+  max-width: 530px;
+  font-size: 1.125rem;
+  padding: 0.5em 0.8em;
+  margin-right: 1rem;
+}
+
+.news button {
+  width: 20%;
+  max-width: 160px;
+  height: 49px;
+  color: #fff;
+  background-color: var(--primary-color);
+  border: none;
+}
+
+.download {
+  text-align: center;
+  padding: 1.5em 0;
+}
+
+/* ******************** Cal-to-Action Section *********************** */
+
+footer {
+  background-color: #343434;
+}
+
+footer h2 {
+  font-size: 1.75rem;
+
+  color: #ea8324;
+  font-weight: 500;
+  margin: 2rem 0 0.877rem 0;
+}
+
+footer a,
+footer p {
+  color: #fff;
+}
+
+.footer-main {
+  width: 80%;
+  /* justify-content: space-evenly; */
+  margin-left: 3.375rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+footer li {
+  margin-bottom: 1rem;
+  margin-left: 0.3.375rem;
+}
+
+.footer-secondary {
+  border-top: 1px solid #ea8324;
+  padding: 2rem;
+}
+
+.copyright p {
+  margin-left: 0.5rem;
+}
+
+.external-link a {
+  margin-right: 1.125rem;
+}

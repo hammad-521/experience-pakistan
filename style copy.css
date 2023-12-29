@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #ff601c; /* Set your desired color value */
+}
+
+body {
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ******************** Header *********************** */
+
+.primary-nav {
+  max-width: 300px;
+  width: 100%;
+}
+.primary-nav li {
+  font-size: 1.125rem;
+}
+
+.actionButtons {
+  max-width: 380px;
+  width: 100%;
+  margin-right: 2.5rem;
+}
+
+.actionButtons button {
+  font-size: 1.125rem;
+  cursor: pointer;
+}
+
+.actionButtons-1 {
+  width: 180px;
+  height: 49px;
+  color: #fff;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 15px;
+}
+
+.actionButtons-2 {
+  width: 47px;
+  height: 49px;
+  background-color: #fff;
+  border: none;
+  font-size: 2.2rem !important;
+}
+
+.actionButtons-3 {
+  width: 108px;
+  height: 42px;
+  color: #fff;
+  background-color: #000;
+  border-radius: 15px;
+}
+
+/* ******************** Hero Section *********************** */
+
+main div {
+  width: 55%;
+  color: #fff;
+  background-color: var(--primary-color);
+  text-align: center;
+  padding: 0 4.5em 0 0.9em;
+  border-top-right-radius: 200px;
+  position: relative;
+  left: 6%;
+  transform: translate(0, -80%);
+}
+
+main h1 {
+  font-size: 4rem;
+  padding: 0.657em 0 0.32em 0;
+}
+
+main p {
+  font-size: 1.25rem;
+}
+
+main button {
+  width: 40%;
+  font-size: 1.25rem;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: var(--primary-color);
+  margin: 2rem 0 1rem 0;
+  padding: 0.4em 0 0.4em 0;
+}
