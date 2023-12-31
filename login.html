@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HomePage</title>
+    <title>SignUp</title>
+    <link rel="stylesheet" href="./styles/signup.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Nanum+Gothic:wght@400;700;800&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="./styles/style.css" />
 
     <script
       src="https://kit.fontawesome.com/9d779ebc01.js"
@@ -61,71 +61,45 @@
         </button>
       </div>
     </header>
-    <!-- ----------------- Hero Section ---------------------- -->
+    <!-- ----------------- Main Section ---------------------- -->
+    <main class="container flex">
+      <div class="main-left">
+        <img src="./images/signup.svg" alt="" />
+      </div>
+      <div class="main-right">
+        <section class="center">
+          <h1>LogIn</h1>
+          <p>Don't have an account? <a href="./signup.html">Sign UP</a></p>
+          <form action="" method="post">
+            <label for="email">Email</label>
+            <br />
+            <input
+              class="width margin"
+              type="text"
+              name="email"
+              id=""
+              placeholder="Email"
+            />
+            <br />
+            <label for="password">Password</label><br />
+            <input
+              class="width margin-less"
+              type="text"
+              name="password"
+              id=""
+              placeholder="Password"
+            /><br />
 
-    <main class="container">
-      <img
-        class="hero-img"
-        src="./images/Hero.png"
-        alt="Combine Image of Faisal Mosque, Minar-e-Pakistan, Mazar-e-Quaid"
-      />
-
-      <div>
-        <h1>Experience Pakistan</h1>
-        <p>
-          Beautiful beaches, record-breaking attractions and experiences like no
-          other &#45; Dubai is the place to be in 2023. It's no wonder we've
-          been named Tripadvisor's #1 Most Popular Destination in the World for
-          the second year running. Let's explore!
-        </p>
-        <button>Events <i class="fa-solid fa-arrow-right"></i></button>
+            <input
+              class="submit-btn"
+              type="submit
+            "
+              placeholder="Submit"
+            />
+          </form>
+        </section>
       </div>
     </main>
-
-    <!-- ----------------- Cities Section ---------------------- -->
-
-    <section class="container Cities">
-      <div>
-        <h1>Choose A City</h1>
-        <div class="city flex container">
-          <div class="city-1">
-            <img src="./images/karachi.png" alt="Karachi" />
-
-            <div class="city-detail">
-              <h2 class="city-1-name">Karachi</h2>
-
-              <div class="city-desc flex">
-                <p>Learn More</p>
-                <a href=""><i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="city-2">
-            <img src="./images/lahore.png" alt="Lahore" />
-            <div class="city-detail">
-              <h2 class="city-1-name">Lahore</h2>
-
-              <div class="city-desc flex">
-                <p>Learn More</p>
-                <a href=""><i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="city-3">
-            <img src="./images/islamabad.png" alt="Islamabad" />
-            <div class="city-detail">
-              <h2 class="city-1-name">Islamabad</h2>
-
-              <div class="city-desc flex">
-                <p>Learn More</p>
-                <a href=""><i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- ----------------- Call to Action Section ---------------------- -->
 
@@ -139,7 +113,6 @@
     </section>
 
     <!-- ----------------- Footer Section ---------------------- -->
-
     <footer>
       <div class="container">
         <div class="footer-main flex container">
@@ -201,15 +174,5 @@
         </div>
       </div>
     </footer>
-
-    <!-- ----------------- Scripts ---------------------- -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
   </body>
 </html>

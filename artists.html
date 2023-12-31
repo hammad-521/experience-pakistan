@@ -3,15 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HomePage</title>
+    <title>Artists</title>
+
+    <link rel="stylesheet" href="./styles/artists.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Nanum+Gothic:wght@400;700;800&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="./styles/style.css" />
 
     <script
       src="https://kit.fontawesome.com/9d779ebc01.js"
@@ -42,7 +43,7 @@
         />
         <ul class="flex">
           <li><a href="./index.html">Home</a></li>
-          <li><a href="./artists.html">Artist</a></li>
+          <li><a href="">Artist</a></li>
           <li><a href="">Partners</a></li>
           <li><a href="">Things To Do</a></li>
           <li><a href="">Events</a></li>
@@ -61,71 +62,63 @@
         </button>
       </div>
     </header>
-    <!-- ----------------- Hero Section ---------------------- -->
+    <!-- ----------------- Main Section ---------------------- -->
+    <main>
+      <div class="container">
+        <section class="artist-head">
+          <h1>Artists</h1>
+        </section>
+        <section class="artist-filter">
+          <form action="">
+            <label for="category">Category:</label>
+            <select name="category" id="">
+              <option>Select Category</option>
+              <option value="Pop">Pop Singer</option>
+              <option value="Rock">Rock Singer</option>
+              <option value="R&B">R&B Singer</option>
+              <option value="Classical">Classical Singer</option>
+              <option value="Country">Country Singer</option>
+              <option value="Jazz">Jazz Singer</option>
+              <option value="Hip-hop/Rap">Hip-hop/Rap Artist</option>
+            </select>
+            <button class="search">Search</button>
+          </form>
+        </section>
 
-    <main class="container">
-      <img
-        class="hero-img"
-        src="./images/Hero.png"
-        alt="Combine Image of Faisal Mosque, Minar-e-Pakistan, Mazar-e-Quaid"
-      />
-
-      <div>
-        <h1>Experience Pakistan</h1>
-        <p>
-          Beautiful beaches, record-breaking attractions and experiences like no
-          other &#45; Dubai is the place to be in 2023. It's no wonder we've
-          been named Tripadvisor's #1 Most Popular Destination in the World for
-          the second year running. Let's explore!
-        </p>
-        <button>Events <i class="fa-solid fa-arrow-right"></i></button>
-      </div>
-    </main>
-
-    <!-- ----------------- Cities Section ---------------------- -->
-
-    <section class="container Cities">
-      <div>
-        <h1>Choose A City</h1>
-        <div class="city flex container">
-          <div class="city-1">
-            <img src="./images/karachi.png" alt="Karachi" />
-
-            <div class="city-detail">
-              <h2 class="city-1-name">Karachi</h2>
-
-              <div class="city-desc flex">
-                <p>Learn More</p>
-                <a href=""><i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-            </div>
+        <section class="artists-data flex container-small">
+          <div class="artist-data-box">
+            <img class="artist-img" src="./images/annurals.jpeg" alt="" />
+            <p>Annural Khalid</p>
           </div>
-
-          <div class="city-2">
-            <img src="./images/lahore.png" alt="Lahore" />
-            <div class="city-detail">
-              <h2 class="city-1-name">Lahore</h2>
-
-              <div class="city-desc flex">
-                <p>Learn More</p>
-                <a href=""><i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-            </div>
+          <div class="artist-data-box">
+            <img src="./images/annurals.jpeg" alt="" />
+            <p>Annural Khalid</p>
           </div>
-          <div class="city-3">
-            <img src="./images/islamabad.png" alt="Islamabad" />
-            <div class="city-detail">
-              <h2 class="city-1-name">Islamabad</h2>
-
-              <div class="city-desc flex">
-                <p>Learn More</p>
-                <a href=""><i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-            </div>
+          <div class="artist-data-box">
+            <img src="./images/annurals.jpeg" alt="" />
+            <p>Annural Khalid</p>
           </div>
+          <div class="artist-data-box">
+            <img src="./images/annurals.jpeg" alt="" />
+            <p>Annural Khalid</p>
+          </div>
+          <div class="artist-data-box">
+            <img src="./images/annurals.jpeg" alt="" />
+            <p>Annural Khalid</p>
+          </div>
+          <div class="artist-data-box">
+            <img src="./images/annurals.jpeg" alt="" />
+            <p>Annural Khalid</p>
+          </div>
+        </section>
+        <div class="page">
+          <a class="active" href="">1</a>
+          <a href="">2</a>
+          <a href="">3</a>
+          <a href=""><i class="fa-solid fa-chevron-right"></i></a>
         </div>
       </div>
-    </section>
+    </main>
 
     <!-- ----------------- Call to Action Section ---------------------- -->
 
@@ -137,9 +130,7 @@
         <button>Subscribe</button>
       </div>
     </section>
-
     <!-- ----------------- Footer Section ---------------------- -->
-
     <footer>
       <div class="container">
         <div class="footer-main flex container">
@@ -201,15 +192,5 @@
         </div>
       </div>
     </footer>
-
-    <!-- ----------------- Scripts ---------------------- -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
   </body>
 </html>

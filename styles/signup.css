@@ -53,11 +53,19 @@ button {
   align-items: center;
   display: none;
 }
+.flex-centers {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
 
 /* ******************** Header *********************** */
 
 header {
   padding: 0.59rem 1.5rem;
+  box-shadow: 1px 2px 5px 0px rgba(118, 118, 118, 0.75);
+  -webkit-box-shadow: 1px 2px 5px 0px rgba(118, 118, 118, 0.75);
+  -moz-box-shadow: 1px 2px 5px 0px rgba(118, 118, 118, 0.75);
 }
 .menu {
   display: none;
@@ -82,6 +90,14 @@ header {
   text-transform: uppercase;
 }
 
+.primary-nav li a {
+  color: #000;
+}
+
+.primary-nav li a:visited {
+  color: #000;
+}
+
 .actionButtons {
   max-width: 340px;
   width: 100%;
@@ -102,118 +118,116 @@ header {
   border-radius: 15px;
   font-family: "Nanum Gothic", sans-serif;
 }
+.actionButtons-1 a {
+  color: #fff;
+}
+.actionButtons-1 a:visited {
+  color: #fff;
+}
 
 .actionButtons-2,
 .actionButtons-3 {
   border: none;
+  background-color: #fff;
   font-size: 1.8rem !important;
 }
 
-/* ******************** Hero Section *********************** */
+.actionButtons-2 a:visited,
+.actionButtons-3 a:visited {
+  color: #000;
+}
+/* ******************** Main Section *********************** */
 
-.hero-img {
-  height: 95vh;
-  width: 100%;
+.center {
   margin: 0 auto;
+  width: 65%;
+}
+.center h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
 }
 
-main {
-  margin-bottom: 10rem;
+.center p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
-main div {
-  width: 55%;
-  max-width: 769px;
-  color: #fff;
+
+.center a {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+form > * {
+  margin-bottom: 0.6rem;
+}
+
+.main-left {
+  width: 40%;
+  background-color: #f5f5f5;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  margin: 0.2rem 0;
+}
+
+.main-left img {
+  width: 60%;
+}
+
+.main-right {
+  width: 50%;
+  margin: 8rem 0 12rem 0;
+}
+
+.main-form {
+  display: flex;
+}
+
+.width,
+.submit-btn {
+  width: 95%;
+  /* border-radius: 5px; */
+}
+
+.submit-btn {
   background-color: var(--primary-color);
-  /* text-align: center; */
-  padding: 3em 2.2em;
-  border-top-right-radius: 200px;
-  /* position: relative;
-  left: 6%;
-  transform: translate(0, -80%); */
-  position: absolute;
-  left: 6%;
-  bottom: -21%;
-}
-
-main h1 {
-  font-size: 2.813rem;
-  /* padding: 0.657em 0 0.32em 0; */
-}
-
-main p {
-  font-size: 1rem;
-  font-family: "Nanum Gothic", sans-serif;
-  line-height: 150%;
-  letter-spacing: 0.2px;
-  margin-top: 1.7rem;
-}
-
-main button {
-  /* width: 40%; */
-  font-size: 1.25rem;
-  font-weight: bold;
-  font-family: "Nanum Gothic", sans-serif;
-  text-transform: uppercase;
-  border: 1px solid #fff;
-  color: #fff;
-  background-color: var(--primary-color);
-  margin: 2rem 0 0 0;
-  padding: 0.8em 1.8em;
-  border-radius: 13px;
-}
-
-main button > i {
-  margin-left: 0.4rem;
-}
-
-/* ******************** Cities Section *********************** */
-
-.Cities {
+  /* margin: 0 auto; */
   text-align: center;
+  padding: 0.8em 0;
+  margin-top: 1rem;
 }
 
-.Cities h1 {
-  font-size: 3.25rem;
-  margin: 14rem 0 5rem 0;
-  text-transform: uppercase;
-}
-
-.city {
-  justify-content: space-evenly;
-  text-align: left;
-}
-
-.city-detail {
-  position: relative;
-  bottom: 125px;
-  color: #fff;
-  padding: 0 1.8em;
-}
-
-.city-detail h2 {
-  font-size: 2.188rem;
-  font-weight: 600;
-
-  margin-bottom: 1.2rem;
-}
-
-.city-detail p {
-  font-size: 1.125rem;
-}
-
-.city-detail a {
-  font-size: 1.8rem;
+.submit-btn::placeholder {
   color: white;
 }
 
-/* .city-desc {
-  padding-left: 1em;
-} */
+label {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
 
-.city-2 img,
-.city-1 img {
-  border-radius: 15px;
+input {
+  font-size: 1.25rem;
+  padding: 0.7em 0.9em;
+  margin: 0.8rem 0;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+}
+.margin {
+  margin-bottom: 1.2rem;
+}
+
+.margin-less {
+  margin-bottom: 0.2rem !important;
+}
+
+.width-small {
+  width: 90%;
+  /* padding: 0.4em 0; */
 }
 
 /* ******************** Call-to-Action Section *********************** */
@@ -296,8 +310,8 @@ footer li {
   justify-content: space-between;
   align-items: start;
   /* margin-left: 3.25rem;
-  align-items: flex-start;
- */
+    align-items: flex-start;
+   */
   margin-bottom: 3rem;
 }
 
@@ -344,99 +358,4 @@ footer img {
 .google {
   width: 185px;
   margin-top: 2.5rem;
-}
-
-/* ******************** Media Query for Laptop 1024 *********************** */
-
-@media (max-width: 1300px) {
-  .city img {
-    width: 90%;
-    height: 90vh;
-  }
-  .city-detail h2 {
-    font-size: 2.5rem;
-  }
-  main div {
-    width: 70%;
-  }
-}
-
-@media (max-width: 1070px) {
-  .primary-nav li,
-  .actionButtons button {
-    font-size: 1rem;
-  }
-  .primary-nav {
-    max-width: 255px;
-  }
-
-  .actionButtons-1 {
-    width: 160px;
-    height: 40px;
-  }
-  .actionButtons-3 {
-    width: 90px;
-    height: 40px;
-  }
-  .actionButtons {
-    max-width: 320px;
-  }
-}
-
-@media screen and (max-width: 920px) {
-  .primary-nav,
-  .actionButtons {
-    display: none;
-  }
-  .laptop-logo {
-    display: none;
-  }
-  .tablet-logo {
-    display: block;
-    margin: 0.8rem;
-  }
-  .header-logo {
-    width: 100px;
-  }
-  .flex-center {
-    display: flex;
-  }
-  .menu {
-    display: block;
-  }
-  .menu i {
-    font-size: 30px;
-    cursor: pointer;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  main div {
-    width: 97%;
-    left: 0%;
-  }
-  main p {
-    font-size: 1rem;
-  }
-  h1 {
-    font-size: 3rem !important;
-  }
-
-  .Cities h1 {
-    margin: 12rem 0 3rem 0;
-  }
-
-  .city {
-    flex-wrap: wrap;
-    text-align: center;
-  }
-
-  .city-detail {
-    position: relative;
-    bottom: 130px;
-  }
-  .footer-main {
-    width: 90%;
-    margin-left: 2rem;
-  }
 }
