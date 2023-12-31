@@ -7,34 +7,56 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Nanum+Gothic:wght@400;700;800&display=swap"
       rel="stylesheet"
     />
 
     <link rel="stylesheet" href="style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/9d779ebc01.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!-- ----------------- Header ---------------------- -->
     <header class="container flex">
-      <img
-        class="header-logo"
-        src="./images/Logo with text.png"
-        alt="Experience Pakistan Logo"
-      />
-      <nav class="primary-nav">
+      <div class="menu">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <div class="flex flex-center">
+        <img
+          class="header-logo tablet-logo"
+          src="./images/newlogo.png"
+          alt=""
+          hidden
+        />
+      </div>
+
+      <nav class="primary-nav flex">
+        <img
+          class="header-logo laptop-logo"
+          src="./images/newlogo.png"
+          alt="Experience Pakistan Logo"
+        />
         <ul class="flex">
           <li>Home</li>
           <li>Artist</li>
           <li>Partners</li>
+          <li>Things To Do</li>
+          <li>Events</li>
         </ul>
       </nav>
 
       <div class="actionButtons flex">
         <button class="actionButtons-1">Organize An Event</button>
         <button class="actionButtons-2">
-          <ion-icon name="search-sharp"></ion-icon>
+          <i class="fa-solid fa-magnifying-glass"></i>
         </button>
-        <button class="actionButtons-3">Sign In</button>
+        <button class="actionButtons-3">
+          <i class="fa-sharp fa-solid fa-user"></i>
+        </button>
       </div>
     </header>
     <!-- ----------------- Hero Section ---------------------- -->
@@ -54,7 +76,7 @@
           been named Tripadvisor's #1 Most Popular Destination in the World for
           the second year running. Let's explore!
         </p>
-        <button>Find 100 Ways To Explore Pakistan</button>
+        <button>Events <i class="fa-solid fa-arrow-right"></i></button>
       </div>
     </main>
 
@@ -63,7 +85,7 @@
     <section class="container Cities">
       <div>
         <h1>Choose A City</h1>
-        <div class="city flex">
+        <div class="city flex container">
           <div class="city-1">
             <img src="./images/karachi.png" alt="Karachi" />
 
@@ -72,9 +94,7 @@
 
               <div class="city-desc flex">
                 <p>Learn More</p>
-                <a href=""
-                  ><ion-icon name="arrow-forward-outline"></ion-icon
-                ></a>
+                <a href=""><i class="fa-solid fa-arrow-right"></i></a>
               </div>
             </div>
           </div>
@@ -86,9 +106,7 @@
 
               <div class="city-desc flex">
                 <p>Learn More</p>
-                <a href=""
-                  ><ion-icon name="arrow-forward-outline"></ion-icon
-                ></a>
+                <a href=""><i class="fa-solid fa-arrow-right"></i></a>
               </div>
             </div>
           </div>
@@ -99,9 +117,7 @@
 
               <div class="city-desc flex">
                 <p>Learn More</p>
-                <a href=""
-                  ><ion-icon name="arrow-forward-outline"></ion-icon
-                ></a>
+                <a href=""><i class="fa-solid fa-arrow-right"></i></a>
               </div>
             </div>
           </div>
@@ -112,17 +128,11 @@
     <!-- ----------------- Call to Action Section ---------------------- -->
 
     <section class="CTA">
-      <div class="container flex">
-        <div class="news">
-          <h2>Stay Updated</h2>
-          <p>Get latest updates on things to do in Pakistan</p>
-          <input type="text" placeholder="Your E-Mail Address" />
-          <button>Subscribe</button>
-        </div>
-        <div class="download">
-          <h2>Download Our App</h2>
-          <img src="./images/Logo trans.png" alt="" />
-        </div>
+      <div class="news">
+        <h2>NEWSLETTER SIGN UP</h2>
+        <p>Get latest updates on things to do in Pakistan</p>
+        <input type="text" placeholder="Your E-Mail Address" />
+        <button>Subscribe</button>
       </div>
     </section>
 
@@ -130,7 +140,21 @@
 
     <footer>
       <div class="container">
-        <div class="footer-main flex">
+        <div class="footer-main flex container">
+          <div class="about-us">
+            <ul>
+              <h2>About US</h2>
+              <li>
+                Experience Pakistan is a Platform for all type of events and
+                entertainment
+              </li>
+              <li>
+                <a href="">
+                  <img class="google" src="./images/google.png" alt="" />
+                </a>
+              </li>
+            </ul>
+          </div>
           <div class="helpful-links">
             <ul>
               <h2>Helpful Links</h2>
@@ -142,6 +166,7 @@
               <li><a href="">Frequently Asked Questions</a></li>
             </ul>
           </div>
+
           <div class="eventsByCity">
             <ul>
               <h2>Events By City</h2>
@@ -150,6 +175,7 @@
               <li><a href="">Islamabad</a></li>
             </ul>
           </div>
+
           <div class="useful-links">
             <ul>
               <h2>Useful Links</h2>
@@ -158,11 +184,13 @@
             </ul>
           </div>
         </div>
+
         <div class="footer-secondary flex">
           <div class="copyright flex">
             <img src="./images/Copyright.png" alt="" />
             <p>2023 Experience Pakistan. All Rights Reserved</p>
           </div>
+
           <div class="external-link">
             <a href="">Terms & Conditions</a>
             <a href="">Privacy Policy</a>
