@@ -20,8 +20,8 @@
   </head>
   <body>
     <!-- ----------------- Header ---------------------- -->
-    <header class="container flex">
-      <div class="menu">
+    <header class="container flex gap">
+      <div class="bar menu-toggle" onclick="toggleMenu()">
         <i class="fa-solid fa-bars"></i>
       </div>
 
@@ -34,25 +34,39 @@
         />
       </div>
 
-      <nav class="primary-nav flex">
+      <nav class="primary-nav flex gap menu" style="left: -1500px">
         <img
           class="header-logo laptop-logo"
           src="./images/newlogo.png"
           alt="Experience Pakistan Logo"
         />
-        <ul class="flex">
+        <ul class="flex gap menu-nav">
           <li><a href="./index.html">Home</a></li>
           <li><a href="./artists.html">Artist</a></li>
           <li><a href="">Partners</a></li>
           <li><a href="">Things To Do</a></li>
           <li><a href="">Events</a></li>
+          <span class="actionButtons hidden gap">
+            <li>
+              <a class="actionButtons-1" href="./signup.html">
+                Organize An Event</a
+              >
+            </li>
+            <li class="actionButtons-2">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </li>
+            <li class="actionButtons-3">
+              <a href="./login.html">
+                <i class="fa-sharp fa-solid fa-user"></i
+              ></a>
+            </li>
+          </span>
         </ul>
       </nav>
 
-      <div class="actionButtons flex">
-        <button class="actionButtons-1">
-          <a href="./signup.html"> Organize An Event</a>
-        </button>
+      <div class="actionButtons flex menu-2">
+        <a class="actionButtons-1" href="./signup.html"> Organize An Event</a>
+
         <button class="actionButtons-2">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
@@ -113,9 +127,10 @@
     </section>
 
     <!-- ----------------- Footer Section ---------------------- -->
+
     <footer>
       <div class="container">
-        <div class="footer-main flex container">
+        <div class="footer-main flex container gap">
           <div class="about-us">
             <ul>
               <h2>About US</h2>
@@ -160,10 +175,12 @@
           </div>
         </div>
 
-        <div class="footer-secondary flex">
-          <div class="copyright flex">
-            <img src="./images/Copyright.png" alt="" />
-            <p>2023 Experience Pakistan. All Rights Reserved</p>
+        <div class="container footer-secondary flex gap">
+          <div class="copyright">
+            <p class="">
+              <img src="./images/Copyright.png" alt="" />2023 Experience
+              Pakistan. All Rights Reserved
+            </p>
           </div>
 
           <div class="external-link">
@@ -174,5 +191,17 @@
         </div>
       </div>
     </footer>
+
+    <!-- ----------------- Scripts ---------------------- -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="./scripts/menu.js"></script>
   </body>
 </html>

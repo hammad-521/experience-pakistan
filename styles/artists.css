@@ -36,12 +36,6 @@ button {
   position: relative;
 }
 
-.container-small {
-  width: 90%;
-  max-width: 1240px;
-  margin: 0 auto;
-}
-
 .contain {
   max-width: 1266px;
   margin: 0 auto;
@@ -59,21 +53,27 @@ button {
   align-items: center;
   display: none;
 }
+
 .flex-centers {
   width: 100%;
   justify-content: center;
   align-items: center;
 }
 
+.gap {
+  gap: 1.4rem;
+}
+
+.hidden {
+  display: none;
+}
+
 /* ******************** Header *********************** */
 
 header {
   padding: 0.59rem 1.5rem;
-  box-shadow: 1px 2px 5px 0px rgba(118, 118, 118, 0.75);
-  -webkit-box-shadow: 1px 2px 5px 0px rgba(118, 118, 118, 0.75);
-  -moz-box-shadow: 1px 2px 5px 0px rgba(118, 118, 118, 0.75);
 }
-.menu {
+.bar {
   display: none;
 }
 .header-logo {
@@ -95,17 +95,15 @@ header {
   font-weight: 700;
   text-transform: uppercase;
 }
-
 .primary-nav li a {
   color: #000;
 }
-
 .primary-nav li a:visited {
   color: #000;
 }
 
 .actionButtons {
-  max-width: 340px;
+  max-width: 320px;
   width: 100%;
   /* margin-right: 2.5rem; */
 }
@@ -116,8 +114,9 @@ header {
 }
 
 .actionButtons-1 {
-  width: 200px;
-  height: 55px;
+  /* width: 200px;
+    height: 55px; */
+  padding: 1em;
   color: #fff;
   background-color: var(--primary-color);
   border: none;
@@ -134,10 +133,9 @@ header {
 .actionButtons-2,
 .actionButtons-3 {
   border: none;
-  background-color: #fff;
   font-size: 1.8rem !important;
+  background-color: #fff;
 }
-
 .actionButtons-2 a:visited,
 .actionButtons-3 a:visited {
   color: #000;
@@ -169,6 +167,7 @@ select {
   padding: 0.2rem 0.7rem;
   border-radius: 5px;
   margin-right: 1.5rem;
+  min-width: 210px;
 }
 
 .search {
@@ -181,7 +180,7 @@ select {
 }
 
 .artist-filter {
-  width: 88%;
+  width: 90%;
   text-align: center;
   margin: 0 auto;
   background-color: var(--secondary-color);
@@ -197,6 +196,7 @@ select {
   margin-bottom: 3rem;
   position: relative;
   border-radius: 15px 15px 0 0;
+  min-width: 300px;
 }
 
 .artist-data-box img {
@@ -232,6 +232,9 @@ select {
 
 .artists-data {
   flex-wrap: wrap;
+  width: 90% !important;
+  margin: 0 auto;
+  justify-content: space-evenly !important;
 }
 
 .page {
@@ -267,7 +270,7 @@ select {
 .news {
   /* width: 60%; */
   text-align: center;
-  padding: 3.8em;
+  padding: 3.8em 0;
 }
 .news p {
   font-size: 1.188rem;
@@ -285,6 +288,8 @@ select {
   padding: 0.625em 0.8em;
   margin-right: 0.3rem;
   border: none;
+  min-width: 250px;
+  margin-bottom: 1rem;
 }
 
 .news button {
@@ -296,6 +301,7 @@ select {
   border: none;
   font-size: 1.188rem;
   font-family: "Nanum Gothic", sans-serif;
+  min-width: 120px;
 }
 
 .download {
@@ -332,21 +338,24 @@ footer li {
   justify-content: space-between;
   align-items: start;
   /* margin-left: 3.25rem;
-      align-items: flex-start;
-     */
+    align-items: flex-start;
+   */
   margin-bottom: 3rem;
 }
 
 .about-us {
   width: 28%;
+  min-width: 250px;
 }
 
 .eventsByCity,
 .useful-links {
   width: 16%;
+  min-width: 150px;
 }
 .helpful-links {
   width: 20%;
+  min-width: 180px;
 }
 
 footer li {
@@ -364,6 +373,8 @@ footer img {
   max-width: 1300px;
   text-align: center;
   margin: 0 auto;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 .copyright p {
@@ -372,12 +383,117 @@ footer img {
   font-family: "Nanum Gothic", sans-serif;
 }
 
+.copyright img {
+  margin-right: 0.5rem;
+}
+
 .external-link a {
   margin-right: 1.8rem;
   font-size: 1.188rem;
   font-family: "Nanum Gothic", sans-serif;
 }
+
 .google {
   width: 185px;
   margin-top: 2.5rem;
+}
+
+/* ******************** Media Query for Common Areas *********************** */
+
+@media screen and (max-width: 970px) {
+  header {
+    gap: 0 !important;
+    z-index: 445 !important;
+  }
+
+  .menu-2 {
+    display: none !important;
+  }
+
+  .hidden {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+  }
+  .menu-nav {
+    margin-bottom: 10rem;
+    height: 62%;
+  }
+
+  .menu {
+    position: fixed;
+    top: 130px;
+    left: -1500px;
+    width: 100vw;
+    height: 100%;
+    background-color: #f5f5f5;
+    transition: left 0.3s ease;
+    z-index: 3;
+  }
+
+  .primary-nav ul,
+  .actionButtons {
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .primary-nav {
+    max-width: 100%;
+  }
+  .laptop-logo {
+    display: none;
+  }
+  .tablet-logo {
+    display: block;
+    margin: 0.8rem;
+  }
+  .header-logo {
+    width: 100px;
+  }
+  .flex-center {
+    display: flex;
+  }
+  .bar {
+    display: block;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  .bar i {
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .footer-main {
+    /* gap: 4rem; */
+    flex-wrap: wrap;
+  }
+  .footer-secondary {
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .external-link a:last-child {
+    margin-right: 0 !important;
+  }
+}
+
+@media screen and (max-width: 514px) {
+  .about-us {
+    width: 88%;
+    min-width: 250px;
+    margin: 0 auto;
+  }
+  label {
+    display: block;
+    margin-bottom: 1rem;
+    margin-right: 0;
+  }
+  select {
+    margin-right: 0;
+  }
+  .search {
+    margin-top: 1rem;
+  }
 }

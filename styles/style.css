@@ -19,6 +19,7 @@ img {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 li {
@@ -54,15 +55,26 @@ button {
   display: none;
 }
 
+.flex-centers {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
 .gap {
   gap: 1.4rem;
 }
+
+.hidden {
+  display: none;
+}
+
 /* ******************** Header *********************** */
 
 header {
   padding: 0.59rem 1.5rem;
 }
-.menu {
+.bar {
   display: none;
 }
 .header-logo {
@@ -97,14 +109,15 @@ header {
   /* margin-right: 2.5rem; */
 }
 
-.actionButtons button {
+.actionButtons a {
   font-size: 1.125rem;
   cursor: pointer;
 }
 
 .actionButtons-1 {
-  width: 200px;
-  height: 55px;
+  /* width: 200px;
+  height: 55px; */
+  padding: 1em;
   color: #fff;
   background-color: var(--primary-color);
   border: none;
@@ -251,7 +264,7 @@ main button > i {
 .news {
   /* width: 60%; */
   text-align: center;
-  padding: 3.8em;
+  padding: 3.8em 0;
 }
 .news p {
   font-size: 1.188rem;
@@ -269,6 +282,8 @@ main button > i {
   padding: 0.625em 0.8em;
   margin-right: 0.3rem;
   border: none;
+  min-width: 250px;
+  margin-bottom: 1rem;
 }
 
 .news button {
@@ -280,6 +295,7 @@ main button > i {
   border: none;
   font-size: 1.188rem;
   font-family: "Nanum Gothic", sans-serif;
+  min-width: 120px;
 }
 
 .download {
@@ -323,14 +339,17 @@ footer li {
 
 .about-us {
   width: 28%;
+  min-width: 250px;
 }
 
 .eventsByCity,
 .useful-links {
   width: 16%;
+  min-width: 150px;
 }
 .helpful-links {
   width: 20%;
+  min-width: 180px;
 }
 
 footer li {
@@ -348,6 +367,8 @@ footer img {
   max-width: 1300px;
   text-align: center;
   margin: 0 auto;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 .copyright p {
@@ -356,57 +377,62 @@ footer img {
   font-family: "Nanum Gothic", sans-serif;
 }
 
+.copyright img {
+  margin-right: 0.5rem;
+}
+
 .external-link a {
   margin-right: 1.8rem;
   font-size: 1.188rem;
   font-family: "Nanum Gothic", sans-serif;
 }
+
 .google {
   width: 185px;
   margin-top: 2.5rem;
 }
 
-/* ******************** Media Query for Laptop 1024 *********************** */
+/* ******************** Media Query  *********************** */
 
-/* @media (max-width: 1300px) {
-  .city img {
-    width: 90%;
-    height: 90vh;
+@media screen and (max-width: 970px) {
+  header {
+    gap: 0 !important;
+    z-index: 445 !important;
   }
-  .city-detail h2 {
-    font-size: 2.5rem;
+
+  .menu-2 {
+    display: none !important;
   }
-  main div {
-    width: 70%;
+
+  .hidden {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
   }
-} */
-/* 
-@media (max-width: 1070px) {
-  .primary-nav li,
-  .actionButtons button {
-    font-size: 1rem;
+  .menu-nav {
+    margin-bottom: 10rem;
+    height: 62%;
+  }
+
+  .menu {
+    position: fixed;
+    top: 130px;
+    left: -1500px;
+    width: 100vw;
+    height: 100%;
+    background-color: #f5f5f5;
+    transition: left 0.3s ease;
+    z-index: 3;
+  }
+
+  .primary-nav ul,
+  .actionButtons {
+    flex-direction: column;
+    max-width: 100%;
   }
   .primary-nav {
-    max-width: 255px;
-  }
-
-  .actionButtons-1 {
-    width: 160px;
-    height: 40px;
-  }
-  .actionButtons-3 {
-    width: 90px;
-    height: 40px;
-  }
-  .actionButtons {
-    max-width: 320px;
-  }
-} */
-
-@media screen and (max-width: 920px) {
-  .primary-nav,
-  .actionButtons {
-    display: none;
+    max-width: 100%;
   }
   .laptop-logo {
     display: none;
@@ -421,16 +447,16 @@ footer img {
   .flex-center {
     display: flex;
   }
-  .menu {
+  .bar {
     display: block;
+    transition: transform 0.3s ease;
+    cursor: pointer;
   }
-  .menu i {
+  .bar i {
     font-size: 30px;
     cursor: pointer;
   }
-}
 
-@media screen and (max-width: 768px) {
   main div {
     width: 97%;
     left: 0%;
@@ -456,7 +482,25 @@ footer img {
     bottom: 130px;
   }
   .footer-main {
-    width: 90%;
-    margin-left: 2rem;
+    /* gap: 4rem; */
+    flex-wrap: wrap;
+  }
+  .footer-secondary {
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .external-link a:last-child {
+    margin-right: 0 !important;
+  }
+}
+
+@media screen and (max-width: 514px) {
+  .about-us {
+    width: 88%;
+    min-width: 250px;
+    margin: 0 auto;
   }
 }
