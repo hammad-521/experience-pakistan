@@ -54,6 +54,9 @@ button {
   display: none;
 }
 
+.gap {
+  gap: 1.4rem;
+}
 /* ******************** Header *********************** */
 
 header {
@@ -89,7 +92,7 @@ header {
 }
 
 .actionButtons {
-  max-width: 340px;
+  max-width: 320px;
   width: 100%;
   /* margin-right: 2.5rem; */
 }
@@ -191,13 +194,14 @@ main button > i {
 
 .Cities h1 {
   font-size: 3.25rem;
-  margin: 14rem 0 5rem 0;
+  margin: 20rem 0 5rem 0;
   text-transform: uppercase;
 }
 
 .city {
   justify-content: space-evenly;
   text-align: left;
+  gap: 1.5rem;
 }
 
 .city-detail {
@@ -364,7 +368,7 @@ footer img {
 
 /* ******************** Media Query for Laptop 1024 *********************** */
 
-@media (max-width: 1300px) {
+/* @media (max-width: 1300px) {
   .city img {
     width: 90%;
     height: 90vh;
@@ -375,8 +379,8 @@ footer img {
   main div {
     width: 70%;
   }
-}
-
+} */
+/* 
 @media (max-width: 1070px) {
   .primary-nav li,
   .actionButtons button {
@@ -397,7 +401,7 @@ footer img {
   .actionButtons {
     max-width: 320px;
   }
-}
+} */
 
 @media screen and (max-width: 920px) {
   .primary-nav,
@@ -444,7 +448,7 @@ footer img {
 
   .city {
     flex-wrap: wrap;
-    text-align: center;
+    /* text-align: center; */
   }
 
   .city-detail {
