@@ -19,6 +19,7 @@ img {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 li {
@@ -39,6 +40,10 @@ button {
 .contain {
   max-width: 1266px;
   margin: 0 auto;
+}
+
+.wrapper {
+  padding: 0 4%;
 }
 
 .flex {
@@ -68,10 +73,27 @@ button {
   display: none;
 }
 
+.hidden-1 {
+  display: none;
+}
+
+.hidden-2 {
+  display: none;
+}
+
 /* ******************** Header *********************** */
 
 header {
   padding: 0.59rem 1.5rem;
+  position: sticky !important;
+  background: white;
+  top: 0;
+  left: 0;
+  border: 0;
+  z-index: 999;
+  box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.26);
+  -webkit-box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.26);
 }
 .bar {
   display: none;
@@ -108,15 +130,15 @@ header {
   /* margin-right: 2.5rem; */
 }
 
-.actionButtons button {
-  font-size: 1.125rem;
+.actionButtons a {
   cursor: pointer;
 }
 
 .actionButtons-1 {
   /* width: 200px;
-    height: 55px; */
+  height: 55px; */
   padding: 1em;
+  font-size: 1.125rem;
   color: #fff;
   background-color: var(--primary-color);
   border: none;
@@ -338,8 +360,8 @@ footer li {
   justify-content: space-between;
   align-items: start;
   /* margin-left: 3.25rem;
-    align-items: flex-start;
-   */
+  align-items: flex-start;
+ */
   margin-bottom: 3rem;
 }
 
@@ -398,12 +420,15 @@ footer img {
   margin-top: 2.5rem;
 }
 
-/* ******************** Media Query for Common Areas *********************** */
+/* ******************** Media Query  *********************** */
 
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 1023px) {
   header {
     gap: 0 !important;
     z-index: 445 !important;
+  }
+  .hero-img {
+    display: none;
   }
 
   .menu-2 {
@@ -423,7 +448,7 @@ footer img {
 
   .menu {
     position: fixed;
-    top: 130px;
+    top: 110px;
     left: -1500px;
     width: 100vw;
     height: 100%;
@@ -437,6 +462,7 @@ footer img {
     flex-direction: column;
     max-width: 100%;
   }
+
   .primary-nav {
     max-width: 100%;
   }
@@ -463,6 +489,10 @@ footer img {
     cursor: pointer;
   }
 
+  h1 {
+    font-size: 2.5rem !important;
+  }
+
   .footer-main {
     /* gap: 4rem; */
     flex-wrap: wrap;
@@ -480,20 +510,19 @@ footer img {
 }
 
 @media screen and (max-width: 514px) {
+  header {
+    padding: 0 1.5rem;
+  }
+
   .about-us {
     width: 88%;
     min-width: 250px;
     margin: 0 auto;
   }
-  label {
-    display: block;
-    margin-bottom: 1rem;
-    margin-right: 0;
-  }
-  select {
-    margin-right: 0;
-  }
-  .search {
-    margin-top: 1rem;
+
+  .external-link {
+    flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: center;
   }
 }

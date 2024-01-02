@@ -42,6 +42,10 @@ button {
   margin: 0 auto;
 }
 
+.wrapper {
+  padding: 0 4%;
+}
+
 .flex {
   display: flex;
   justify-content: space-between;
@@ -69,10 +73,27 @@ button {
   display: none;
 }
 
+.hidden-1 {
+  display: none;
+}
+
+.hidden-2 {
+  display: none;
+}
+
 /* ******************** Header *********************** */
 
 header {
   padding: 0.59rem 1.5rem;
+  position: sticky !important;
+  background: white;
+  top: 0;
+  left: 0;
+  border: 0;
+  z-index: 999;
+  box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.26);
+  -webkit-box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.26);
 }
 .bar {
   display: none;
@@ -110,7 +131,6 @@ header {
 }
 
 .actionButtons a {
-  font-size: 1.125rem;
   cursor: pointer;
 }
 
@@ -118,6 +138,7 @@ header {
   /* width: 200px;
   height: 55px; */
   padding: 1em;
+  font-size: 1.125rem;
   color: #fff;
   background-color: var(--primary-color);
   border: none;
@@ -144,7 +165,7 @@ header {
 /* ******************** Hero Section *********************** */
 
 .hero-img {
-  height: 95vh;
+  /* height: 95vh; */
   width: 100%;
   margin: 0 auto;
 }
@@ -207,7 +228,7 @@ main button > i {
 
 .Cities h1 {
   font-size: 3.25rem;
-  margin: 20rem 0 5rem 0;
+  margin: 12rem 0 3rem 0;
   text-transform: uppercase;
 }
 
@@ -394,16 +415,21 @@ footer img {
 
 /* ******************** Media Query  *********************** */
 
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 1023px) {
   header {
     gap: 0 !important;
     z-index: 445 !important;
+  }
+  .hero-img {
+    display: none;
   }
 
   .menu-2 {
     display: none !important;
   }
-
+  .hidden-1 {
+    display: block;
+  }
   .hidden {
     display: flex;
 
@@ -417,7 +443,7 @@ footer img {
 
   .menu {
     position: fixed;
-    top: 130px;
+    top: 110px;
     left: -1500px;
     width: 100vw;
     height: 100%;
@@ -431,6 +457,7 @@ footer img {
     flex-direction: column;
     max-width: 100%;
   }
+
   .primary-nav {
     max-width: 100%;
   }
@@ -465,11 +492,14 @@ footer img {
     font-size: 1rem;
   }
   h1 {
-    font-size: 3rem !important;
+    font-size: 2.5rem !important;
+  }
+  .CTA h2 {
+    font-size: 2.2rem !important;
   }
 
   .Cities h1 {
-    margin: 12rem 0 3rem 0;
+    margin: 16rem 0 3rem 0;
   }
 
   .city {
@@ -497,10 +527,41 @@ footer img {
   }
 }
 
+@media screen and (max-width: 769px) {
+  main div {
+    max-width: 658px;
+    padding: 2em 2.2em;
+    bottom: -30%;
+  }
+}
+
 @media screen and (max-width: 514px) {
+  header {
+    padding: 0 1.5rem;
+  }
+  main img {
+    height: 100%;
+  }
+
+  .hidden-1 {
+    display: none;
+  }
+
+  .hidden-2 {
+    display: block;
+  }
   .about-us {
     width: 88%;
     min-width: 250px;
     margin: 0 auto;
+  }
+  main div {
+    padding: 1.7em 1.6em 1.7em 1.2em;
+  }
+
+  .external-link {
+    flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: center;
   }
 }
