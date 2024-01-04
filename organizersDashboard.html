@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LogIn</title>
-    <link rel="stylesheet" href="./styles/signup.css" />
-
+    <title>Organizer Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Nanum+Gothic:wght@400;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="./styles/organizersDashboard.css" />
 
     <script
       src="https://kit.fontawesome.com/9d779ebc01.js"
@@ -42,15 +42,10 @@
         />
         <ul class="flex gap menu-nav">
           <li><a href="./index.html">Home</a></li>
-          <li><a href="./artists.html">Artist</a></li>
           <li><a href="">Partners</a></li>
-          <li><a href="">Things To Do</a></li>
-          <li><a href="">Events</a></li>
+          <li><a href="">Organize an Event</a></li>
+          <li><a href="">View Events List</a></li>
           <span class="actionButtons hidden gap">
-            <a class="actionButtons-1" href="./signup.html">
-              Become an Organizer</a
-            >
-
             <li class="actionButtons-2">
               <i class="fa-solid fa-magnifying-glass"></i>
             </li>
@@ -59,61 +54,29 @@
                 <i class="fa-sharp fa-solid fa-user"></i
               ></a>
             </li>
+            <a class="actionButtons-1" href="./signup.html"> Logout</a>
           </span>
         </ul>
       </nav>
 
       <div class="actionButtons flex menu-2">
-        <a class="actionButtons-1" href="./signup.html"> Become an Organizer</a>
-
         <button class="actionButtons-2">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
         <button class="actionButtons-3">
           <a href="./login.html"> <i class="fa-sharp fa-solid fa-user"></i></a>
         </button>
+        <a class="actionButtons-1" href="./signup.html"> Logout</a>
       </div>
     </header>
-    <!-- ----------------- Main Section ---------------------- -->
-    <main class="container flex">
-      <div class="main-left">
-        <img src="./images/form.svg" alt="" />
-      </div>
-      <div class="main-right">
-        <section class="center">
-          <h1>LogIn</h1>
-          <p>Don't have an account? <a href="./signup.html">Sign UP</a></p>
-          <form action="" method="post">
-            <label for="email">Email</label>
-            <br />
-            <input
-              class="width margin"
-              type="text"
-              name="email"
-              id=""
-              placeholder="Email"
-            />
-            <br />
-            <label for="password">Password</label><br />
-            <input
-              class="width margin-less"
-              type="text"
-              name="password"
-              id=""
-              placeholder="Password"
-            /><br />
-
-            <input
-              class="submit-btn"
-              type="submit
-            "
-              placeholder="Submit"
-            />
-          </form>
+    <!-- ----------------- Hero Section ---------------------- -->
+    <main>
+      <div class="container">
+        <section class="organizer">
+          <h1>Organizer's Dashboard</h1>
         </section>
       </div>
     </main>
-
     <!-- ----------------- Call to Action Section ---------------------- -->
 
     <section class="CTA">
