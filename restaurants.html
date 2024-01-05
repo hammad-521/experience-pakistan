@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foods & Drinks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Nanum+Gothic:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/restaurants.css" />
+
+    <script
+      src="https://kit.fontawesome.com/9d779ebc01.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- ----------------- Header ---------------------- -->
+    <header class="container flex gap">
+      <div class="bar menu-toggle" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <div class="flex flex-center">
+        <img
+          class="header-logo tablet-logo"
+          src="./images/newlogo.png"
+          alt=""
+          hidden
+        />
+      </div>
+
+      <nav class="primary-nav flex gap menu" style="left: -1500px">
+        <img
+          class="header-logo laptop-logo"
+          src="./images/newlogo.png"
+          alt="Experience Pakistan Logo"
+        />
+        <ul class="flex gap menu-nav">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./artists.html">Artist</a></li>
+          <li><a href="./partners.html">Partners</a></li>
+          <li><a href="./restaurants.html">Foods & Drinks </a></li>
+          <li><a href="">Events</a></li>
+          <span class="actionButtons hidden gap">
+            <a class="actionButtons-1" href="./signup.html">
+              Become an Organizer</a
+            >
+
+            <li class="actionButtons-2">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </li>
+            <li class="actionButtons-3">
+              <a href="./login.html">
+                <i class="fa-sharp fa-solid fa-user"></i
+              ></a>
+            </li>
+          </span>
+        </ul>
+      </nav>
+
+      <div class="actionButtons flex menu-2">
+        <a class="actionButtons-1" href="./signup.html"> Become an Organizer</a>
+
+        <button class="actionButtons-2">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button class="actionButtons-3">
+          <a href="./login.html"> <i class="fa-sharp fa-solid fa-user"></i></a>
+        </button>
+      </div>
+    </header>
+    <!-- ----------------- Restaurants Section ---------------------- -->
+
+    <main class="container food">
+      <section class="food-head">
+        <h1>Foods & Drinks</h1>
+      </section>
+      <!-- -_***************************___ Browse Food -___**************************____ -->
+      <div class="flex food-filter-mix">
+        <section class="filter">
+          <div class="filter-body event-mobile">
+            <h2 class="event-tablet">Filters</h2>
+
+            <div class="filter-1">
+              <h3>Food Type</h3>
+              <span class="flex-start">
+                <input type="checkbox" />
+                <label for="Restaurants">Restaurants</label>
+              </span>
+
+              <span class="flex-start">
+                <input type="checkbox" />
+                <label for="Desserts">Desserts</label>
+              </span>
+
+              <span class="flex-start">
+                <input type="checkbox" />
+                <label for="Coffee & Tea">Coffee & Tea</label>
+              </span>
+
+              <span class="flex-start">
+                <input type="checkbox" />
+                <label for="Bakeries">Bakeries</label>
+              </span>
+            </div>
+
+            <div class="filter-2">
+              <h3>Meals</h3>
+
+              <span class="flex-start">
+                <input type="checkbox" />
+                <label for="Breakfast">Breakfast</label>
+              </span>
+
+              <span class="flex-start">
+                <input type="checkbox" />
+                <label for="Brunch">Brunch</label>
+              </span>
+
+              <span class="flex-start">
+                <input type="checkbox" />
+                <label for="Lunch">Lunch</label>
+              </span>
+
+              <span class="flex-start">
+                <input type="checkbox" />
+                <label for="Dinner">Dinner</label>
+              </span>
+            </div>
+
+            <div class="filter-3">
+              <h3>Cuisines</h3>
+              <span class="flex-start">
+                <input type="checkbox" />
+                <label for="Desi">Desi</label>
+              </span>
+
+              <span class="flex-start">
+                <input type="checkbox" />
+                <label for="Chinese">Chinese</label>
+              </span>
+
+              <span class="flex-start">
+                <input type="checkbox" />
+                <label for="Fast Food">Fast Food</label>
+              </span>
+            </div>
+
+            <div class="filter-4">
+              <h3>Ratings</h3>
+              <span class="flex-start">
+                <input type="checkbox" />
+                <label for="3stars" class="stars">
+                  <span> <i class="fa-regular fa-circle fill"></i></span>
+                  <span> <i class="fa-regular fa-circle fill"></i></span>
+                  <span> <i class="fa-regular fa-circle fill"></i></span>
+                  <span>& Above</span>
+                </label>
+              </span>
+
+              <span class="flex-start">
+                <input type="checkbox" />
+                <label for="4stars" class="stars">
+                  <span> <i class="fa-regular fa-circle fill"></i></span>
+                  <span> <i class="fa-regular fa-circle fill"></i></span>
+                  <span> <i class="fa-regular fa-circle fill"></i></span>
+                  <span> <i class="fa-regular fa-circle fill"></i></span>
+                  <span>& Above</span></label
+                >
+              </span>
+
+              <span class="flex-start">
+                <input type="checkbox" />
+                <label for="5stars" class="stars">
+                  <span> <i class="fa-regular fa-circle fill"></i></span>
+                  <span> <i class="fa-regular fa-circle fill"></i></span>
+                  <span> <i class="fa-regular fa-circle fill"></i></span>
+                  <span> <i class="fa-regular fa-circle fill"></i></span>
+                  <span> <i class="fa-regular fa-circle fill"></i></span>
+                  <span> Stars</span></label
+                >
+              </span>
+            </div>
+
+            <div class="space-box"></div>
+            <a href="" class="search-btn">Search</a>
+          </div>
+        </section>
+
+        <div class="food-right">
+          <section class="food-body wrapper">
+            <h2>Browse Lahore By Food</h2>
+            <div class="food-browse flex gap">
+              <div class="food-browse-box">
+                <img src="./images/browse.png" alt="" />
+                <h3>Cafe</h3>
+              </div>
+
+              <div class="food-browse-box">
+                <img src="./images/browse.png" alt="" />
+                <h3>Desi</h3>
+              </div>
+
+              <div class="food-browse-box">
+                <img src="./images/browse.png" alt="" />
+                <h3>Italian</h3>
+              </div>
+
+              <div class="food-browse-box">
+                <img src="./images/browse.png" alt="" />
+                <h3>Chinese</h3>
+              </div>
+
+              <!-- <div class="food-browse-box">
+                <img src="./images/browse.png" alt="" />
+                <h3>Korean</h3>
+              </div> -->
+            </div>
+          </section>
+
+          <!-- -_***************************___ Fine Dinning -___**************************____ -->
+          <section class="food-body wrapper">
+            <div class="flex food-body-head">
+              <h2>Fine Dinning</h2>
+              <a href="">See All</a>
+            </div>
+
+            <div class="food-browse flex gap">
+              <div class="food-browse-box">
+                <img src="./images/fine.png" alt="" />
+                <h3>Monal</h3>
+                <div class="review flex gap-small">
+                  <div class="rating flex">
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle"></i></span>
+                  </div>
+                  <p class="light">210</p>
+                </div>
+                <div class="tags light flex">
+                  <p>Continental,</p>
+                  <p>Desi,</p>
+                  <p>Italian</p>
+                </div>
+              </div>
+
+              <div class="food-browse-box">
+                <img src="./images/fine.png" alt="" />
+                <h3>Amavi</h3>
+                <div class="review flex gap-small">
+                  <div class="rating flex">
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle"></i></span>
+                    <span> <i class="fa-regular fa-circle"></i></span>
+                    <span> <i class="fa-regular fa-circle"></i></span>
+                  </div>
+                  <p class="light">210</p>
+                </div>
+                <div class="tags light flex">
+                  <p>Continental,</p>
+                  <p>Desi,</p>
+                  <p>Italian</p>
+                </div>
+              </div>
+
+              <div class="food-browse-box">
+                <img src="./images/fine.png" alt="" />
+                <h3>Cafe Aylanto</h3>
+                <div class="review flex gap-small">
+                  <div class="rating flex">
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle"></i></span>
+                  </div>
+                  <p class="light">210</p>
+                </div>
+                <div class="tags light flex">
+                  <p>Continental,</p>
+                  <p>Desi,</p>
+                  <p>Italian</p>
+                </div>
+              </div>
+
+              <div class="food-browse-box">
+                <img src="./images/fine.png" alt="" />
+                <h3>Saffron</h3>
+                <div class="review flex gap-small">
+                  <div class="rating flex">
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle"></i></span>
+                    <span> <i class="fa-regular fa-circle"></i></span>
+                  </div>
+                  <p class="light">210</p>
+                </div>
+                <div class="tags light flex">
+                  <p>Continental,</p>
+                  <p>Desi,</p>
+                  <p>Italian</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- -_***************************___ Local Cuisine  -___**************************____ -->
+          <section class="food-body wrapper">
+            <div class="flex food-body-head">
+              <h2>Local Cuisine</h2>
+              <a href="">See All</a>
+            </div>
+            <div class="food-browse flex gap">
+              <div class="food-browse-box">
+                <img src="./images/fine.png" alt="" />
+                <h3>Monal</h3>
+                <div class="review flex gap-small">
+                  <div class="rating flex">
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle"></i></span>
+                  </div>
+                  <p class="light">210</p>
+                </div>
+                <div class="tags light flex">
+                  <p>Continental,</p>
+                  <p>Desi,</p>
+                  <p>Italian</p>
+                </div>
+              </div>
+
+              <div class="food-browse-box">
+                <img src="./images/fine.png" alt="" />
+                <h3>Amavi</h3>
+                <div class="review flex gap-small">
+                  <div class="rating flex">
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle"></i></span>
+                    <span> <i class="fa-regular fa-circle"></i></span>
+                    <span> <i class="fa-regular fa-circle"></i></span>
+                  </div>
+                  <p class="light">210</p>
+                </div>
+                <div class="tags light flex">
+                  <p>Continental,</p>
+                  <p>Desi,</p>
+                  <p>Italian</p>
+                </div>
+              </div>
+
+              <div class="food-browse-box">
+                <img src="./images/fine.png" alt="" />
+                <h3>Cafe Aylanto</h3>
+                <div class="review flex gap-small">
+                  <div class="rating flex">
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle"></i></span>
+                  </div>
+                  <p class="light">210</p>
+                </div>
+                <div class="tags light flex">
+                  <p>Continental,</p>
+                  <p>Desi,</p>
+                  <p>Italian</p>
+                </div>
+              </div>
+
+              <div class="food-browse-box">
+                <img src="./images/fine.png" alt="" />
+                <h3>Lasania</h3>
+                <div class="review flex gap-small">
+                  <div class="rating flex">
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle"></i></span>
+                    <span> <i class="fa-regular fa-circle"></i></span>
+                  </div>
+                  <p class="light">210</p>
+                </div>
+                <div class="tags light flex">
+                  <p>Continental,</p>
+                  <p>Desi,</p>
+                  <p>Italian</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- -_***************************___ Sweet Tooth  -___**************************____ -->
+          <section class="food-body wrapper">
+            <div class="flex food-body-head">
+              <h2>Sweet Tooth</h2>
+              <a href="">See All</a>
+            </div>
+            <div class="food-browse flex gap">
+              <div class="food-browse-box">
+                <img src="./images/fine.png" alt="" />
+                <h3>Layers</h3>
+                <div class="review flex gap-small">
+                  <div class="rating flex">
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle"></i></span>
+                  </div>
+                  <p class="light">210</p>
+                </div>
+                <div class="tags light flex">
+                  <p>Continental,</p>
+                  <p>Desi,</p>
+                  <p>Italian</p>
+                </div>
+              </div>
+
+              <div class="food-browse-box">
+                <img src="./images/fine.png" alt="" />
+                <h3>Kitchen Cuisine</h3>
+                <div class="review flex gap-small">
+                  <div class="rating flex">
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle"></i></span>
+                    <span> <i class="fa-regular fa-circle"></i></span>
+                    <span> <i class="fa-regular fa-circle"></i></span>
+                  </div>
+                  <p class="light">210</p>
+                </div>
+                <div class="tags light flex">
+                  <p>Continental,</p>
+                  <p>Desi,</p>
+                  <p>Italian</p>
+                </div>
+              </div>
+
+              <div class="food-browse-box">
+                <img src="./images/fine.png" alt="" />
+                <h3>Kitchen Cuisine</h3>
+                <div class="review flex gap-small">
+                  <div class="rating flex">
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle"></i></span>
+                    <span> <i class="fa-regular fa-circle"></i></span>
+                    <span> <i class="fa-regular fa-circle"></i></span>
+                  </div>
+                  <p class="light">210</p>
+                </div>
+                <div class="tags light flex">
+                  <p>Continental,</p>
+                  <p>Desi,</p>
+                  <p>Italian</p>
+                </div>
+              </div>
+
+              <div class="food-browse-box">
+                <img src="./images/fine.png" alt="" />
+                <h3>Lasania</h3>
+                <div class="review flex gap-small">
+                  <div class="rating flex">
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle"></i></span>
+                    <span> <i class="fa-regular fa-circle"></i></span>
+                  </div>
+                  <p class="light">210</p>
+                </div>
+                <div class="tags light flex">
+                  <p>Continental,</p>
+                  <p>Desi,</p>
+                  <p>Italian</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- -_***************************___ Cheap Eats  -___**************************____ -->
+          <section class="food-body wrapper">
+            <div class="flex food-body-head">
+              <h2>Cheap Eats</h2>
+              <a href="">See All</a>
+            </div>
+            <div class="food-browse flex gap">
+              <div class="food-browse-box">
+                <img src="./images/fine.png" alt="" />
+                <h3>Karachi Biryani</h3>
+                <div class="review flex gap-small">
+                  <div class="rating flex">
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle"></i></span>
+                  </div>
+                  <p class="light">210</p>
+                </div>
+                <div class="tags light flex">
+                  <p>Continental,</p>
+                  <p>Desi,</p>
+                  <p>Italian</p>
+                </div>
+              </div>
+
+              <div class="food-browse-box">
+                <img src="./images/fine.png" alt="" />
+                <h3>Osman Burger Spot</h3>
+                <div class="review flex gap-small">
+                  <div class="rating flex">
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle"></i></span>
+                    <span> <i class="fa-regular fa-circle"></i></span>
+                    <span> <i class="fa-regular fa-circle"></i></span>
+                  </div>
+                  <p class="light">210</p>
+                </div>
+                <div class="tags light flex">
+                  <p>Continental,</p>
+                  <p>Desi,</p>
+                  <p>Italian</p>
+                </div>
+              </div>
+
+              <div class="food-browse-box">
+                <img src="./images/fine.png" alt="" />
+                <h3>Afghani Fries</h3>
+                <div class="review flex gap-small">
+                  <div class="rating flex">
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle"></i></span>
+                  </div>
+                  <p class="light">210</p>
+                </div>
+                <div class="tags light flex">
+                  <p>Continental,</p>
+                  <p>Desi,</p>
+                  <p>Italian</p>
+                </div>
+              </div>
+
+              <div class="food-browse-box">
+                <img src="./images/fine.png" alt="" />
+                <h3>Saffron</h3>
+                <div class="review flex gap-small">
+                  <div class="rating flex">
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle fill"></i></span>
+                    <span> <i class="fa-regular fa-circle"></i></span>
+                    <span> <i class="fa-regular fa-circle"></i></span>
+                  </div>
+                  <p class="light">210</p>
+                </div>
+                <div class="tags light flex">
+                  <p>Continental,</p>
+                  <p>Desi,</p>
+                  <p>Italian</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- ----------------- Keep Exloring Section ---------------------- -->
+
+    <section class="explore container wrapper">
+      <div class="explore-head">
+        <h2>Keep Exploring</h2>
+        <p>Pack in more city's highlights</p>
+      </div>
+
+      <div class="explore-body flex gap">
+        <div class="explore-box">
+          <img src="./images/explore-box.png" alt="" />
+          <div class="explore-box-desc">
+            <h3>Sights & Attractions</h3>
+            <p>
+              Check out the latest hotspots and attractions to add to your next
+              holiday.
+            </p>
+          </div>
+        </div>
+
+        <div class="explore-box">
+          <img src="./images/explore-box.png" alt="" />
+          <div class="explore-box-desc">
+            <h3>Shopping</h3>
+            <p>
+              Indulge in tax-free shopping at high-end malls and charming souks.
+            </p>
+          </div>
+        </div>
+
+        <div class="explore-box">
+          <img src="./images/explore-box.png" alt="" />
+          <div class="explore-box-desc">
+            <h3>Arts & Culture</h3>
+            <p>
+              Explore Dubai's culture through traditional spaces and modern art
+              districts.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------- Call to Action Section ---------------------- -->
+
+    <section class="CTA">
+      <div class="news">
+        <h2>NEWSLETTER SIGN UP</h2>
+        <p>Get latest updates on things to do in Pakistan</p>
+        <input type="text" placeholder="Your E-Mail Address" />
+        <button>Subscribe</button>
+      </div>
+    </section>
+
+    <!-- ----------------- Footer Section ---------------------- -->
+
+    <footer>
+      <div class="container">
+        <div class="footer-main flex container gap">
+          <div class="about-us">
+            <ul>
+              <h2>About US</h2>
+              <li>
+                Experience Pakistan is a Platform for all type of events and
+                entertainment
+              </li>
+              <li>
+                <a href="">
+                  <img class="google" src="./images/google.png" alt="" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="helpful-links">
+            <ul>
+              <h2>Helpful Links</h2>
+              <li><a href="">Experience Pakistan</a></li>
+              <li><a href="">Search By City</a></li>
+              <li><a href="">About Us</a></li>
+              <li><a href="">Contact Us</a></li>
+              <li><a href="">Articles</a></li>
+              <li><a href="">Frequently Asked Questions</a></li>
+            </ul>
+          </div>
+
+          <div class="eventsByCity">
+            <ul>
+              <h2>Events By City</h2>
+              <li><a href="">Lahore</a></li>
+              <li><a href="">Karachi</a></li>
+              <li><a href="">Islamabad</a></li>
+            </ul>
+          </div>
+
+          <div class="useful-links">
+            <ul>
+              <h2>Useful Links</h2>
+              <li><a href="">Submit a Complaint</a></li>
+              <li><a href="">Give a Suggestion</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="container footer-secondary flex gap">
+          <div class="copyright">
+            <p class="">
+              <img src="./images/Copyright.png" alt="" />2023 Experience
+              Pakistan. All Rights Reserved
+            </p>
+          </div>
+
+          <div class="external-link flex wrapper">
+            <a href="">Terms & Conditions</a>
+            <a href="">Privacy Policy</a>
+            <a href="">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ----------------- Scripts ---------------------- -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="./scripts/menu.js"></script>
+  </body>
+</html>
