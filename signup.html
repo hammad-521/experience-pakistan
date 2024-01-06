@@ -93,6 +93,7 @@
                   name="fname"
                   id=""
                   placeholder="First"
+                  required
               /></span>
 
               <span class="width-small">
@@ -103,8 +104,46 @@
                   name="lname"
                   id=""
                   placeholder="Last"
+                  required
               /></span>
             </div>
+
+            <label for="organization">Organization Name</label>
+            <br />
+            <input
+              class="width margin"
+              type="text"
+              name="organization"
+              id="organization"
+              placeholder="Organization Name"
+              required
+            />
+            <br />
+
+            <label for="description">Organization Description</label>
+            <br />
+            <textarea
+              id="description"
+              class="width margin"
+              name="description"
+              rows="4"
+              cols="50"
+              placeholder="Organization Description in two sentances only."
+              required
+            ></textarea>
+
+            <br />
+
+            <label for="logo">Organization Logo</label><br />
+            <input
+              type="file"
+              id="logo"
+              class="width margin"
+              name="logo"
+              accept="image/*"
+              required
+            />
+            <br />
 
             <label for="email">Email</label>
             <br />
@@ -114,8 +153,22 @@
               name="email"
               id=""
               placeholder="Email"
+              required
             />
             <br />
+
+            <label for="phone">Phone Number</label>
+            <br />
+            <input
+              class="width margin"
+              type="tel"
+              name="phone"
+              id=""
+              placeholder="Phone Number"
+              required
+            />
+            <br />
+
             <label for="password">Password</label><br />
             <input
               class="width margin-less"
@@ -123,6 +176,7 @@
               name="password"
               id=""
               placeholder="Password"
+              required
             /><br />
             <input
               class="width"
@@ -130,7 +184,9 @@
               name="cpassword"
               id=""
               placeholder="Confirm Password"
+              required
             />
+
             <input
               class="submit-btn"
               type="submit
