@@ -64,6 +64,12 @@ button {
   justify-content: center;
   align-items: center;
 }
+.flex-col {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
 
 .gap {
   gap: 1.4rem;
@@ -80,7 +86,17 @@ button {
 .hidden-2 {
   display: none;
 }
+.fill {
+  background-color: var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 50%;
+}
+.rating {
+  /* max-width: 85px; */
 
+  gap: 0.05rem;
+  color: var(--primary-color);
+}
 /* ******************** Header *********************** */
 
 header {
@@ -312,9 +328,6 @@ footer img {
   header {
     gap: 0 !important;
     z-index: 445 !important;
-  }
-  .hero-img {
-    display: none;
   }
 
   .menu-2 {

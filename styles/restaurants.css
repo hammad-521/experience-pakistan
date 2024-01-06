@@ -612,6 +612,7 @@ footer img {
     margin-right: 0 !important;
   }
 }
+
 @media screen and (max-width: 768px) {
   .food-browse {
     flex-wrap: wrap;
