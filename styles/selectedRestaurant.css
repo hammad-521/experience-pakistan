@@ -133,18 +133,17 @@
 .column {
   margin-bottom: 1rem;
 }
-
+.review {
+  align-items: start;
+}
+.restaurants-name,
+.restaurant-address div,
+.restaurants-mid div {
+  margin-bottom: 0.8rem !important;
+}
 @media screen and (max-width: 900px) {
   .restaurants-section-head div {
     flex-wrap: wrap;
-  }
-  .restaurants-name,
-  .restaurant-address div,
-  .restaurants-mid div {
-    margin-bottom: 0.8rem;
-  }
-  .review {
-    align-items: start;
   }
 
   /* .restaurants-name,
