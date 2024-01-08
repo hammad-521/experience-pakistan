@@ -12,7 +12,7 @@
     />
 
     <link rel="stylesheet" href="./styles/organizerhead-foot.css" />
-    <link rel="stylesheet" href="./styles/organizeEvent.css" />
+    <link rel="stylesheet" href="./styles/eventList.css" />
 
     <script
       src="https://kit.fontawesome.com/9d779ebc01.js"
@@ -71,153 +71,87 @@
       </div>
     </header>
     <!-- ----------------- Hero Section ---------------------- -->
-    <main class="addEvent">
+    <main class="eventList">
       <div class="container">
-        <section class="addEvent-head">
-          <h1>Organize An Event</h1>
+        <section class="list-head">
+          <h1>All Events List</h1>
         </section>
 
-        <section class="addEvent-body wrapper">
-          <h2>
-            Please fill the below form to generate a request to Add an Event.
-          </h2>
+        <section class="list-body wrapper flex gap">
+          <div class="card">
+            <img src="./images/event1.png" alt="" />
+            <div class="card-body">
+              <h2>Soul Fest</h2>
 
-          <form
-            class="product-form flex-col"
-            action="/add-event"
-            method="POST"
-            id="eventForm"
-          >
-            <div class="flex-centers">
-              <div class="form-control">
-                <label for="name">Event Name:</label> <br />
-                <input class="width" type="text" name="name" id="name" />
+              <p>Layari Beach</p>
+              <p>22 Nov 2024</p>
+              <div class="flex flex-centers status gap-small">
+                <h3>Status:</h3>
+                <p>Pending</p>
               </div>
 
-              <div class="form-control">
-                <label for="imageURL">Event's Banner Image:</label><br />
-                <input class="width" type="file" accept="image/*" required />
+              <button>Edit Detail</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="./images/event1.png" alt="" />
+            <div class="card-body">
+              <h2>Soul Fest</h2>
+
+              <p>Layari Beach</p>
+              <p>22 Nov 2024</p>
+              <div class="flex flex-centers status gap-small">
+                <h3>Status:</h3>
+                <p>Pending</p>
+              </div>
+              <button>Edit Detail</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="./images/event1.png" alt="" />
+            <div class="card-body">
+              <h2>Soul Fest</h2>
+
+              <p>Layari Beach</p>
+              <p>22 Nov 2024</p>
+              <div class="flex flex-centers status gap-small">
+                <h3>Status:</h3>
+                <p>Pending</p>
+              </div>
+              <button>Edit Detail</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="./images/event1.png" alt="" />
+            <div class="card-body">
+              <h2>Soul Fest</h2>
+
+              <p>Layari Beach</p>
+              <p>22 Nov 2024</p>
+              <div class="flex flex-centers status gap-small">
+                <h3>Status:</h3>
+                <p>Pending</p>
+              </div>
+              <button>Edit Detail</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="./images/event1.png" alt="" />
+            <div class="card-body">
+              <h2>Soul Fest</h2>
+
+              <p>Layari Beach</p>
+              <p>22 Nov 2024</p>
+              <div class="flex flex-centers status gap-small">
+                <h3>Status:</h3>
+                <p>Approved</p>
               </div>
             </div>
-            <div class="flex-centers">
-              <div class="form-control">
-                <label for="category">Category:</label> <br />
-                <select class="width" name="category" id="category">
-                  <option>Select Category</option>
-                  <option value="Education">Education</option>
-                  <option value="Arts & Culture">Arts & Culture</option>
-                  <option value="Sports">Sports</option>
-                  <option value="Food">Food</option>
-                  <option value="Concert">Concet</option>
-                  <option value="Technology">Technology</option>
-                  <option value="Exhibition & Workshops">
-                    Exhibition & Workshops
-                  </option>
-                  <option value="Seminars,Conferences & Community">
-                    Seminars,Conferences & Community"
-                  </option>
-                  <option value="Fashion & LifeStyle">
-                    Fashion & LifeStyle
-                  </option>
-                </select>
-              </div>
-
-              <div class="form-control">
-                <label for="city">City:</label><br />
-                <select class="width" name="city" id="city">
-                  <option>Select Category</option>
-                  <option value="Lahore">Lahore</option>
-                  <option value="Karachi">Karachi</option>
-                  <option value="Islamabad">Islamabad</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="flex-centers">
-              <div class="form-control">
-                <label for="address">Address:</label><br />
-                <input class="width" type="text" name="address" id="address" />
-              </div>
-
-              <div class="form-control">
-                <label for="standard">Standard Ticket:</label> <br />
-                <input
-                  class="width"
-                  type="number"
-                  name="standard"
-                  id="standard"
-                  placeholder="Price for a Standard Ticket"
-                />
-                <br />
-                <label for="vip">VIP Ticket:</label> <br />
-                <input
-                  class="width"
-                  type="number"
-                  name="vip"
-                  id="vip"
-                  placeholder="Price for a VIP Ticket"
-                />
-                <br />
-              </div>
-            </div>
-            <div class="flex-centers">
-              <div class="form-control">
-                <label for="Starttime">Start Time:</label><br />
-                <input
-                  class="width-small"
-                  type="time"
-                  name="sTime"
-                  id="sTime"
-                />
-              </div>
-
-              <div class="form-control">
-                <label for="Endtime">End Time:</label><br />
-                <input
-                  class="width-small"
-                  type="time"
-                  name="eTime"
-                  id="eTime"
-                />
-              </div>
-            </div>
-            <div class="flex-centers">
-              <div class="form-control">
-                <label for="StartDate">Start Date:</label><br />
-                <input
-                  class="width-small"
-                  type="date"
-                  name="sdate"
-                  id="sdate"
-                />
-              </div>
-              <div class="form-control">
-                <label for="date">End Date:</label><br />
-                <input
-                  class="width-small"
-                  type="date"
-                  name="edate"
-                  id="edate"
-                />
-              </div>
-            </div>
-
-            <div class="form-control desc wrapper">
-              <label for="description">Description:</label><br />
-              <textarea
-                name="description"
-                id="description"
-                rows="5"
-                cols="50"
-                class="desc-area"
-              ></textarea>
-            </div>
-            <div class="cover wrapper">
-              <button class="btn" type="submit">Submit</button>
-            </div>
-          </form>
-
-          <!-- **********************************************************  -->
+          </div>
         </section>
       </div>
     </main>

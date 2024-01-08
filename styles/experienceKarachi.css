@@ -283,8 +283,11 @@ header {
   /* justify-content: space-around; */
 }
 
+.eventType-body {
+  flex-wrap: wrap;
+}
 .eventType-body > div {
-  width: 33.33%;
+  width: 30%;
 }
 
 .event-left {
@@ -584,7 +587,7 @@ footer img {
   }
 
   .eventType-body > div {
-    width: 50%;
+    width: 46%;
   }
 
   .events section {
