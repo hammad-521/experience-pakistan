@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Organizer Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Nanum+Gothic:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/organizerhead-foot.css" />
+    <link rel="stylesheet" href="./styles/organizeEvent.css" />
+
+    <script
+      src="https://kit.fontawesome.com/9d779ebc01.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- ----------------- Header ---------------------- -->
+    <header class="container flex gap">
+      <div class="bar menu-toggle" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <div class="flex flex-center">
+        <img
+          class="header-logo tablet-logo"
+          src="./images/newlogo.png"
+          alt=""
+          hidden
+        />
+      </div>
+
+      <nav class="primary-nav flex gap menu" style="left: -1500px">
+        <img
+          class="header-logo laptop-logo"
+          src="./images/newlogo.png"
+          alt="Experience Pakistan Logo"
+        />
+        <ul class="flex gap menu-nav">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="">Partners</a></li>
+          <li><a href="">Organize an Event</a></li>
+          <li><a href="">View Events List</a></li>
+          <span class="actionButtons hidden gap">
+            <li class="actionButtons-2">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </li>
+            <li class="actionButtons-3">
+              <a href="./login.html">
+                <i class="fa-sharp fa-solid fa-user"></i
+              ></a>
+            </li>
+            <a class="actionButtons-1" href="./signup.html"> Logout</a>
+          </span>
+        </ul>
+      </nav>
+
+      <div class="actionButtons flex menu-2">
+        <button class="actionButtons-2">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button class="actionButtons-3">
+          <a href="./login.html"> <i class="fa-sharp fa-solid fa-user"></i></a>
+        </button>
+        <a class="actionButtons-1" href="./signup.html"> Logout</a>
+      </div>
+    </header>
+    <!-- ----------------- Hero Section ---------------------- -->
+    <main class="addEvent">
+      <div class="container">
+        <section class="addEvent-head">
+          <h1>Organize An Event</h1>
+        </section>
+
+        <section class="addEvent-body wrapper">
+          <h2>
+            Please fill the below form to generate a request to Add an Event.
+          </h2>
+
+          <form
+            class="product-form flex-col"
+            action="/add-event"
+            method="POST"
+            id="eventForm"
+          >
+            <div class="flex-centers">
+              <div class="form-control">
+                <label for="name">Event Name:</label> <br />
+                <input class="width" type="text" name="name" id="name" />
+              </div>
+
+              <div class="form-control">
+                <label for="imageURL">Event's Banner Image:</label><br />
+                <input class="width" type="file" accept="image/*" required />
+              </div>
+            </div>
+            <div class="flex-centers">
+              <div class="form-control">
+                <label for="category">Category:</label> <br />
+                <select class="width" name="category" id="category">
+                  <option>Select Category</option>
+                  <option value="Education">Education</option>
+                  <option value="Arts & Culture">Arts & Culture</option>
+                  <option value="Sports">Sports</option>
+                  <option value="Food">Food</option>
+                  <option value="Concert">Concet</option>
+                  <option value="Technology">Technology</option>
+                  <option value="Exhibition & Workshops">
+                    Exhibition & Workshops
+                  </option>
+                  <option value="Seminars,Conferences & Community">
+                    Seminars,Conferences & Community"
+                  </option>
+                  <option value="Fashion & LifeStyle">
+                    Fashion & LifeStyle
+                  </option>
+                </select>
+              </div>
+
+              <div class="form-control">
+                <label for="city">City:</label><br />
+                <select class="width" name="city" id="city">
+                  <option>Select Category</option>
+                  <option value="Lahore">Lahore</option>
+                  <option value="Karachi">Karachi</option>
+                  <option value="Islamabad">Islamabad</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="flex-centers">
+              <div class="form-control">
+                <label for="address">Address:</label><br />
+                <input class="width" type="text" name="address" id="address" />
+              </div>
+
+              <div class="form-control">
+                <label for="price">Ticket Types:</label> <br />
+                <label>
+                  <input
+                    type="checkbox"
+                    class="tickets"
+                    name="ticketType"
+                    value="standard"
+                  />
+                  Standard
+                </label>
+                <br />
+                <label>
+                  <input
+                    type="checkbox"
+                    class="tickets"
+                    name="ticketType"
+                    value="vip"
+                  />
+                  VIP
+                </label>
+                <br />
+              </div>
+            </div>
+            <div class="flex-centers">
+              <div class="form-control">
+                <label for="Starttime">Start Time:</label><br />
+                <input
+                  class="width-small"
+                  type="time"
+                  name="sTime"
+                  id="sTime"
+                />
+              </div>
+
+              <div class="form-control">
+                <label for="Endtime">End Time:</label><br />
+                <input
+                  class="width-small"
+                  type="time"
+                  name="eTime"
+                  id="eTime"
+                />
+              </div>
+            </div>
+            <div class="flex-centers">
+              <div class="form-control">
+                <label for="StartDate">Start Date:</label><br />
+                <input
+                  class="width-small"
+                  type="date"
+                  name="sdate"
+                  id="sdate"
+                />
+              </div>
+              <div class="form-control">
+                <label for="date">End Date:</label><br />
+                <input
+                  class="width-small"
+                  type="date"
+                  name="edate"
+                  id="edate"
+                />
+              </div>
+            </div>
+
+            <div class="form-control desc wrapper">
+              <label for="description">Description:</label><br />
+              <textarea
+                name="description"
+                id="description"
+                rows="5"
+                cols="50"
+                class="desc-area"
+              ></textarea>
+            </div>
+            <div class="cover wrapper">
+              <button class="btn" type="submit">Submit</button>
+            </div>
+          </form>
+
+          <!-- **********************************************************  -->
+        </section>
+      </div>
+    </main>
+    <!-- ----------------- Call to Action Section ---------------------- -->
+
+    <section class="CTA">
+      <div class="news">
+        <h2>NEWSLETTER SIGN UP</h2>
+        <p>Get latest updates on things to do in Pakistan</p>
+        <input type="text" placeholder="Your E-Mail Address" />
+        <button>Subscribe</button>
+      </div>
+    </section>
+
+    <!-- ----------------- Footer Section ---------------------- -->
+
+    <footer>
+      <div class="container">
+        <div class="footer-main flex container gap">
+          <div class="about-us">
+            <ul>
+              <h2>About US</h2>
+              <li>
+                Experience Pakistan is a Platform for all type of events and
+                entertainment
+              </li>
+              <li>
+                <a href="">
+                  <img class="google" src="./images/google.png" alt="" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="helpful-links">
+            <ul>
+              <h2>Helpful Links</h2>
+              <li><a href="">Experience Pakistan</a></li>
+              <li><a href="">Search By City</a></li>
+              <li><a href="">About Us</a></li>
+              <li><a href="">Contact Us</a></li>
+              <li><a href="">Articles</a></li>
+              <li><a href="">Frequently Asked Questions</a></li>
+            </ul>
+          </div>
+
+          <div class="eventsByCity">
+            <ul>
+              <h2>Events By City</h2>
+              <li><a href="">Lahore</a></li>
+              <li><a href="">Karachi</a></li>
+              <li><a href="">Islamabad</a></li>
+            </ul>
+          </div>
+
+          <div class="useful-links">
+            <ul>
+              <h2>Useful Links</h2>
+              <li><a href="">Submit a Complaint</a></li>
+              <li><a href="">Give a Suggestion</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="container footer-secondary flex gap">
+          <div class="copyright">
+            <p class="">
+              <img src="./images/Copyright.png" alt="" />2023 Experience
+              Pakistan. All Rights Reserved
+            </p>
+          </div>
+
+          <div class="external-link flex wrapper">
+            <a href="">Terms & Conditions</a>
+            <a href="">Privacy Policy</a>
+            <a href="">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ----------------- Scripts ---------------------- -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="./scripts/menu.js"></script>
+    <script src="./scripts/eventForm.js"></script>
+  </body>
+</html>
