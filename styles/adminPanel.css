@@ -56,7 +56,6 @@ button {
   width: 100%;
   justify-content: center;
   align-items: center;
-  display: none;
 }
 
 .flex-centers {
@@ -78,4 +77,63 @@ button {
 
 .hidden {
   display: none;
+}
+
+/* ------------------ Dashboard Section ------------------ */
+
+.dashboard {
+  padding: 3em 4em;
+}
+
+.dashboard-stats div {
+  margin-bottom: 1rem;
+}
+.dashboard h1 {
+  color: #000;
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 3rem;
+  margin-bottom: 3rem;
+}
+
+.stat-box {
+  padding: 1.5em 2.5em;
+  border-radius: 1.6875rem;
+  border: 0.75px solid var(--orange-200, #fbd38d);
+  background: var(--white, #fff);
+  box-shadow: 0px 1.5px 3px 0px rgba(0, 0, 0, 0.06),
+    0px 1.5px 4.5px 0px rgba(0, 0, 0, 0.1);
+  width: min-content;
+}
+
+.stat-box h2 {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  padding-bottom: 0.6em;
+}
+.stat-box p {
+  font-size: 1.75rem;
+  font-weight: 700 !important;
+}
+
+.box-detail a {
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.25rem;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-detail a:visited {
+  color: var(--primary-color);
+}
+
+.box-detail {
+  gap: 5rem;
 }
