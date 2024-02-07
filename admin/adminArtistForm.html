@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/adminNavbar.css" />
+    <link rel="stylesheet" href="../styles/adminPanel.css" />
+    <script
+      src="https://kit.fontawesome.com/9d779ebc01.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section class="flex container">
+      <nav class="navbar">
+        <a href="" class="">
+          <img class="Logo flex" src="../images/newlogo-trans.png" alt="" />
+        </a>
+        <div class="main-nav">
+          <ul>
+            <a href="../adminPanel.html"
+              ><li><i class="fa-solid fa-desktop"></i>Dashboard</li></a
+            >
+            <a href=""
+              ><li><i class="fa-solid fa-campground"></i>Events</li></a
+            >
+            <a href="">
+              <li><i class="fa-solid fa-rug"></i>Tickets</li>
+            </a>
+            <a href="./adminArtist.html"
+              ><li><i class="fa-solid fa-people-group"></i>Artists</li></a
+            >
+            <a href=""
+              ><li><i class="fa-solid fa-utensils"></i>Restaurants</li>
+            </a>
+            <a href=""
+              ><li><i class="fa-solid fa-gear"></i>Settings</li></a
+            >
+          </ul>
+        </div>
+
+        <div class="secondary-nav">
+          <div class="second-nav-head flex flex-center">
+            <div class="head-img">
+              <img src="../images/profile.svg" alt="" />
+            </div>
+
+            <div class="head-detail">
+              <p>Muhammad Hammad</p>
+              <button>Logout</button>
+            </div>
+          </div>
+
+          <div class="second-nav-body">
+            <p>Copyright 2023 Experience Pakistan</p>
+            <p>All rights Reserved.</p>
+          </div>
+        </div>
+      </nav>
+
+      <main class="dashboard">
+        <h1>Add an Artist</h1>
+
+        <section class="list">
+          <form class="product-form" action="/artist" method="POST">
+            <div class="form-control">
+              <label for="name">Artist Name:</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Atif Aslam"
+              />
+            </div>
+            <div class="form-control">
+              <label for="category">Artist Category:</label>
+              <select name="category" id="category">
+                <option>Select Category</option>
+                <option value="Singer">Singer</option>
+                <option value="Sketch Artist">Sketch Artist</option>
+                <option value="Musician">Musician</option>
+                <option value="Graphic Art">Graphic Art</option>
+                <option value="Photographer">Photographer</option>
+                <option value="Dancer">Dancer</option>
+              </select>
+            </div>
+
+            <div class="form-control">
+              <label for="imageURL">Artist ImageURL:</label>
+              <input
+                type="text"
+                name="imageURL"
+                id="ImageURL"
+                placeholder="atifaslam.jpeg"
+              />
+            </div>
+
+            <div class="form-control desc">
+              <label for="description">Artist Description:</label>
+              <textarea
+                name="description"
+                id="Description"
+                rows="5"
+                placeholder="Description Here!"
+              ></textarea>
+            </div>
+            <div class="confirmBtn">
+              <button class="addBtn" id="confirm" type="submit">
+                Add Artist
+              </button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </section>
+  </body>
+</html>

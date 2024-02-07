@@ -95,6 +95,7 @@ button {
   font-weight: 900;
   line-height: 3rem;
   margin-bottom: 3rem;
+  text-transform: uppercase;
 }
 
 .stat-box {
@@ -136,4 +137,82 @@ button {
 
 .box-detail {
   gap: 5rem;
+}
+
+/* Artist Section */
+
+.addBtn {
+  font-size: 1.0625rem;
+  padding: 0.5em 1em;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 15px;
+  color: white;
+}
+
+.addBtn i {
+  margin-left: 0.45rem;
+}
+.artist {
+  margin-bottom: 2rem;
+  border: 1px solid var(--primary-color);
+  padding: 1em;
+  border-radius: 27px;
+}
+
+.artist img {
+  width: 140px;
+  border-radius: 27px;
+}
+
+.artistDetail h2 {
+  font-size: 1.2rem;
+}
+
+.artist p {
+  font-size: 1rem;
+}
+
+.artistCategory {
+  margin: 0.1rem 0 0.5rem;
+}
+
+.list {
+  width: 100%;
+  margin: 0 auto;
+}
+.list form {
+  width: 100%;
+}
+
+.list label {
+  font-weight: bold;
+  font-size: 1.125rem;
+  display: inline-block;
+  width: 200px !important;
+}
+
+.form-control {
+  margin: 2rem auto;
+}
+
+.desc {
+  display: flex;
+  gap: 5px;
+}
+
+.form-control input,
+.form-control textarea,
+.form-control select {
+  background-color: var(--secondary-color);
+  padding: 0.6em 1.2em;
+  font-size: 1.125rem;
+  border: none;
+  border-radius: 15px;
+  width: 50%;
+}
+
+.confirmBtn {
+  margin: 0 auto;
+  width: 100%;
 }
