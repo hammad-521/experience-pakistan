@@ -5,8 +5,8 @@
 }
 
 :root {
-  --primary-color: #f47725; /* Set your desired color value */
-  --secondary-color: #ffd3b4; /* Set your desired color value */
+  --primary-color: #ff601c;
+  --secondary-color: #fff;
 }
 
 body {
@@ -30,6 +30,7 @@ li {
 button {
   cursor: pointer;
 }
+
 .container {
   width: 100%;
   max-width: 1440px;
@@ -63,6 +64,14 @@ button {
   justify-content: center;
   align-items: center;
 }
+
+.flexStarts {
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  gap: 2rem;
+}
+
 .flex-col {
   display: flex;
   flex-direction: column;
@@ -189,7 +198,7 @@ button {
   font-weight: bold;
   font-size: 1.125rem;
   display: inline-block;
-  width: 200px !important;
+  width: 240px !important;
 }
 
 .form-control {
@@ -204,7 +213,7 @@ button {
 .form-control input,
 .form-control textarea,
 .form-control select {
-  background-color: var(--secondary-color);
+  background-color: #ffdbba;
   padding: 0.6em 1.2em;
   font-size: 1.125rem;
   border: none;
@@ -215,4 +224,125 @@ button {
 .confirmBtn {
   margin: 0 auto;
   width: 100%;
+}
+
+.actionBtns button {
+  padding: 0.5em 1em;
+  border: none;
+  color: white;
+  font-size: 1.125rem;
+  border-radius: 10px;
+  width: 88px;
+  font-weight: 500;
+}
+
+.deleteBtn {
+  background-color: tomato;
+  margin-bottom: 1.25rem;
+}
+.deleteBtns {
+  background-color: tomato;
+}
+.editBtn {
+  background-color: seagreen;
+}
+
+.foodType {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+
+.foodType label {
+  margin-bottom: 0.6rem;
+}
+.foodType input[type="checkbox"] {
+  width: 40px;
+  height: 16px;
+}
+
+td,
+th {
+  padding: 1em;
+  text-align: center !important;
+  border-top: 1px solid #dee2e6;
+}
+tr {
+  box-shadow: 10px 10px 4px -12px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 4px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 4px -12px rgba(0, 0, 0, 0.75);
+  border-left: 1px solid #dee2e6;
+  border-right: 1px solid #dee2e6;
+}
+
+th {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  font-size: 1.125rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.viewBtn {
+  background-color: #ffdbba;
+  color: rgb(49, 45, 45) !important;
+  white-space: nowrap;
+}
+
+.restaurantDetail p {
+  display: inline-block;
+  padding: 1em 3em 0.5em 0.4em;
+}
+
+.restaurantDetail div {
+  display: inline-block;
+  border-bottom: 2px solid var(--primary-color);
+  margin: 1rem 1rem 0.5rem 0;
+}
+
+.restaurantDetail h3 {
+  display: inline-block;
+}
+
+.extra {
+  margin: 1rem 0 4rem 0;
+}
+.extra p {
+  padding-bottom: 1em;
+}
+
+.restaurantDetail main > img {
+  max-width: 220px;
+  object-fit: contain;
+}
+
+.RestaurantMain {
+  background-color: var(--primary-color);
+  width: 100%;
+  padding: 2em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.RestaurantMain h1 {
+  margin: 0 !important;
+  color: #fff !important;
+}
+
+.restaurantImages {
+  padding-bottom: 2em;
+  text-align: center;
+}
+
+.restaurantImages img {
+  margin: 1rem 0.5rem;
 }

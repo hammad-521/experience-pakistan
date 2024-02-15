@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Panel</title>
+    <title>Artists</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,7 +19,7 @@
     ></script>
   </head>
   <body>
-    <section class="flex container">
+    <section class="flex container flexStart">
       <nav class="navbar">
         <a href="" class="">
           <img class="Logo flex" src="../images/newlogo-trans.png" alt="" />
@@ -35,10 +35,10 @@
             <a href="">
               <li><i class="fa-solid fa-rug"></i>Tickets</li>
             </a>
-            <a href="./adminArtist.html"
+            <a href="./adminArtist.html" class="active"
               ><li><i class="fa-solid fa-people-group"></i>Artists</li></a
             >
-            <a href=""
+            <a href="./adminRestaurant.html"
               ><li><i class="fa-solid fa-utensils"></i>Restaurants</li>
             </a>
             <a href=""
@@ -59,10 +59,10 @@
             </div>
           </div>
 
-          <div class="second-nav-body">
+          <!-- <div class="second-nav-body">
             <p>Copyright 2023 Experience Pakistan</p>
             <p>All rights Reserved.</p>
-          </div>
+          </div> -->
         </div>
       </nav>
 
@@ -91,6 +91,10 @@
                 </p>
               </span>
             </div>
+            <div class="actionBtns">
+              <button class="deleteBtn">Delete</button>
+              <button class="editBtn">Edit</button>
+            </div>
           </div>
 
           <div class="artist flex gap">
@@ -108,6 +112,10 @@
                   with the release of her debut single 'Dil de Bol'.
                 </p>
               </span>
+            </div>
+            <div class="actionBtns">
+              <button class="deleteBtn">Delete</button>
+              <button class="editBtn">Edit</button>
             </div>
           </div>
         </section>

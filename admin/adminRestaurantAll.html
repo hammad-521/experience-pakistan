@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Add an Artist</title>
+    <title>Monal Restaurants</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,10 +35,10 @@
             <a href="">
               <li><i class="fa-solid fa-rug"></i>Tickets</li>
             </a>
-            <a href="./adminArtist.html" class="active"
+            <a href="./adminArtist.html"
               ><li><i class="fa-solid fa-people-group"></i>Artists</li></a
             >
-            <a href="./adminRestaurant.html"
+            <a href="./adminRestaurant.html" class="active"
               ><li><i class="fa-solid fa-utensils"></i>Restaurants</li>
             </a>
             <a href=""
@@ -67,59 +67,53 @@
       </nav>
 
       <main class="dashboard">
-        <h1>Add an Artist</h1>
+        <section class="restaurantDetail">
+          <main class="RestaurantMain">
+            <!-- <img src="../images/fine.png" alt="" /> -->
+            <h1>Monal RoofTop</h1>
+          </main>
 
-        <section class="list">
-          <form class="product-form" action="/artist" method="POST">
-            <div class="form-control">
-              <label for="name">Artist Name:</label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Atif Aslam"
-              />
-            </div>
-            <div class="form-control">
-              <label for="category">Artist Category:</label>
-              <select name="category" id="category">
-                <option>Select Category</option>
-                <option value="Singer">Singer</option>
-                <option value="Sketch Artist">Sketch Artist</option>
-                <option value="Musician">Musician</option>
-                <option value="Graphic Art">Graphic Art</option>
-                <option value="Photographer">Photographer</option>
-                <option value="Dancer">Dancer</option>
-              </select>
-            </div>
+          <div>
+            <h3>Rating:</h3>
+            <p>4.6</p>
+          </div>
 
-            <div class="form-control">
-              <label for="imageURL">Artist ImageURL:</label>
+          <div>
+            <h3>Address:</h3>
+            <p>123 ABC Street</p>
+          </div>
+          <div>
+            <h3>Phone Number:</h3>
+            <p>123456789</p>
+          </div>
+          <div>
+            <h3>City:</h3>
+            <p>Lahore</p>
+          </div>
+          <div>
+            <h3>Category:</h3>
+            <p>Fine Dinning</p>
+          </div>
+          <div>
+            <h3>Food Types:</h3>
+            <p>Dessert, Fast Food</p>
+          </div>
+          <br />
+          <div class="extra">
+            <h3>Description:</h3>
+            <p>
+              Monal Lahore is the definition of contemporary Restaurant, serving
+              the finest Cuisines with a combination of traditional and exciting
+              flavors from around the world.
+            </p>
+          </div>
 
-              <input
-                type="file"
-                name="imageURL[]"
-                id="ImageURL"
-                accept="image/*"
-                multiple
-              />
-            </div>
-
-            <div class="form-control desc">
-              <label for="description">Artist Description:</label>
-              <textarea
-                name="description"
-                id="Description"
-                rows="5"
-                placeholder="Description Here!"
-              ></textarea>
-            </div>
-            <div class="confirmBtn">
-              <button class="addBtn" id="confirm" type="submit">
-                Add Artist
-              </button>
-            </div>
-          </form>
+          <div class="restaurantImages">
+            <img src="../images/monal1.png" alt="" />
+            <img src="../images/monal2.png" alt="" />
+            <img src="../images/monal2.png" alt="" />
+            <img src="../images/monal2.png" alt="" />
+          </div>
         </section>
       </main>
     </section>

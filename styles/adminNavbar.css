@@ -5,8 +5,8 @@
 }
 
 :root {
-  --primary-color: #f47725; /* Set your desired color value */
-  --secondary-color: #ffd3b4; /* Set your desired color value */
+  --primary-color: #ff601c;
+  --secondary-color: #fff;
 }
 
 body {
@@ -51,6 +51,9 @@ button {
   justify-content: space-between;
   align-items: center;
 }
+.flexStart {
+  align-items: flex-start !important;
+}
 
 .flex-center {
   width: 100%;
@@ -79,31 +82,38 @@ button {
 .Logo {
   width: 100px;
 }
+
 nav {
   background-color: var(--secondary-color) !important;
   width: 20%;
   height: max-content;
-  padding-top: 2em;
+  padding-top: 1em;
   border: 1px solid var(--primary-color);
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
+
 .Logo {
   margin: 0 auto;
 }
 
 nav li {
-  color: var(--Primary-Color, #f47725);
-  font-size: 1.25rem;
+  color: var(--primary-color);
+  font-size: 1.125rem;
   font-style: normal;
   font-weight: 500;
   line-height: 2.25rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
+  width: fit-content;
 }
 
 .navbar a {
   text-align: left;
 }
 .main-nav {
-  padding: 4em 3em;
+  padding: 1.25em 3em;
   padding-right: 0;
   border-bottom: 1px solid var(--primary-color);
 }
@@ -113,17 +123,38 @@ nav li {
   width: 30px !important;
 }
 
+.main-nav a {
+  display: flex;
+  width: fit-content;
+  color: transparent;
+  padding: 0em 1.5rem;
+  padding-top: 10px;
+  width: 200px;
+}
+
+.main-nav ul {
+  width: fit-content;
+}
 main {
   width: 80%;
-  background-color: #f5f5f5;
+  /* background-color: #f5f5f5; */
   align-self: flex-start;
 }
 
 .second-nav-head {
-  padding: 2em 1em 2em 0;
+  padding: 0.5em 1em 0.5em 0;
   gap: 1.5rem;
 }
 
+.active {
+  background-color: var(--primary-color);
+  padding: 0em 1.5em;
+  color: var(--secondary-color);
+  border-radius: 45px;
+}
+.active li {
+  color: var(--secondary-color);
+}
 .head-img {
   width: 5.5rem;
   height: 5.5rem;
