@@ -489,6 +489,9 @@ footer img {
   h1 {
     font-size: 2.5rem !important;
   }
+  .CTA h2 {
+    font-size: 2.2rem !important;
+  }
 
   .footer-main {
     /* gap: 4rem; */
