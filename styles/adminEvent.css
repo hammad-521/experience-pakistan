@@ -1,0 +1,121 @@
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.event {
+  border: 1px solid var(--primary-color);
+  padding: 1em;
+  border-radius: 27px;
+}
+.event-1 {
+  border: 1px solid var(--primary-color);
+  padding: 1em 1.2em 1em 0.5em;
+  border-radius: 27px;
+  margin-bottom: 1em;
+}
+.event > :last-child {
+  margin-bottom: 0;
+}
+
+.eventDetail {
+  padding: 0.6em;
+  width: 100%;
+}
+
+.eventDetail > p {
+  text-align: center;
+  padding: 0.4em 1em 0 1em;
+  border-right: 1px solid var(--primary-color);
+}
+
+.eventDetail > :first-child {
+  padding-left: 0.5em;
+}
+
+.eventDT > :first-child {
+  margin-bottom: 0.4rem;
+}
+
+.eventDetail > p > span {
+  display: block;
+}
+
+.event h2 {
+  padding-left: 0.8em;
+}
+
+.newBtns button {
+  padding: 0.6em 0.8em;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.newBtns {
+  display: flex;
+  flex-direction: column;
+}
+
+.ticketBtn {
+  background-color: #faae69;
+  color: black !important;
+}
+.ticketBtn:hover {
+  background-color: #bb7e46;
+}
+
+.seeMoreBtn {
+  background-color: #f6ad55;
+  margin-bottom: 1.25rem;
+  color: black !important;
+}
+
+.seeMoreBtn:hover {
+  background-color: #fca336;
+}
+
+.dashboards {
+  padding: 0em 3em;
+  text-align: center;
+}
+
+.dashboards h1 {
+  text-align: center !important;
+  margin: 0 auto;
+  background-color: var(--primary-color);
+  width: 100%;
+  padding: 0.5em;
+  color: #fff !important;
+  border-radius: 10px;
+}
+
+.flex-set {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  row-gap: 1rem;
+}
+
+.event-info {
+  margin-top: 3rem;
+}
+
+.detail-head h2 {
+  padding-bottom: 0.4em;
+}
+
+.detail-body {
+  margin-top: 1rem !important;
+}
+
+.artistDetail h2 {
+  margin-bottom: 0.5rem;
+}

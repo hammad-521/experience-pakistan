@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Artists</title>
+    <title>Add an Artist</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,10 +32,10 @@
             <a href="./adminEvent.html"
               ><li><i class="fa-solid fa-campground"></i>Events</li></a
             >
-            <a href="./adminPartner.html">
+            <a href="./adminPartner.html" class="active">
               <li><i class="fa-solid fa-rug"></i>Partners</li>
             </a>
-            <a href="./adminArtist.html" class="active"
+            <a href="./adminArtist.html"
               ><li><i class="fa-solid fa-people-group"></i>Artists</li></a
             >
             <a href="./adminRestaurant.html"
@@ -67,57 +67,43 @@
       </nav>
 
       <main class="dashboard">
-        <div class="flex">
-          <h1>Artists</h1>
-          <a class="addBtn" href="./adminArtistForm.html">
-            Add Artist <i class="fa-solid fa-plus"></i>
-          </a>
-        </div>
+        <h1>Add a Partner</h1>
 
-        <section class="userList">
-          <div class="artist flex gap">
-            <img src="../images/annurals.jpeg" alt="" />
-            <div class="artistDetail">
-              <h2>Annural Khalid</h2>
-              <p class="artistCategory">Singer</p>
-              <span>
-                <p>
-                  Annural Khalid is a singer/songwriter from Islamabad,
-                  Pakistan. Singing since the age of 4, her music career
-                  officially kicked off during lockdown 2020 when she started
-                  uploading covers of Urdu/Punjabi hits on her instagram page
-                  which gained her a major following on the platform, followed
-                  with the release of her debut single 'Dil de Bol'.
-                </p>
-              </span>
+        <section class="list">
+          <form class="product-form" action="/artist" method="POST">
+            <div class="form-control">
+              <label for="name">Partner Name:</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Coke Studio"
+              />
             </div>
-            <div class="actionBtns">
-              <button class="deleteBtn">Delete</button>
-              <button class="editBtn">Edit</button>
-            </div>
-          </div>
 
-          <div class="artist flex gap">
-            <img src="../images/annurals.jpeg" alt="" />
-            <div class="artistDetail">
-              <h2>Annural Khalid</h2>
-              <p class="artistCategory">Singer</p>
-              <span>
-                <p>
-                  Annural Khalid is a singer/songwriter from Islamabad,
-                  Pakistan. Singing since the age of 4, her music career
-                  officially kicked off during lockdown 2020 when she started
-                  uploading covers of Urdu/Punjabi hits on her instagram page
-                  which gained her a major following on the platform, followed
-                  with the release of her debut single 'Dil de Bol'.
-                </p>
-              </span>
+            <div class="form-control">
+              <label for="imageURL">Partner Image:</label>
+              <input
+                type="file"
+                name="imageURL"
+                id="ImageURL"
+                accept="image/*"
+              />
             </div>
-            <div class="actionBtns">
-              <button class="deleteBtn">Delete</button>
-              <button class="editBtn">Edit</button>
+
+            <div class="form-control desc">
+              <label for="description">Partner Description:</label>
+              <textarea
+                name="description"
+                id="Description"
+                rows="5"
+                placeholder="Description Here!"
+              ></textarea>
             </div>
-          </div>
+            <div class="confirmBtn">
+              <button class="addBtn" id="confirm" type="submit">Confirm</button>
+            </div>
+          </form>
         </section>
       </main>
     </section>

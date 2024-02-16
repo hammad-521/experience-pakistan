@@ -240,11 +240,21 @@ button {
   background-color: tomato;
   margin-bottom: 1.25rem;
 }
+.deleteBtn:hover,
+.deleteBtns:hover {
+  background-color: rgb(230, 68, 40);
+}
+
 .deleteBtns {
   background-color: tomato;
 }
+
 .editBtn {
   background-color: seagreen;
+}
+
+.editBtn:hover {
+  background-color: rgb(26, 107, 61);
 }
 
 .foodType {
