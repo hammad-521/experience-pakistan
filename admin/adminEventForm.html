@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events Form</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="../styles/organizeEvent.css" />
+    <link rel="stylesheet" href="../styles/selectedRestaurant.css" /> -->
+    <link rel="stylesheet" href="../styles/adminNavbar.css" />
+    <link rel="stylesheet" href="../styles/adminPanel.css" />
+    <link rel="stylesheet" href="../styles/adminEvent.css" />
+
+    <script
+      src="https://kit.fontawesome.com/9d779ebc01.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section class="flex container flexStart">
+      <nav class="navbar">
+        <a href="" class="">
+          <img class="Logo flex" src="../images/newlogo-trans.png" alt="" />
+        </a>
+        <div class="main-nav">
+          <ul>
+            <a href="../adminPanel.html"
+              ><li><i class="fa-solid fa-desktop"></i>Dashboard</li></a
+            >
+            <a href="./adminEvent.html" class="active"
+              ><li><i class="fa-solid fa-campground"></i>Events</li></a
+            >
+            <a href="./adminPartner.html">
+              <li><i class="fa-solid fa-rug"></i>Partners</li>
+            </a>
+            <a href="./adminArtist.html"
+              ><li><i class="fa-solid fa-people-group"></i>Artists</li></a
+            >
+            <a href="./adminRestaurant.html"
+              ><li><i class="fa-solid fa-utensils"></i>Restaurants</li>
+            </a>
+            <a href=""
+              ><li><i class="fa-solid fa-gear"></i>Settings</li></a
+            >
+          </ul>
+        </div>
+
+        <div class="secondary-nav">
+          <div class="second-nav-head flex flex-center">
+            <div class="head-img">
+              <img src="../images/profile.svg" alt="" />
+            </div>
+
+            <div class="head-detail">
+              <p>Muhammad Hammad</p>
+              <button>Logout</button>
+            </div>
+          </div>
+
+          <!-- <div class="second-nav-body">
+            <p>Copyright 2023 Experience Pakistan</p>
+            <p>All rights Reserved.</p>
+          </div> -->
+        </div>
+      </nav>
+
+      <main class="dashboard">
+        <h1>Events</h1>
+
+        <section class="list">
+          <form
+            class="product-form"
+            action="/add-event"
+            method="POST"
+            id="eventForm"
+          >
+            <div class="form-control">
+              <label for="name">Event Name:</label>
+              <input class="width" type="text" name="name" id="name" />
+            </div>
+
+            <div class="form-control">
+              <label for="imageURL">Event's Banner Image:</label>
+              <input class="width" type="file" accept="image/*" required="" />
+            </div>
+
+            <div class="form-control">
+              <label for="category">Category:</label>
+              <select class="width" name="category" id="category">
+                <option>Select Category</option>
+                <option value="Education">Education</option>
+                <option value="Arts &amp; Culture">Arts &amp; Culture</option>
+                <option value="Sports">Sports</option>
+                <option value="Food">Food</option>
+                <option value="Concert">Concet</option>
+                <option value="Technology">Technology</option>
+                <option value="Exhibition &amp; Workshops">
+                  Exhibition &amp; Workshops
+                </option>
+                <option value="Seminars,Conferences &amp; Community">
+                  Seminars,Conferences &amp; Community"
+                </option>
+                <option value="Fashion &amp; LifeStyle">
+                  Fashion &amp; LifeStyle
+                </option>
+              </select>
+            </div>
+
+            <div class="form-control">
+              <label for="city">City:</label>
+              <select class="width" name="city" id="city">
+                <option>Select City</option>
+                <option value="Lahore">Lahore</option>
+                <option value="Karachi">Karachi</option>
+                <option value="Islamabad">Islamabad</option>
+              </select>
+            </div>
+
+            <div class="form-control">
+              <label for="address">Address:</label>
+              <input class="width" type="text" name="address" id="address" />
+            </div>
+
+            <div class="form-control">
+              <label for="standard">Standard Ticket:</label>
+              <input
+                class="width"
+                type="number"
+                name="standard"
+                id="standard"
+                placeholder="Price for a Standard Ticket"
+              />
+            </div>
+            <div class="form-control">
+              <label for="vip">VIP Ticket:</label>
+              <input
+                class="width"
+                type="number"
+                name="vip"
+                id="vip"
+                placeholder="Price for a VIP Ticket"
+              />
+            </div>
+
+            <div class="form-control">
+              <label for="Starttime">Start Time:</label>
+              <input class="width-small" type="time" name="sTime" id="sTime" />
+            </div>
+
+            <div class="form-control">
+              <label for="Endtime">End Time:</label>
+              <input class="width-small" type="time" name="eTime" id="eTime" />
+            </div>
+
+            <div class="form-control">
+              <label for="StartDate">Start Date:</label>
+              <input class="width-small" type="date" name="sdate" id="sdate" />
+            </div>
+
+            <div class="form-control">
+              <label for="date">End Date:</label>
+              <input class="width-small" type="date" name="edate" id="edate" />
+            </div>
+
+            <div class="form-control desc">
+              <label for="description">Description:</label>
+              <textarea
+                name="description"
+                id="description"
+                rows="5"
+                cols="50"
+                class="desc-area"
+              ></textarea>
+            </div>
+            <div class="confirmBtn">
+              <button class="addBtn" id="confirm" type="submit">Submit</button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </section>
+  </body>
+</html>

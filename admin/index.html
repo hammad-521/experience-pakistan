@@ -3,37 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Admin | LogIn Page</title>
+
+    <link rel="stylesheet" href="../styles/signup.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.7/lottie.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/9d779ebc01.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <h1>ADMIN LOGIN **** COMING SOON ******</h1>
-    <form class="product-form" action="/artist" method="POST">
-      <div class="form-control">
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" />
+    <main class="container flex">
+      <div class="main-left">
+        <img src="../images/form.svg" alt="" style="object-fit: contain" />
       </div>
-      <div class="form-control">
-        <label for="description">Description</label>
-        <textarea name="description" id="Description" rows="5"></textarea>
-      </div>
-      <div class="form-control">
-        <label for="imageURL">ImageURL</label>
-        <input type="text" name="imageURL" id="ImageURL" />
-      </div>
-      <label for="category">Category:</label>
-      <select name="category" id="category">
-        <option>Select Category</option>
-        <option value="Singer">Singer</option>
-        <option value="Sketch Artist">Sketch Artist</option>
-        <option value="Musician">Musician</option>
-        <option value="Graphic Art">Graphic Art</option>
-        <option value="Photographer">Photographer</option>
-        <option value="Dancer">Dancer</option>
-      </select>
+      <div class="main-right" style="margin-bottom: 9rem !important">
+        <section class="center">
+          <h1>Admin LogIn</h1>
 
-      <button class="btn" type="submit">Add Artist</button>
-
-      <a href="../adminPanel.html">Go to Admin Panel</a>
-    </form>
+          <form action="../adminPanel.html">
+            <label for="email">Email</label>
+            <br />
+            <input
+              class="width margin"
+              type="text"
+              name="email"
+              id=""
+              placeholder="Email"
+            />
+            <br />
+            <label for="password">Password</label><br />
+            <input
+              class="width margin-less"
+              type="text"
+              name="password"
+              id=""
+              placeholder="Password"
+            /><br />
+            <input class="submit-btn" type="submit" placeholder="Submit" />
+          </form>
+        </section>
+      </div>
+    </main>
   </body>
 </html>
