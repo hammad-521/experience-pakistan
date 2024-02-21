@@ -48,7 +48,7 @@
           </ul>
         </div>
 
-        <div class="secondary-nav">
+        <!--  <div class="secondary-nav">
           <div class="second-nav-head flex flex-center">
             <div class="head-img">
               <img src="../images/profile.svg" alt="" />
@@ -59,24 +59,91 @@
               <button>Logout</button>
             </div>
           </div>
-
-          <!-- <div class="second-nav-body">
+          
+           <div class="second-nav-body">
             <p>Copyright 2023 Experience Pakistan</p>
             <p>All rights Reserved.</p>
-          </div> -->
-        </div>
+          </div> 
+        </div>-->
       </nav>
 
-      <main class="dashboard">
-        <div class="flex">
-          <h1>Events</h1>
+      <main>
+        <section class="dashboard-head flex">
+          <div class="dashboard-head-primary flex">
+            <i class="fa-solid fa-bars-staggered"></i>
+            <h1>Events</h1>
+          </div>
+
+          <div class="dashboard-head-secondary flex gap">
+            <input class="searchBox" type="text" placeholder="Search" />
+            <div class="head-img">
+              <img
+                id="profileIcon"
+                onclick="toggleProfileCard()"
+                src="../images/young-man.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </section>
+
+        <div id="profileCard">
+          <div class="head-detail">
+            <img src="../images/young-man.jpg" alt="" />
+            <p>Muhammad Hammad</p>
+            <button>Logout</button>
+          </div>
+        </div>
+
+        <section class="flex dashboard-info">
           <a class="addBtn" href="./adminEventForm.html">
             Add an Event <i class="fa-solid fa-plus"></i>
           </a>
-        </div>
+          <div class="success-card green" id="successCard">
+            <span class="close-icon" onclick="closeCard()">&times;</span>
+            <p>Successfully added Event!</p>
+          </div>
+        </section>
 
-        <section class="userList">
+        <section class="dashboard">
           <div class="event">
+            <div class="event-1">
+              <div class="flex gap eventMain">
+                <div class="artistDetail">
+                  <h2>Artificial Intelligence Summit 2023</h2>
+                  <div class="eventDetail flex flex-center">
+                    <p>Wasif</p>
+                    <p>Islamabad</p>
+                    <p>Conference</p>
+
+                    <p class="eventDT">
+                      <span>Aug 30, 2024</span>
+                      <span>08:00 PM</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="newBtns">
+                  <button class="deleteBtn"><a href="">Delete</a></button>
+                  <button class="editBtn"><a href="">Edit</a></button>
+                </div>
+
+                <div class="newBtns">
+                  <button
+                    class="seeMoreBtn"
+                    onclick="window.location.href = './adminEventAll.html'"
+                  >
+                    See More
+                  </button>
+                  <button
+                    class="ticketBtn"
+                    onclick="window.location.href = './adminTicket.html'"
+                  >
+                    Tickets Details
+                  </button>
+                </div>
+              </div>
+            </div>
+
             <div class="event-1">
               <div class="flex gap eventMain">
                 <div class="artistDetail">
@@ -113,7 +180,42 @@
                 </div>
               </div>
             </div>
+            <div class="event-1">
+              <div class="flex gap eventMain">
+                <div class="artistDetail">
+                  <h2>Artificial Intelligence Summit 2023</h2>
+                  <div class="eventDetail flex flex-center">
+                    <p>Muhammad Wasif Shahid</p>
+                    <p>Islamabad</p>
+                    <p>Conference, Party</p>
 
+                    <p class="eventDT">
+                      <span>Aug 30, 2024</span>
+                      <span>08:00 PM</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="newBtns">
+                  <button class="deleteBtn"><a href="">Delete</a></button>
+                  <button class="editBtn"><a href="">Edit</a></button>
+                </div>
+
+                <div class="newBtns">
+                  <button
+                    class="seeMoreBtn"
+                    onclick="window.location.href = './adminEventAll.html'"
+                  >
+                    See More
+                  </button>
+                  <button
+                    class="ticketBtn"
+                    onclick="window.location.href = './adminTicket.html'"
+                  >
+                    Tickets Details
+                  </button>
+                </div>
+              </div>
+            </div>
             <div class="event-1">
               <div class="flex gap eventMain">
                 <div class="artistDetail">
@@ -227,5 +329,7 @@
         </section>
       </main>
     </section>
+
+    <script src="../scripts/admin.js"></script>
   </body>
 </html>

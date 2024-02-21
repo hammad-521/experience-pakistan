@@ -51,7 +51,7 @@
           </ul>
         </div>
 
-        <div class="secondary-nav">
+        <!-- <div class="secondary-nav">
           <div class="second-nav-head flex flex-center">
             <div class="head-img">
               <img src="../images/profile.svg" alt="" />
@@ -63,17 +63,41 @@
             </div>
           </div>
 
-          <!-- <div class="second-nav-body">
+         <div class="second-nav-body">
             <p>Copyright 2023 Experience Pakistan</p>
             <p>All rights Reserved.</p>
-          </div> -->
-        </div>
+          </div> 
+        </div>-->
       </nav>
 
-      <main class="dashboard">
-        <h1>Events</h1>
+      <main>
+        <section class="dashboard-head flex">
+          <div class="dashboard-head-primary flex">
+            <i class="fa-solid fa-bars-staggered"></i>
+            <h1>New Event</h1>
+          </div>
 
-        <section class="list">
+          <div class="dashboard-head-secondary">
+            <div class="head-img">
+              <img
+                id="profileIcon"
+                onclick="toggleProfileCard()"
+                src="../images/young-man.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </section>
+
+        <div id="profileCard">
+          <div class="head-detail">
+            <img src="../images/young-man.jpg" alt="" />
+            <p>Muhammad Hammad</p>
+            <button>Logout</button>
+          </div>
+        </div>
+
+        <section class="dashboard list">
           <form
             class="product-form"
             action="/add-event"
@@ -185,5 +209,6 @@
         </section>
       </main>
     </section>
+    <script src="../scripts/admin.js"></script>
   </body>
 </html>

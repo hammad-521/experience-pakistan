@@ -12,7 +12,11 @@ a {
 .event {
   border: 1px solid var(--primary-color);
   padding: 1em;
-  border-radius: 27px;
+  border-radius: 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  max-height: 80vh;
+  overflow-y: auto;
 }
 .event-1 {
   border: 1px solid var(--primary-color);
@@ -59,7 +63,14 @@ a {
   border-radius: 10px;
   font-weight: 500;
 }
-
+.event-img {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.event-img img {
+  width: 450px;
+}
 .newBtns {
   display: flex;
   flex-direction: column;
@@ -121,4 +132,19 @@ a {
 
 .artistDetail h2 {
   margin-bottom: 0.5rem;
+}
+
+/* Custom scrollbar styling */
+.event::-webkit-scrollbar {
+  width: 10px;
+}
+
+.event::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color); /* Color of the scrollbar thumb */
+  border-radius: 10px;
+}
+
+.event::-webkit-scrollbar-track {
+  background-color: #ddd; /* Color of the scrollbar track */
+  border-radius: 10px;
 }

@@ -101,7 +101,7 @@ nav {
 
 nav li {
   color: var(--primary-color);
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 500;
   line-height: 2.25rem;
@@ -113,9 +113,9 @@ nav li {
   text-align: left;
 }
 .main-nav {
-  padding: 1.25em 3em;
+  padding: 3em;
   padding-right: 0;
-  border-bottom: 1px solid var(--primary-color);
+  /* border-bottom: 1px solid var(--primary-color); */
 }
 
 .main-nav i {
@@ -130,6 +130,7 @@ nav li {
   padding: 0em 1.5rem;
   padding-top: 10px;
   width: 200px;
+  border: 1px solid transparent;
 }
 
 .main-nav ul {
@@ -148,6 +149,7 @@ main {
 
 .active {
   background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
   padding: 0em 1.5em;
   color: var(--secondary-color);
   border-radius: 45px;
@@ -155,32 +157,66 @@ main {
 .active li {
   color: var(--secondary-color);
 }
+
+ul > a:hover {
+  border: 1px solid var(--primary-color);
+  border-radius: 45px;
+}
 .head-img {
-  width: 5.5rem;
-  height: 5.5rem;
+  width: 53px;
+  height: 54px;
   background-color: var(--primary-color);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+.head-img:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .head-img img {
-  height: 50px;
+  height: 48px;
+  width: 48px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+#profileCard {
+  display: none;
+  position: absolute;
+  top: 90px;
+  right: 10px;
+  width: 200px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid slategray;
 }
 
 .head-detail {
-  width: min-content;
-  font-size: 1.0625rem;
+  /* width: min-content; */
+  font-size: 1rem;
   font-style: normal;
   font-weight: 700;
   margin-top: 1.8rem;
+  margin-bottom: 1rem;
+
   text-align: center;
+}
+.head-detail img {
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
 }
 
 .head-detail button {
   margin-top: 1.2rem;
-  font-size: 1.0625rem;
+  font-size: 1rem;
   padding: 0.5em 1em;
   background-color: var(--primary-color);
   border: none;

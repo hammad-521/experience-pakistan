@@ -93,39 +93,66 @@ button {
 .dashboard {
   padding: 3em 4em;
 }
+/* .dashboard-stats div > div {
+  min-width: 2%;
+} */
 
-.dashboard-stats div {
-  margin-bottom: 1rem;
+.dashboard-stats > div {
+  margin-bottom: 0.8rem;
+  flex-wrap: wrap;
 }
-.dashboard h1 {
+.dashboard-head h1 {
   color: #000;
-  font-size: 2.25rem;
+  font-size: 2.125rem;
   font-style: normal;
   font-weight: 900;
   line-height: 3rem;
-  margin-bottom: 3rem;
+
   text-transform: uppercase;
+}
+.dashboard-head {
+  margin: 1.8rem 3rem 0 3rem;
+}
+
+.dashboard-head-primary {
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+}
+
+.dashboard-head i {
+  font-size: 1.5rem;
 }
 
 .stat-box {
-  padding: 1.5em 2.5em;
+  padding: 1em 2em;
   border-radius: 1.6875rem;
   border: 0.75px solid var(--orange-200, #fbd38d);
   background: var(--white, #fff);
-  box-shadow: 0px 1.5px 3px 0px rgba(0, 0, 0, 0.06),
-    0px 1.5px 4.5px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
   width: min-content;
 }
 
+.stat-box:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
 .stat-box h2 {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-style: normal;
   font-weight: 500;
   padding-bottom: 0.6em;
 }
+
 .stat-box p {
-  font-size: 1.75rem;
+  font-size: 1.15rem;
   font-weight: 700 !important;
+}
+
+.stat-box i {
+  font-size: 3rem;
+  color: var(--primary-color);
 }
 
 .box-detail a {
@@ -150,13 +177,52 @@ button {
 
 /* Artist Section */
 
+.success-card {
+  position: relative;
+  max-width: 300px;
+  padding: 20px;
+  padding-right: 25px;
+
+  color: white;
+  font-weight: 500;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.green {
+  background-color: #4caf50;
+}
+
+.red {
+  background-color: tomato;
+}
+.close-icon {
+  position: absolute;
+  top: 3px;
+  right: 7px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+.dashboard-info {
+  padding: 3em 4em 0;
+}
+
 .addBtn {
   font-size: 1.0625rem;
-  padding: 0.5em 1em;
+  padding: 1em 1.25em;
   background-color: var(--primary-color);
   border: none;
   border-radius: 15px;
   color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.addBtn:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .addBtn i {
@@ -167,6 +233,10 @@ button {
   border: 1px solid var(--primary-color);
   padding: 1em;
   border-radius: 27px;
+}
+
+.artistDetail {
+  margin-right: auto;
 }
 
 .artist img {
@@ -225,6 +295,9 @@ button {
   margin: 0 auto;
   width: 100%;
 }
+.actionBtns {
+  width: 10%;
+}
 
 .actionBtns button {
   padding: 0.5em 1em;
@@ -234,8 +307,12 @@ button {
   border-radius: 10px;
   width: 88px;
   font-weight: 500;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
 }
-
+.actionBtns button:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 .deleteBtn {
   background-color: tomato;
   margin-bottom: 1.25rem;
@@ -346,6 +423,12 @@ th {
 .RestaurantMain h1 {
   margin: 0 !important;
   color: #fff !important;
+
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 3rem;
+  text-transform: uppercase;
 }
 
 .restaurantImages {
@@ -355,4 +438,48 @@ th {
 
 .restaurantImages img {
   margin: 1rem 0.5rem;
+  width: 450px;
+  height: 550px;
+  object-fit: cover;
+}
+
+.searchBox {
+  padding: 0.4em 0.8em;
+  font-size: 1.125rem;
+  border-radius: 40px;
+  border: 1px solid var(--primary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.searchBox:focus-visible {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.userList {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.userList-more {
+  border: 1px solid var(--primary-color);
+  padding: 1em;
+  border-radius: 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* Custom scrollbar styling */
+.userList::-webkit-scrollbar {
+  width: 8px;
+}
+
+.userList::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color); /* Color of the scrollbar thumb */
+  border-radius: 5px;
+}
+
+.userList::-webkit-scrollbar-track {
+  background-color: #ddd; /* Color of the scrollbar track */
+  border-radius: 5px;
 }

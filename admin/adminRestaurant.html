@@ -47,7 +47,7 @@
           </ul>
         </div>
 
-        <div class="secondary-nav">
+        <!--  <div class="secondary-nav">
           <div class="second-nav-head flex flex-center">
             <div class="head-img">
               <img src="../images/profile.svg" alt="" />
@@ -59,103 +59,387 @@
             </div>
           </div>
 
-          <!-- <div class="second-nav-body">
+          <div class="second-nav-body">
             <p>Copyright 2023 Experience Pakistan</p>
             <p>All rights Reserved.</p>
-          </div> -->
-        </div>
+          </div> 
+        </div>-->
       </nav>
 
-      <main class="dashboard">
-        <div class="flex">
-          <h1>Restaurants</h1>
-          <a class="addBtn" href="./adminRestaurantForm.html">
-            Add Restaurant <i class="fa-solid fa-plus"></i>
-          </a>
+      <main>
+        <section class="dashboard-head flex">
+          <div class="dashboard-head-primary flex">
+            <i class="fa-solid fa-bars-staggered"></i>
+            <h1>Restaurants</h1>
+          </div>
+
+          <div class="dashboard-head-secondary flex gap">
+            <input class="searchBox" type="text" placeholder="Search" />
+            <div class="head-img">
+              <img
+                id="profileIcon"
+                onclick="toggleProfileCard()"
+                src="../images/young-man.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </section>
+
+        <div id="profileCard">
+          <div class="head-detail">
+            <img src="../images/young-man.jpg" alt="" />
+            <p>Muhammad Hammad</p>
+            <button>Logout</button>
+          </div>
         </div>
+        <section class="flex dashboard-info">
+          <a class="addBtn" href="./adminRestaurantForm.html">
+            Add a Restaurant <i class="fa-solid fa-plus"></i>
+          </a>
+          <div class="success-card green" id="successCard">
+            <span class="close-icon" onclick="closeCard()">&times;</span>
+            <p>Successfully added Restaurant!</p>
+          </div>
+        </section>
 
-        <section class="userList">
-          <table>
-            <thead>
-              <tr>
-                <th>Restaurant Name</th>
-                <th>City</th>
-                <th>Phone #</th>
-                <th>Category</th>
-                <th>Rating</th>
-                <th>More Info</th>
-                <th>Delete</th>
-                <th>Edit</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Monal</td>
-                <td>Lahore</td>
-                <td>123456789</td>
-                <td>Fine Dinning</td>
-                <td>4.7</td>
-                <td class="actionBtns">
-                  <button
-                    class="viewBtn"
+        <section class="dashboard">
+          <div class="userList">
+            <table>
+              <thead>
+                <tr>
+                  <th>Restaurant Name</th>
+                  <th>City</th>
+                  <th>Phone #</th>
+                  <th>Category</th>
+                  <th>Rating</th>
+                  <th>More Info</th>
+                  <th>Delete</th>
+                  <th>Edit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Monal</td>
+                  <td>Lahore</td>
+                  <td>123456789</td>
+                  <td>Fine Dinning</td>
+                  <td>4.7</td>
+                  <td class="actionBtns">
+                    <button
+                      class="viewBtn"
+                      onclick="window.location.href = './adminRestaurantAll.html'"
+                    >
+                      See All
+                    </button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="deleteBtns">Delete</button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="editBtn">Edit</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Monal</td>
+                  <td>Islamabad</td>
+                  <td>123456789</td>
+                  <td>Fine Dinning</td>
+                  <td>4.7</td>
+                  <td
+                    class="actionBtns"
                     onclick="window.location.href = './adminRestaurantAll.html'"
                   >
-                    See All
-                  </button>
-                </td>
-                <td class="actionBtns">
-                  <button class="deleteBtns">Delete</button>
-                </td>
-                <td class="actionBtns">
-                  <button class="editBtn">Edit</button>
-                </td>
-              </tr>
+                    <button class="viewBtn">See All</button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="deleteBtns">Delete</button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="editBtn">Edit</button>
+                  </td>
+                </tr>
 
-              <tr>
-                <td>Monal</td>
-                <td>Islamabad</td>
-                <td>123456789</td>
-                <td>Fine Dinning</td>
-                <td>4.7</td>
-                <td
-                  class="actionBtns"
-                  onclick="window.location.href = './adminRestaurantAll.html'"
-                >
-                  <button class="viewBtn">See All</button>
-                </td>
-                <td class="actionBtns">
-                  <button class="deleteBtns">Delete</button>
-                </td>
-                <td class="actionBtns">
-                  <button class="editBtn">Edit</button>
-                </td>
-              </tr>
+                <tr>
+                  <td>Monal</td>
+                  <td>Karachi</td>
+                  <td>123456789</td>
+                  <td>Fine Dinning</td>
+                  <td>4.7</td>
+                  <td class="actionBtns">
+                    <button
+                      class="viewBtn"
+                      onclick="window.location.href = './adminRestaurantAll.html'"
+                    >
+                      See All
+                    </button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="deleteBtns">Delete</button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="editBtn">Edit</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Monal</td>
+                  <td>Lahore</td>
+                  <td>123456789</td>
+                  <td>Fine Dinning</td>
+                  <td>4.7</td>
+                  <td class="actionBtns">
+                    <button
+                      class="viewBtn"
+                      onclick="window.location.href = './adminRestaurantAll.html'"
+                    >
+                      See All
+                    </button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="deleteBtns">Delete</button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="editBtn">Edit</button>
+                  </td>
+                </tr>
 
-              <tr>
-                <td>Monal</td>
-                <td>Karachi</td>
-                <td>123456789</td>
-                <td>Fine Dinning</td>
-                <td>4.7</td>
-                <td class="actionBtns">
-                  <button
-                    class="viewBtn"
+                <tr>
+                  <td>Monal</td>
+                  <td>Islamabad</td>
+                  <td>123456789</td>
+                  <td>Fine Dinning</td>
+                  <td>4.7</td>
+                  <td
+                    class="actionBtns"
                     onclick="window.location.href = './adminRestaurantAll.html'"
                   >
-                    See All
-                  </button>
-                </td>
-                <td class="actionBtns">
-                  <button class="deleteBtns">Delete</button>
-                </td>
-                <td class="actionBtns">
-                  <button class="editBtn">Edit</button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+                    <button class="viewBtn">See All</button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="deleteBtns">Delete</button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="editBtn">Edit</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Monal</td>
+                  <td>Karachi</td>
+                  <td>123456789</td>
+                  <td>Fine Dinning</td>
+                  <td>4.7</td>
+                  <td class="actionBtns">
+                    <button
+                      class="viewBtn"
+                      onclick="window.location.href = './adminRestaurantAll.html'"
+                    >
+                      See All
+                    </button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="deleteBtns">Delete</button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="editBtn">Edit</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Monal</td>
+                  <td>Lahore</td>
+                  <td>123456789</td>
+                  <td>Fine Dinning</td>
+                  <td>4.7</td>
+                  <td class="actionBtns">
+                    <button
+                      class="viewBtn"
+                      onclick="window.location.href = './adminRestaurantAll.html'"
+                    >
+                      See All
+                    </button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="deleteBtns">Delete</button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="editBtn">Edit</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Monal</td>
+                  <td>Islamabad</td>
+                  <td>123456789</td>
+                  <td>Fine Dinning</td>
+                  <td>4.7</td>
+                  <td
+                    class="actionBtns"
+                    onclick="window.location.href = './adminRestaurantAll.html'"
+                  >
+                    <button class="viewBtn">See All</button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="deleteBtns">Delete</button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="editBtn">Edit</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Monal</td>
+                  <td>Karachi</td>
+                  <td>123456789</td>
+                  <td>Fine Dinning</td>
+                  <td>4.7</td>
+                  <td class="actionBtns">
+                    <button
+                      class="viewBtn"
+                      onclick="window.location.href = './adminRestaurantAll.html'"
+                    >
+                      See All
+                    </button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="deleteBtns">Delete</button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="editBtn">Edit</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Monal</td>
+                  <td>Lahore</td>
+                  <td>123456789</td>
+                  <td>Fine Dinning</td>
+                  <td>4.7</td>
+                  <td class="actionBtns">
+                    <button
+                      class="viewBtn"
+                      onclick="window.location.href = './adminRestaurantAll.html'"
+                    >
+                      See All
+                    </button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="deleteBtns">Delete</button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="editBtn">Edit</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Monal</td>
+                  <td>Islamabad</td>
+                  <td>123456789</td>
+                  <td>Fine Dinning</td>
+                  <td>4.7</td>
+                  <td
+                    class="actionBtns"
+                    onclick="window.location.href = './adminRestaurantAll.html'"
+                  >
+                    <button class="viewBtn">See All</button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="deleteBtns">Delete</button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="editBtn">Edit</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Monal</td>
+                  <td>Karachi</td>
+                  <td>123456789</td>
+                  <td>Fine Dinning</td>
+                  <td>4.7</td>
+                  <td class="actionBtns">
+                    <button
+                      class="viewBtn"
+                      onclick="window.location.href = './adminRestaurantAll.html'"
+                    >
+                      See All
+                    </button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="deleteBtns">Delete</button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="editBtn">Edit</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Monal</td>
+                  <td>Lahore</td>
+                  <td>123456789</td>
+                  <td>Fine Dinning</td>
+                  <td>4.7</td>
+                  <td class="actionBtns">
+                    <button
+                      class="viewBtn"
+                      onclick="window.location.href = './adminRestaurantAll.html'"
+                    >
+                      See All
+                    </button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="deleteBtns">Delete</button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="editBtn">Edit</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Monal</td>
+                  <td>Islamabad</td>
+                  <td>123456789</td>
+                  <td>Fine Dinning</td>
+                  <td>4.7</td>
+                  <td
+                    class="actionBtns"
+                    onclick="window.location.href = './adminRestaurantAll.html'"
+                  >
+                    <button class="viewBtn">See All</button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="deleteBtns">Delete</button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="editBtn">Edit</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Monal</td>
+                  <td>Karachi</td>
+                  <td>123456789</td>
+                  <td>Fine Dinning</td>
+                  <td>4.7</td>
+                  <td class="actionBtns">
+                    <button
+                      class="viewBtn"
+                      onclick="window.location.href = './adminRestaurantAll.html'"
+                    >
+                      See All
+                    </button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="deleteBtns">Delete</button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="editBtn">Edit</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
       </main>
     </section>
+    <script src="../scripts/admin.js"></script>
   </body>
 </html>

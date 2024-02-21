@@ -47,7 +47,7 @@
           </ul>
         </div>
 
-        <div class="secondary-nav">
+        <!-- <div class="secondary-nav">
           <div class="second-nav-head flex flex-center">
             <div class="head-img">
               <img src="../images/profile.svg" alt="" />
@@ -59,67 +59,239 @@
             </div>
           </div>
 
-          <!-- <div class="second-nav-body">
+           <div class="second-nav-body">
             <p>Copyright 2023 Experience Pakistan</p>
             <p>All rights Reserved.</p>
-          </div> -->
-        </div>
+          </div> 
+        </div> -->
       </nav>
 
-      <main class="dashboard">
-        <div class="flex">
-          <h1>Artists</h1>
-          <a class="addBtn" href="./adminArtistForm.html">
-            Add Artist <i class="fa-solid fa-plus"></i>
-          </a>
-        </div>
-
-        <section class="userList">
-          <div class="artist flex gap">
-            <img src="../images/annurals.jpeg" alt="" />
-            <div class="artistDetail">
-              <h2>Annural Khalid</h2>
-              <p class="artistCategory">Singer</p>
-              <span>
-                <p>
-                  Annural Khalid is a singer/songwriter from Islamabad,
-                  Pakistan. Singing since the age of 4, her music career
-                  officially kicked off during lockdown 2020 when she started
-                  uploading covers of Urdu/Punjabi hits on her instagram page
-                  which gained her a major following on the platform, followed
-                  with the release of her debut single 'Dil de Bol'.
-                </p>
-              </span>
-            </div>
-            <div class="actionBtns">
-              <button class="deleteBtn">Delete</button>
-              <button class="editBtn">Edit</button>
-            </div>
+      <main>
+        <section class="dashboard-head flex">
+          <div class="dashboard-head-primary flex">
+            <i class="fa-solid fa-bars-staggered"></i>
+            <h1>Artists</h1>
           </div>
 
-          <div class="artist flex gap">
-            <img src="../images/annurals.jpeg" alt="" />
-            <div class="artistDetail">
-              <h2>Annural Khalid</h2>
-              <p class="artistCategory">Singer</p>
-              <span>
-                <p>
-                  Annural Khalid is a singer/songwriter from Islamabad,
-                  Pakistan. Singing since the age of 4, her music career
-                  officially kicked off during lockdown 2020 when she started
-                  uploading covers of Urdu/Punjabi hits on her instagram page
-                  which gained her a major following on the platform, followed
-                  with the release of her debut single 'Dil de Bol'.
-                </p>
-              </span>
+          <div class="dashboard-head-secondary flex gap">
+            <input class="searchBox" type="text" placeholder="Search" />
+
+            <div class="head-img">
+              <img
+                id="profileIcon"
+                onclick="toggleProfileCard()"
+                src="../images/young-man.jpg"
+                alt=""
+              />
             </div>
-            <div class="actionBtns">
-              <button class="deleteBtn">Delete</button>
-              <button class="editBtn">Edit</button>
+          </div>
+        </section>
+
+        <div id="profileCard">
+          <div class="head-detail">
+            <img src="../images/young-man.jpg" alt="" />
+            <p>Muhammad Hammad</p>
+            <button>Logout</button>
+          </div>
+        </div>
+
+        <section class="flex dashboard-info">
+          <a class="addBtn" href="./adminArtistForm.html">
+            Add an Artist <i class="fa-solid fa-plus"></i>
+          </a>
+          <div class="success-card red" id="successCard">
+            <span class="close-icon" onclick="closeCard()">&times;</span>
+            <p>Successfully added Artist!</p>
+          </div>
+        </section>
+
+        <section class="dashboard">
+          <div class="userList-more userList">
+            <div class="artist flex gap">
+              <img src="../images/annurals.jpeg" alt="" />
+              <div class="artistDetail">
+                <h2>Annural Khalid</h2>
+                <p class="artistCategory">Singer</p>
+                <span>
+                  <p>Annural Khalid is a singer/</p>
+                </span>
+              </div>
+              <div class="actionBtns">
+                <button class="deleteBtn">Delete</button>
+                <button class="editBtn">Edit</button>
+              </div>
+            </div>
+
+            <div class="artist flex gap">
+              <img src="../images/annurals.jpeg" alt="" />
+              <div class="artistDetail">
+                <h2>Annural Khalid</h2>
+                <p class="artistCategory">Singer</p>
+                <span>
+                  <p>
+                    Annural Khalid is a singer/songwriter from Islamabad,
+                    Pakistan. Singing since the age of 4, her music career
+                    officially kicked off during lockdown 2020 when she started
+                    uploading covers of Urdu/Punjabi hits on her instagram page
+                    which gained her a major following on the platform, followed
+                    with the release of her debut single 'Dil de Bol'.
+                  </p>
+                </span>
+              </div>
+              <div class="actionBtns">
+                <button class="deleteBtn">Delete</button>
+                <button class="editBtn">Edit</button>
+              </div>
+            </div>
+            <div class="artist flex gap">
+              <img src="../images/annurals.jpeg" alt="" />
+              <div class="artistDetail">
+                <h2>Annural Khalid</h2>
+                <p class="artistCategory">Singer</p>
+                <span>
+                  <p>Annural Khalid is a singer/</p>
+                </span>
+              </div>
+              <div class="actionBtns">
+                <button class="deleteBtn">Delete</button>
+                <button class="editBtn">Edit</button>
+              </div>
+            </div>
+
+            <div class="artist flex gap">
+              <img src="../images/annurals.jpeg" alt="" />
+              <div class="artistDetail">
+                <h2>Annural Khalid</h2>
+                <p class="artistCategory">Singer</p>
+                <span>
+                  <p>
+                    Annural Khalid is a singer/songwriter from Islamabad,
+                    Pakistan. Singing since the age of 4, her music career
+                    officially kicked off during lockdown 2020 when she started
+                    uploading covers of Urdu/Punjabi hits on her instagram page
+                    which gained her a major following on the platform, followed
+                    with the release of her debut single 'Dil de Bol'.
+                  </p>
+                </span>
+              </div>
+              <div class="actionBtns">
+                <button class="deleteBtn">Delete</button>
+                <button class="editBtn">Edit</button>
+              </div>
+            </div>
+            <div class="artist flex gap">
+              <img src="../images/annurals.jpeg" alt="" />
+              <div class="artistDetail">
+                <h2>Annural Khalid</h2>
+                <p class="artistCategory">Singer</p>
+                <span>
+                  <p>Annural Khalid is a singer/</p>
+                </span>
+              </div>
+              <div class="actionBtns">
+                <button class="deleteBtn">Delete</button>
+                <button class="editBtn">Edit</button>
+              </div>
+            </div>
+
+            <div class="artist flex gap">
+              <img src="../images/annurals.jpeg" alt="" />
+              <div class="artistDetail">
+                <h2>Annural Khalid</h2>
+                <p class="artistCategory">Singer</p>
+                <span>
+                  <p>
+                    Annural Khalid is a singer/songwriter from Islamabad,
+                    Pakistan. Singing since the age of 4, her music career
+                    officially kicked off during lockdown 2020 when she started
+                    uploading covers of Urdu/Punjabi hits on her instagram page
+                    which gained her a major following on the platform, followed
+                    with the release of her debut single 'Dil de Bol'.
+                  </p>
+                </span>
+              </div>
+              <div class="actionBtns">
+                <button class="deleteBtn">Delete</button>
+                <button class="editBtn">Edit</button>
+              </div>
+            </div>
+            <div class="artist flex gap">
+              <img src="../images/annurals.jpeg" alt="" />
+              <div class="artistDetail">
+                <h2>Annural Khalid</h2>
+                <p class="artistCategory">Singer</p>
+                <span>
+                  <p>Annural Khalid is a singer/</p>
+                </span>
+              </div>
+              <div class="actionBtns">
+                <button class="deleteBtn">Delete</button>
+                <button class="editBtn">Edit</button>
+              </div>
+            </div>
+
+            <div class="artist flex gap">
+              <img src="../images/annurals.jpeg" alt="" />
+              <div class="artistDetail">
+                <h2>Annural Khalid</h2>
+                <p class="artistCategory">Singer</p>
+                <span>
+                  <p>
+                    Annural Khalid is a singer/songwriter from Islamabad,
+                    Pakistan. Singing since the age of 4, her music career
+                    officially kicked off during lockdown 2020 when she started
+                    uploading covers of Urdu/Punjabi hits on her instagram page
+                    which gained her a major following on the platform, followed
+                    with the release of her debut single 'Dil de Bol'.
+                  </p>
+                </span>
+              </div>
+              <div class="actionBtns">
+                <button class="deleteBtn">Delete</button>
+                <button class="editBtn">Edit</button>
+              </div>
+            </div>
+            <div class="artist flex gap">
+              <img src="../images/annurals.jpeg" alt="" />
+              <div class="artistDetail">
+                <h2>Annural Khalid</h2>
+                <p class="artistCategory">Singer</p>
+                <span>
+                  <p>Annural Khalid is a singer/</p>
+                </span>
+              </div>
+              <div class="actionBtns">
+                <button class="deleteBtn">Delete</button>
+                <button class="editBtn">Edit</button>
+              </div>
+            </div>
+
+            <div class="artist flex gap">
+              <img src="../images/annurals.jpeg" alt="" />
+              <div class="artistDetail">
+                <h2>Annural Khalid</h2>
+                <p class="artistCategory">Singer</p>
+                <span>
+                  <p>
+                    Annural Khalid is a singer/songwriter from Islamabad,
+                    Pakistan. Singing since the age of 4, her music career
+                    officially kicked off during lockdown 2020 when she started
+                    uploading covers of Urdu/Punjabi hits on her instagram page
+                    which gained her a major following on the platform, followed
+                    with the release of her debut single 'Dil de Bol'.
+                  </p>
+                </span>
+              </div>
+              <div class="actionBtns">
+                <button class="deleteBtn">Delete</button>
+                <button class="editBtn">Edit</button>
+              </div>
             </div>
           </div>
         </section>
       </main>
     </section>
+
+    <script src="../scripts/admin.js"></script>
   </body>
 </html>
