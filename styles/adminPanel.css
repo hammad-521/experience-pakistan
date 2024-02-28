@@ -131,7 +131,8 @@ button {
   background: var(--white, #fff);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease-in-out;
-  width: min-content;
+  width: 22%;
+  flex-basis: 225px;
 }
 
 .stat-box:hover {
@@ -289,6 +290,12 @@ button {
   border: none;
   border-radius: 15px;
   width: 50%;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 10px var(--primary-color); /* Adjust the box shadow properties and color */
 }
 
 .confirmBtn {

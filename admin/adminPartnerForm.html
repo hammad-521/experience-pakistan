@@ -46,24 +46,6 @@
             >
           </ul>
         </div>
-
-        <!-- <div class="secondary-nav">
-          <div class="second-nav-head flex flex-center">
-            <div class="head-img">
-              <img src="../images/profile.svg" alt="" />
-            </div>
-
-            <div class="head-detail">
-              <p>Muhammad Hammad</p>
-              <button>Logout</button>
-            </div>
-          </div>
-
-           <div class="second-nav-body">
-            <p>Copyright 2023 Experience Pakistan</p>
-            <p>All rights Reserved.</p>
-          </div> 
-        </div>-->
       </nav>
 
       <main>
@@ -96,12 +78,38 @@
         <section class="dashboard list">
           <form class="product-form" action="/artist" method="POST">
             <div class="form-control">
-              <label for="name">Partner Name:</label>
+              <label for="fname">First Name</label>
               <input
+                class="width-small"
                 type="text"
-                name="name"
-                id="name"
-                placeholder="Coke Studio"
+                name="fname"
+                id=""
+                placeholder="Coke"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label for="lname">Last Name</label>
+              <input
+                class="width-small"
+                type="text"
+                name="lname"
+                id=""
+                placeholder="Studio"
+                required
+              />
+            </div>
+
+            <div class="form-control">
+              <label for="organization">Organization Name</label>
+
+              <input
+                class="width margin"
+                type="text"
+                name="organization"
+                id="organization"
+                placeholder="Organization Name"
+                required
               />
             </div>
 
@@ -124,6 +132,55 @@
                 placeholder="Description Here!"
               ></textarea>
             </div>
+
+            <div class="form-control">
+              <label for="email">Partner Email</label>
+
+              <input
+                class="width margin"
+                type="text"
+                name="email"
+                id=""
+                placeholder="Email"
+                required
+              />
+            </div>
+
+            <div class="form-control">
+              <label for="phone">Phone Number</label>
+              <input
+                class="width margin"
+                type="tel"
+                name="phone"
+                id=""
+                placeholder="Phone Number"
+                required
+              />
+            </div>
+
+            <div class="form-control">
+              <label for="password">Password</label>
+              <input
+                class="width margin-less"
+                type="text"
+                name="password"
+                id=""
+                placeholder="Password"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label for="password">Confirm Password</label>
+              <input
+                class="width"
+                type="text"
+                name="cpassword"
+                id=""
+                placeholder="Confirm Password"
+                required
+              />
+            </div>
+
             <div class="confirmBtn">
               <button class="addBtn" id="confirm" type="submit">Confirm</button>
             </div>

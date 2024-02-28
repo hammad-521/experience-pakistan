@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignUp</title>
+
+    <link rel="stylesheet" href="../styles/userSignup.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Nanum+Gothic:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/9d779ebc01.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section class="top-CTA">
+      <p>
+        <i class="fa-solid fa-crown"></i> <a href="">Subscribe</a> to our
+        Newsletter to get latest updates on things to do in Pakistan!
+      </p>
+    </section>
+    <!-- ----------------- Header ---------------------- -->
+    <header class="container flex gap">
+      <div class="bar menu-toggle" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <div class="flex flex-center">
+        <img
+          class="header-logo tablet-logo"
+          src="../images/newlogo.png"
+          alt=""
+          hidden
+        />
+      </div>
+      <nav class="primary-nav flex gap menu" style="left: -1500px">
+        <a href="../index.html">
+          <img
+            class="header-logo laptop-logo"
+            src="../images/newlogo.png"
+            alt="Experience Pakistan Logo"
+        /></a>
+      </nav>
+
+      <div class="actionButtons menu-2">
+        <a class="actionButtons-1" href="./signup.html">Need Help ? </a>
+      </div>
+    </header>
+    <!-- ----------------- Main Section ---------------------- -->
+    <main class="container flex signupForm">
+      <section class="main-right centers">
+        <h1>Create Account</h1>
+        <form action="" method="post">
+          <label for="Name"> Name</label>
+          <br />
+          <input
+            class="width margin"
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter your Name"
+            required
+          />
+          <br />
+
+          <label for="email">Email</label>
+          <br />
+          <input
+            class="width margin"
+            type="text"
+            name="email"
+            id=""
+            placeholder="Enter your Email"
+            required
+          />
+          <br />
+
+          <label for="phone">Phone Number</label>
+          <br />
+          <input
+            class="width margin"
+            type="tel"
+            name="phone"
+            id=""
+            placeholder="Enter a Phone Number"
+            required
+          />
+          <br />
+
+          <label for="password">Password</label><br />
+          <input
+            class="width margin"
+            type="text"
+            name="password"
+            id=""
+            placeholder="Password"
+            required
+          /><br />
+
+          <label for="cpassword">Confirm Password</label><br />
+
+          <input
+            class="width margin"
+            type="text"
+            name="cpassword"
+            id="cpassword"
+            placeholder="Confirm Password"
+            required
+          />
+
+          <input
+            class="submit-btn"
+            type="submit
+            "
+            placeholder="Submit"
+          />
+        </form>
+        <p>Already have an account? <a href="./userLogin.html">Log in</a></p>
+      </section>
+    </main>
+
+    <!-- ----------------- Scripts ---------------------- -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="./scripts/menu.js"></script>
+  </body>
+</html>
