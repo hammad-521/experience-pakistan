@@ -601,6 +601,10 @@ footer img {
   left: auto;
 }
 
+.bottom {
+  bottom: 0;
+}
+
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
