@@ -148,3 +148,11 @@ a {
   background-color: #ddd; /* Color of the scrollbar track */
   border-radius: 10px;
 }
+
+.ticket-fields {
+  display: none;
+}
+
+.margin-right {
+  margin-right: 15px;
+}

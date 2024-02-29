@@ -32,7 +32,7 @@
             <a href="./adminEvent.html"
               ><li><i class="fa-solid fa-campground"></i>Events</li></a
             >
-            <a href="./adminPartner.html" class="active">
+            <a href="./adminPartner.html">
               <li><i class="fa-solid fa-rug"></i>Partners</li>
             </a>
             <a href="./adminArtist.html"
@@ -41,7 +41,7 @@
             <a href="./adminRestaurant.html"
               ><li><i class="fa-solid fa-utensils"></i>Restaurants</li>
             </a>
-            <a href="./adminSettings.html"
+            <a href="./adminSettings.html" class="active"
               ><li><i class="fa-solid fa-gear"></i>Settings</li></a
             >
           </ul>
@@ -52,7 +52,7 @@
         <section class="dashboard-head flex">
           <div class="dashboard-head-primary flex">
             <i class="fa-solid fa-bars-staggered"></i>
-            <h1>New Partner</h1>
+            <h1>Account Details</h1>
           </div>
 
           <div class="dashboard-head-secondary">
@@ -77,6 +77,27 @@
 
         <section class="dashboard list">
           <form class="product-form" action="/artist" method="POST">
+            <div class="form-control form-set">
+              <label for="image">Profile Image</label>
+              <div class="profile-image">
+                <img
+                  id="user-image"
+                  src="https://timelessdramachannel.com/wp-content/uploads/2019/07/kivanc-tatlitug-e1562932203955.png"
+                  alt="User Profile Image"
+                />
+
+                <label for="image-upload" class="change-image" id="width-small"
+                  >Change Image</label
+                >
+                <input
+                  type="file"
+                  id="image-upload"
+                  accept="image/*"
+                  style="display: none"
+                />
+              </div>
+            </div>
+
             <div class="form-control">
               <label for="fname">First Name</label>
               <input
@@ -84,7 +105,7 @@
                 type="text"
                 name="fname"
                 id=""
-                placeholder="Coke"
+                placeholder="Wasif"
                 required
               />
             </div>
@@ -95,46 +116,13 @@
                 type="text"
                 name="lname"
                 id=""
-                placeholder="Studio"
+                placeholder="Shahid"
                 required
               />
             </div>
 
             <div class="form-control">
-              <label for="organization">Organization Name</label>
-
-              <input
-                class="width margin"
-                type="text"
-                name="organization"
-                id="organization"
-                placeholder="Organization Name"
-                required
-              />
-            </div>
-
-            <div class="form-control">
-              <label for="imageURL">Partner Image:</label>
-              <input
-                type="file"
-                name="imageURL"
-                id="ImageURL"
-                accept="image/*"
-              />
-            </div>
-
-            <div class="form-control desc">
-              <label for="description">Partner Description:</label>
-              <textarea
-                name="description"
-                id="Description"
-                rows="5"
-                placeholder="Description Here!"
-              ></textarea>
-            </div>
-
-            <div class="form-control">
-              <label for="email">Partner Email</label>
+              <label for="email">Email</label>
 
               <input
                 class="width margin"
@@ -157,37 +145,48 @@
                 required
               />
             </div>
-
             <div class="form-control">
-              <label for="password">Password</label>
+              <label for="password">Current Password</label>
               <input
                 class="width margin-less"
                 type="text"
                 name="password"
                 id=""
-                placeholder="Password"
+                placeholder="Enter your current Password"
                 required
               />
             </div>
             <div class="form-control">
-              <label for="password">Confirm Password</label>
+              <label for="password">New Password</label>
               <input
                 class="width"
                 type="text"
                 name="cpassword"
                 id=""
-                placeholder="Confirm Password"
+                placeholder="Enter your New Password"
                 required
               />
             </div>
 
             <div class="confirmBtn">
-              <button class="addBtn" id="confirm" type="submit">Confirm</button>
+              <button class="addBtn" id="confirm" type="submit">Update</button>
             </div>
           </form>
         </section>
       </main>
     </section>
     <script src="../scripts/admin.js"></script>
+    <script>
+      const imageUpload = document.getElementById("image-upload");
+      const userImage = document.getElementById("user-image");
+
+      imageUpload.addEventListener("change", function () {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          userImage.src = e.target.result;
+        };
+        reader.readAsDataURL(this.files[0]);
+      });
+    </script>
   </body>
 </html>

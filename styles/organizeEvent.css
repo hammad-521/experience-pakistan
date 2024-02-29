@@ -64,6 +64,10 @@ select {
   /* width: 500px; */
   width: 100%;
 }
+.width-large {
+  max-width: 1000px;
+  width: 100%;
+}
 .width-small {
   max-width: 300px;
   width: 100%;
@@ -113,4 +117,16 @@ select {
   .flex-col {
     align-items: center;
   }
+}
+
+.ticket-fields {
+  display: none;
+}
+#ticketDetails {
+  width: 100%;
+}
+
+#ticketDetails > * {
+  margin-bottom: 0.6rem;
+  width: 100%;
 }

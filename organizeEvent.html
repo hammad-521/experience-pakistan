@@ -133,33 +133,8 @@
               </div>
             </div>
 
-            <div class="flex-centers">
-              <div class="form-control">
-                <label for="address">Address:</label><br />
-                <input class="width" type="text" name="address" id="address" />
-              </div>
+            <!-- <div class="flex-centers"></div> -->
 
-              <div class="form-control">
-                <label for="standard">Standard Ticket:</label> <br />
-                <input
-                  class="width"
-                  type="number"
-                  name="standard"
-                  id="standard"
-                  placeholder="Price for a Standard Ticket"
-                />
-                <br />
-                <label for="vip">VIP Ticket:</label> <br />
-                <input
-                  class="width"
-                  type="number"
-                  name="vip"
-                  id="vip"
-                  placeholder="Price for a VIP Ticket"
-                />
-                <br />
-              </div>
-            </div>
             <div class="flex-centers">
               <div class="form-control">
                 <label for="Starttime">Start Time:</label><br />
@@ -181,6 +156,7 @@
                 />
               </div>
             </div>
+
             <div class="flex-centers">
               <div class="form-control">
                 <label for="StartDate">Start Date:</label><br />
@@ -203,6 +179,15 @@
             </div>
 
             <div class="form-control desc wrapper">
+              <label for="address">Address:</label><br />
+              <input
+                class="width-large"
+                type="text"
+                name="address"
+                id="address"
+              />
+            </div>
+            <div class="form-control desc wrapper">
               <label for="description">Description:</label><br />
               <textarea
                 name="description"
@@ -212,6 +197,44 @@
                 class="desc-area"
               ></textarea>
             </div>
+
+            <div class="flex-centers">
+              <div class="form-control">
+                <label for="ticketedEvent">Is your Event Ticketed?</label>
+                <select
+                  id="ticketedEvent"
+                  name="ticketedEvent"
+                  class="width-small"
+                  onchange="toggleTicketFields()"
+                >
+                  <option value="no">No</option>
+                  <option value="yes">Yes</option>
+                </select>
+                <br />
+              </div>
+
+              <div class="form-control">
+                <div id="ticketFields" class="ticket-fields">
+                  <label for="numOfTickets"
+                    >How many types of Tickets are you offering?</label
+                  >
+                  <br />
+                  <input
+                    type="number"
+                    id="numOfTickets"
+                    class="width"
+                    name="numOfTickets"
+                    placeholder="Enter the number of ticket types"
+                    min="1"
+                    required
+                    onchange="updateTicketDetails()"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div id="ticketDetails"></div>
+
             <div class="cover wrapper">
               <button class="btn" type="submit">Submit</button>
             </div>
@@ -301,5 +324,86 @@
     <!-- ----------------- Scripts ---------------------- -->
 
     <script src="./scripts/menu.js"></script>
+
+    <script>
+      function toggleTicketFields() {
+        var ticketedEvent = document.getElementById("ticketedEvent");
+        var ticketFields = document.getElementById("ticketFields");
+
+        if (ticketedEvent.value === "yes") {
+          ticketFields.style.display = "block";
+        } else {
+          ticketFields.style.display = "none";
+          document.getElementById("ticketDetails").innerHTML = ""; // Clear previous fields
+        }
+      }
+
+      function updateTicketDetails() {
+        var numOfTickets = document.getElementById("numOfTickets");
+        var ticketDetails = document.getElementById("ticketDetails");
+
+        var value = parseInt(numOfTickets.value); // Convert to integer
+
+        // Validate input (optional)
+        if (isNaN(value) || value < 1) {
+          ticketDetails.innerHTML =
+            "Please enter a valid number of ticket types (minimum 1)";
+          return; // Exit if invalid
+        }
+
+        ticketDetails.innerHTML = ""; // Clear previous fields
+
+        // Create input fields dynamically
+        for (var i = 1; i <= value; i++) {
+          // Create wrapper div with class "flex-centers"
+          var flexCentersWrapper = document.createElement("div");
+          flexCentersWrapper.classList.add("flex-centers");
+
+          // Ticket Type Name
+          var ticketTypeWrapper = document.createElement("div");
+          ticketTypeWrapper.classList.add("form-control");
+
+          var ticketTypeLabel = document.createElement("label");
+          ticketTypeLabel.for = "ticketType" + i;
+          ticketTypeLabel.innerHTML = "Enter Ticket Type " + i + " Name:";
+          ticketTypeWrapper.appendChild(ticketTypeLabel);
+
+          var ticketTypeInput = document.createElement("input");
+          ticketTypeInput.type = "text";
+          ticketTypeInput.id = "ticketType" + i;
+          ticketTypeInput.classList.add("width");
+          ticketTypeInput.name = "ticketType" + i;
+          ticketTypeInput.placeholder = "e.g., Platinum, Gold, etc.";
+          ticketTypeWrapper.appendChild(ticketTypeInput);
+
+          flexCentersWrapper.appendChild(ticketTypeWrapper);
+
+          // Ticket Price
+          var ticketPriceWrapper = document.createElement("div");
+          ticketPriceWrapper.classList.add("form-control");
+
+          var ticketPriceLabel = document.createElement("label");
+          ticketPriceLabel.for = "ticketPrice" + i;
+          ticketPriceLabel.innerHTML = "Enter Ticket Price " + i + ":";
+          ticketPriceWrapper.appendChild(ticketPriceLabel);
+
+          var ticketPriceInput = document.createElement("input");
+          ticketPriceInput.type = "number";
+          ticketPriceInput.id = "ticketPrice" + i;
+          ticketPriceInput.classList.add("width");
+          ticketPriceInput.name = "ticketPrice" + i;
+          ticketPriceInput.placeholder = "Enter Ticket Price";
+          ticketPriceWrapper.appendChild(ticketPriceInput);
+
+          flexCentersWrapper.appendChild(ticketPriceWrapper);
+
+          // Add some space between each set of fields
+          // flexCentersWrapper.appendChild(document.createElement("br"));
+
+          // Append the flex-centers wrapper to the main ticketDetails div
+          ticketDetails.appendChild(flexCentersWrapper);
+        }
+      }
+    </script>
   </body>
 </html>

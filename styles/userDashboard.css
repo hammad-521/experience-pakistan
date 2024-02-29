@@ -1,0 +1,43 @@
+/* Setting Form  */
+.profile-image {
+  position: relative;
+  display: inline-block;
+  /* margin-bottom: 1rem; */
+}
+
+.profile-image img {
+  max-height: 100%;
+  height: 380px;
+  width: 380px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+}
+
+.change-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  line-height: 100px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  font-size: 1.25rem !important;
+  padding-top: 6em;
+  border-radius: 50%;
+}
+
+.profile-image:hover .change-image {
+  opacity: 1;
+}
+
+.form-set {
+  display: flex;
+  justify-self: start;
+  align-items: center;
+}

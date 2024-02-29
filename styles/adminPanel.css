@@ -270,6 +270,7 @@ button {
   font-size: 1.125rem;
   display: inline-block;
   width: 240px !important;
+  line-height: 24px;
 }
 
 .form-control {
@@ -299,8 +300,11 @@ textarea:focus {
 }
 
 .confirmBtn {
-  margin: 0 auto;
-  width: 100%;
+  display: flex;
+  /* margin-left: auto; */
+  justify-content: end;
+  width: 74%;
+  padding-top: 1rem;
 }
 .actionBtns {
   width: 10%;
@@ -489,4 +493,51 @@ th {
 .userList::-webkit-scrollbar-track {
   background-color: #ddd; /* Color of the scrollbar track */
   border-radius: 5px;
+}
+
+/* Setting Form  */
+.profile-image {
+  position: relative;
+  display: inline-block;
+  /* margin-bottom: 1rem; */
+}
+#width-small {
+  width: 150px !important;
+}
+
+.profile-image img {
+  max-height: 100%;
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+}
+
+.change-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  line-height: 100px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  font-size: 1rem !important;
+  padding-top: 2em;
+  border-radius: 50%;
+}
+
+.profile-image:hover .change-image {
+  opacity: 1;
+}
+
+.form-set {
+  display: flex;
+  justify-self: start;
+  align-items: center;
 }

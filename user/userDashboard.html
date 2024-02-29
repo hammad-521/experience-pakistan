@@ -11,7 +11,8 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="./styles/organizersDashboard.css" />
+    <link rel="stylesheet" href="../styles/organizersDashboard.css" />
+    <link rel="stylesheet" href="../styles/userDashboard.css" />
 
     <script
       src="https://kit.fontawesome.com/9d779ebc01.js"
@@ -28,7 +29,7 @@
       <div class="flex flex-center">
         <img
           class="header-logo tablet-logo"
-          src="./images/newlogo.png"
+          src="../images/newlogo.png"
           alt=""
           hidden
         />
@@ -37,24 +38,25 @@
       <nav class="primary-nav flex gap menu" style="left: -1500px">
         <img
           class="header-logo laptop-logo"
-          src="./images/newlogo.png"
+          src="../images/newlogo.png"
           alt="Experience Pakistan Logo"
         />
         <ul class="flex gap menu-nav">
-          <li><a href="./organizersDashboard.html">Home</a></li>
+          <li><a href="./organizersDashboard.html">Profile</a></li>
 
-          <li><a href="./organizeEvent.html">Organize an Event</a></li>
-          <li><a href="./eventList.html">View Events List</a></li>
+          <li><a href="#">Tickets</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Reviews</a></li>
           <span class="actionButtons hidden gap">
             <li class="actionButtons-2">
               <i class="fa-solid fa-magnifying-glass"></i>
             </li>
             <li class="actionButtons-3">
-              <a href="./login.html">
+              <a href="./userDashboard.html">
                 <i class="fa-sharp fa-solid fa-user"></i
               ></a>
             </li>
-            <a class="actionButtons-1" href="./signup.html"> Logout</a>
+            <a class="actionButtons-1" href="./userLogin.html"> Logout</a>
           </span>
         </ul>
       </nav>
@@ -66,35 +68,49 @@
         <button class="actionButtons-3">
           <a href="./login.html"> <i class="fa-sharp fa-solid fa-user"></i></a>
         </button>
-        <a class="actionButtons-1" href="./signup.html"> Logout</a>
+        <a class="actionButtons-1" href="./userLogin.html"> Logout</a>
       </div>
     </header>
     <!-- ----------------- Hero Section ---------------------- -->
     <main>
       <div class="container">
         <section class="organizer">
-          <h1>Organizer's Dashboard</h1>
+          <h1>User's Dashboard</h1>
         </section>
 
         <section class="organizer-details flex wrapper gap-large">
-          <div class="organizer-image">
-            <img src="./images/coke studio.jpg" alt="" />
+          <div class="organizer-image profile-image">
+            <img
+              id="user-image"
+              src="https://i.pinimg.com/736x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg"
+              alt="User Profile Image"
+            />
+
+            <label for="image-upload" class="change-image" id="width-small"
+              >Click Here to Upload a New Image</label
+            >
+            <input
+              type="file"
+              id="image-upload"
+              accept="image/*"
+              style="display: none"
+            />
           </div>
 
           <div class="organizer-info flex">
             <div class="organizer-info-head flex">
-              <h2>Coke Studio</h2>
+              <h2>Muhammad Wasif Shahid</h2>
               <button class="editBtn">
                 Edit info <i class="fa-solid fa-pencil"></i>
               </button>
             </div>
 
             <div class="organizer-contact flex gap">
-              <h3>Wasif Shahid</h3>
+              <h3>House # 90, E-11/4, Islamabad, Pakistan</h3>
               <span class="decor-line"></span>
               <h3>123456789</h3>
               <span class="decor-line"></span>
-              <h3>cokestudio@email.com</h3>
+              <h3>Wasif@email.com</h3>
             </div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -112,83 +128,6 @@
         </section>
       </div>
     </main>
-    <!-- ----------------- Call to Action Section ---------------------- -->
-
-    <section class="CTA">
-      <div class="news">
-        <h2>NEWSLETTER SIGN UP</h2>
-        <p>Get latest updates on things to do in Pakistan</p>
-        <input type="text" placeholder="Your E-Mail Address" />
-        <button>Subscribe</button>
-      </div>
-    </section>
-
-    <!-- ----------------- Footer Section ---------------------- -->
-
-    <footer>
-      <div class="container">
-        <div class="footer-main flex container gap">
-          <div class="about-us">
-            <ul>
-              <h2>About US</h2>
-              <li>
-                Experience Pakistan is a Platform for all type of events and
-                entertainment
-              </li>
-              <li>
-                <a href="">
-                  <img class="google" src="./images/google.png" alt="" />
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="helpful-links">
-            <ul>
-              <h2>Helpful Links</h2>
-              <li><a href="">Experience Pakistan</a></li>
-              <li><a href="">Search By City</a></li>
-              <li><a href="">About Us</a></li>
-              <li><a href="">Contact Us</a></li>
-              <li><a href="">Articles</a></li>
-              <li><a href="">Frequently Asked Questions</a></li>
-            </ul>
-          </div>
-
-          <div class="eventsByCity">
-            <ul>
-              <h2>Events By City</h2>
-              <li><a href="">Lahore</a></li>
-              <li><a href="">Karachi</a></li>
-              <li><a href="">Islamabad</a></li>
-            </ul>
-          </div>
-
-          <div class="useful-links">
-            <ul>
-              <h2>Useful Links</h2>
-              <li><a href="">Submit a Complaint</a></li>
-              <li><a href="">Give a Suggestion</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="container footer-secondary flex gap">
-          <div class="copyright">
-            <p class="">
-              <img src="./images/Copyright.png" alt="" />2023 Experience
-              Pakistan. All Rights Reserved
-            </p>
-          </div>
-
-          <div class="external-link flex wrapper">
-            <a href="">Terms & Conditions</a>
-            <a href="">Privacy Policy</a>
-            <a href="">Cookie Policy</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
     <!-- ----------------- Scripts ---------------------- -->
     <script
       type="module"
@@ -199,6 +138,19 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
 
-    <script src="./scripts/menu.js"></script>
+    <script src="../scripts/menu.js"></script>
+
+    <script>
+      const imageUpload = document.getElementById("image-upload");
+      const userImage = document.getElementById("user-image");
+
+      imageUpload.addEventListener("change", function () {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          userImage.src = e.target.result;
+        };
+        reader.readAsDataURL(this.files[0]);
+      });
+    </script>
   </body>
 </html>
