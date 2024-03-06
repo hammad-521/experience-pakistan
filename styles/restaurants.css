@@ -268,9 +268,7 @@ input[type="checkbox"] {
   border: 1px solid rgba(0, 0, 0, 0.2);
   background: #fff;
 
-  box-shadow: 0px 0px 25px 3px rgba(169, 169, 169, 0.75);
-  -webkit-box-shadow: 0px 0px 25px 3px rgba(169, 169, 169, 0.75);
-  -moz-box-shadow: 0px 0px 25px 3px rgba(169, 169, 169, 0.75);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
 }
 
 .food-browse-box h3 {

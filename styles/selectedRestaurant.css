@@ -130,6 +130,12 @@
   align-items: start !important;
 }
 
+.rest-img {
+  /* width: 100%; */
+  margin: auto;
+  /* height: 80vh; */
+}
+
 .column {
   margin-bottom: 1rem;
 }
