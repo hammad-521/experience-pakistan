@@ -318,4 +318,9 @@ table tr th:nth-child(2) {
     width: min-content;
     margin: auto;
   }
+
+  .contactDetail input {
+    min-width: 220px;
+    width: 240px;
+  }
 }

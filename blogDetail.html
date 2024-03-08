@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book a Tickets</title>
+    <title>Blogs</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -11,8 +11,8 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="./styles/sample.css" />
-    <link rel="stylesheet" href="./styles/ticket.css" />
+    <link rel="stylesheet" href="./styles/restaurants.css" />
+    <link rel="stylesheet" href="./styles/blogs.css" />
 
     <script
       src="https://kit.fontawesome.com/9d779ebc01.js"
@@ -45,45 +45,20 @@
           <li><a href="./index.html">Home</a></li>
           <li><a href="./artists.html">Artist</a></li>
           <li><a href="./partners.html">Partners</a></li>
-          <!-- <li><a href="./restaurants.html">Foods & Drinks </a></li> -->
-          <li class="dropdown">
-            <a href="#" class="dropbtn">Things to Do</a>
-            <div class="dropdown-content">
-              <ul>
-                <li><a href="#">Food & Drink</a></li>
-                <li><a href="#">Cinemas</a></li>
-                <li><a href="#">Fun House</a></li>
-                <li><a href="#">Gaming Arenas</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropbtn">Events</a>
-            <div class="dropdown-content">
-              <ul>
-                <li><a href="#">Karachi</a></li>
-                <li><a href="#">Lahore</a></li>
-                <li><a href="#">Islamabad</a></li>
-              </ul>
-            </div>
-          </li>
-          <!-- <li><a href="./events.html">Events</a></li> -->
+          <li><a href="./restaurants.html">Foods & Drinks </a></li>
+          <li><a href="./events.html">Events</a></li>
           <span class="actionButtons hidden gap">
             <a class="actionButtons-1" href="./signup.html">
               Become an Organizer</a
             >
 
-            <li class="actionButtons-3 dropdown">
-              <a href="#" class="dropbtn">
+            <li class="actionButtons-2">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </li>
+            <li class="actionButtons-3">
+              <a href="./login.html">
                 <i class="fa-sharp fa-solid fa-user"></i
               ></a>
-              <div class="dropdown-content right bottom">
-                <ul>
-                  <li><a href="./user/userLogin.html">Customer Login</a></li>
-                  <li><a href="./login.html">Organizer Login</a></li>
-                  <li><a href="./admin/index.html">Admin Login</a></li>
-                </ul>
-              </div>
             </li>
           </span>
         </ul>
@@ -92,93 +67,82 @@
       <div class="actionButtons flex menu-2">
         <a class="actionButtons-1" href="./signup.html"> Become an Organizer</a>
 
-        <ul>
-          <li class="actionButtons-3 dropdown">
-            <a href="#" class="dropbtn">
-              <i class="fa-sharp fa-solid fa-user"></i
-            ></a>
-            <div class="dropdown-content right">
-              <ul>
-                <li><a href="./user/userLogin.html">Customer Login</a></li>
-                <li><a href="./login.html">Organizer Login</a></li>
-                <li><a href="./admin/index.html">Admin Login</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
+        <button class="actionButtons-2">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button class="actionButtons-3">
+          <a href="./login.html"> <i class="fa-sharp fa-solid fa-user"></i></a>
+        </button>
       </div>
     </header>
 
-    <!-- ----------------- Summary Detal Section ---------------------- -->
+    <!-- ----------------- Blog Detail Section ---------------------- -->
 
-    <main class="ticket flex container wrapper">
-      <section class="ticketDetail summaryDetail">
-        <div class="ticketDetail-head flex">
-          <span>2</span>
-          <h2>Contact Details</h2>
+    <main class="explore-body wrapper container">
+      <div class="explore-box blog-box">
+        <div class="explore-box-image">
+          <img src="./images/explore-box.png" alt="" />
         </div>
-
-        <p class="ticketDetail-info">
-          We'll use this information to send you confirmation and updates about
-          your booking.
-        </p>
-
-        <div class="ticketDetail-form">
-          <h3 class="contactDetail-heading">SoulFest 2024</h3>
-          <form action="./ticketSummary.html" class="contactForm">
-            <section class="flex contactDetail gap">
-              <div class="form-control">
-                <label for="fname">First Name</label>
-                <input
-                  type="text"
-                  name="fname"
-                  id="fname"
-                  placeholder="Muhammad"
-                  value=""
-                />
-              </div>
-
-              <div class="form-control">
-                <label for="lname">Last Name</label>
-                <input
-                  type="text"
-                  name="lname"
-                  id="lname"
-                  placeholder="Hammad"
-                  value=""
-                />
-              </div>
-            </section>
-
-            <section class="flex contactDetail gap">
-              <div class="form-control">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Email"
-                  value=""
-                />
-              </div>
-
-              <div class="form-control">
-                <label for="phone">Phone Number</label>
-                <input
-                  type="tel"
-                  name="phone"
-                  id="phone"
-                  placeholder="123456"
-                  value=""
-                />
-              </div>
-            </section>
-
-            <button class="next-btn">Continue</button>
-          </form>
+        <div class="explore-box-desc">
+          <h3>
+            Building Pakistan One Design at a Time - YOCA Celebrates 70 glorious
+            years of Independence
+          </h3>
+          <p>By Muhammad Hammad | Posted: March 08, 2024</p>
         </div>
-      </section>
+        <div class="explore-box-end">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit,
+            doloribus, repellat aliquid voluptatibus, sed expedita amet at
+            molestias accusantium facere corporis in perferendis. Ab sunt animi
+            iusto officiis ullam perferendis eaque numquam, id aut, quos
+            corrupti earum quaerat vero, ducimus officia! Magni alias natus
+            maiores ea perspiciatis provident cum atque voluptates quasi nemo!
+            Atque adipisci nam pariatur ex quae velit. Ad in distinctio dolorem
+            eius, sed consequatur error repellendus! Expedita voluptates vel
+            excepturi quae aut blanditiis soluta amet! Iure nam sed laudantium,
+            earum ab ullam, nemo accusamus temporibus aliquam distinctio quasi
+            accusantium totam eum nihil vero esse reprehenderit obcaecati
+            impedit illo minima quos ad. Asperiores, animi eaque? Deleniti,
+            <br />
+            maxime recusandae? Tenetur distinctio necessitatibus nostrum
+            laudantium nulla cumque suscipit recusandae vel magnam, beatae cum
+            deserunt perspiciatis quisquam architecto eos ut blanditiis, sint
+            illum qui atque maxime hic. Ad provident accusamus adipisci corrupti
+            quia quas nisi cupiditate velit cumque praesentium reprehenderit,
+            ullam minus quasi? Maiores natus nostrum odio cum error temporibus
+            illum ipsa voluptate similique in vitae tenetur inventore eveniet
+            praesentium numquam dolore, totam ad perferendis id ex voluptatibus
+            distinctio. Ad nobis tempora soluta amet obcaecati illum accusamus
+            iste corporis vero ex itaque modi rem accusantium nemo quasi odit
+            delectus ipsa, vitae dolore voluptas, nostrum reiciendis fugit
+            laudantium! Nemo obcaecati praesentium quidem, rerum quisquam
+            temporibus dolor suscipit, harum modi tempore possimus nam quis
+            fugiat, sint eius! Totam nihil odio neque nisi rem velit excepturi
+            quibusdam nemo? Voluptate omnis, doloremque voluptatum in odio
+            eligendi hic illum esse inventore dolorem dicta excepturi adipisci
+            consequatur tenetur temporibus accusantium minima vitae.
+            <br />Maiores quasi dicta voluptatibus quo nisi repellendus laborum
+            similique voluptatem numquam architecto, modi dignissimos corrupti
+            labore ab error nesciunt quaerat laudantium! Est, amet voluptatem
+            ipsam hic odit illo laboriosam quia assumenda praesentium officiis
+            neque consequuntur sed nisi itaque dignissimos quo consequatur quis
+            soluta omnis ullam!
+          </p>
+        </div>
+      </div>
     </main>
+
+    <!-- ----------------- Call to Action Section ---------------------- -->
+
+    <section class="CTA">
+      <div class="news">
+        <h2>NEWSLETTER SIGN UP</h2>
+        <p>Get latest updates on things to do in Pakistan</p>
+        <input type="text" placeholder="Your E-Mail Address" />
+        <button>Subscribe</button>
+      </div>
+    </section>
 
     <!-- ----------------- Footer Section ---------------------- -->
 
