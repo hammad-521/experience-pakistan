@@ -7,6 +7,8 @@
 :root {
   --primary-color: #f47725; /* Set your desired color value */
   --secondary-color: #ffb987; /* Set your desired color value */
+  --tertiary-color: #f6ad55;
+  --contrast-color: #ffdbba; /* Set your desired color value */
 }
 
 body {
@@ -64,6 +66,11 @@ button {
   justify-content: center;
   align-items: center;
 }
+
+.flex-start {
+  justify-content: flex-start !important;
+}
+
 .flex-col {
   display: flex;
   width: 100%;
@@ -75,6 +82,9 @@ button {
   gap: 1.4rem;
 }
 
+.gap-small {
+  gap: 1rem;
+}
 .hidden {
   display: none;
 }
@@ -141,7 +151,7 @@ header {
 }
 
 .actionButtons {
-  max-width: 320px;
+  max-width: 270px;
   width: 100%;
   /* margin-right: 2.5rem; */
 }
@@ -176,6 +186,66 @@ header {
 }
 .actionButtons-2 a:visited,
 .actionButtons-3 a:visited {
+  color: #000;
+}
+
+/* NEW */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 0.4em 0.2em 0.4em;
+  left: -30px;
+}
+
+.right {
+  right: 0 !important;
+  /* max-width: 100%; */
+  left: auto;
+}
+
+.bottom {
+  bottom: 0;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  line-height: 25px;
+  white-space: nowrap;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  /* border-bottom: 1px solid var(--primary-color); */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.drop-text {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.dropbtn i {
   color: #000;
 }
 

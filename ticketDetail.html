@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Experience</title>
+    <title>Book a Tickets</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,7 +12,7 @@
     />
 
     <link rel="stylesheet" href="./styles/sample.css" />
-    <link rel="stylesheet" href="./styles/selectedRestaurant.css" />
+    <link rel="stylesheet" href="./styles/ticket.css" />
 
     <script
       src="https://kit.fontawesome.com/9d779ebc01.js"
@@ -45,20 +45,45 @@
           <li><a href="./index.html">Home</a></li>
           <li><a href="./artists.html">Artist</a></li>
           <li><a href="./partners.html">Partners</a></li>
-          <li><a href="./restaurants.html">Foods & Drinks </a></li>
-          <li><a href="./events.html">Events</a></li>
+          <!-- <li><a href="./restaurants.html">Foods & Drinks </a></li> -->
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Things to Do</a>
+            <div class="dropdown-content">
+              <ul>
+                <li><a href="#">Food & Drink</a></li>
+                <li><a href="#">Cinemas</a></li>
+                <li><a href="#">Fun House</a></li>
+                <li><a href="#">Gaming Arenas</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Events</a>
+            <div class="dropdown-content">
+              <ul>
+                <li><a href="#">Karachi</a></li>
+                <li><a href="#">Lahore</a></li>
+                <li><a href="#">Islamabad</a></li>
+              </ul>
+            </div>
+          </li>
+          <!-- <li><a href="./events.html">Events</a></li> -->
           <span class="actionButtons hidden gap">
             <a class="actionButtons-1" href="./signup.html">
               Become an Organizer</a
             >
 
-            <li class="actionButtons-2">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </li>
-            <li class="actionButtons-3">
-              <a href="./login.html">
+            <li class="actionButtons-3 dropdown">
+              <a href="#" class="dropbtn">
                 <i class="fa-sharp fa-solid fa-user"></i
               ></a>
+              <div class="dropdown-content right bottom">
+                <ul>
+                  <li><a href="./user/userLogin.html">Customer Login</a></li>
+                  <li><a href="./login.html">Organizer Login</a></li>
+                  <li><a href="./admin/index.html">Admin Login</a></li>
+                </ul>
+              </div>
             </li>
           </span>
         </ul>
@@ -67,113 +92,93 @@
       <div class="actionButtons flex menu-2">
         <a class="actionButtons-1" href="./signup.html"> Become an Organizer</a>
 
-        <button class="actionButtons-2">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-        <button class="actionButtons-3">
-          <a href="./login.html"> <i class="fa-sharp fa-solid fa-user"></i></a>
-        </button>
+        <ul>
+          <li class="actionButtons-3 dropdown">
+            <a href="#" class="dropbtn">
+              <i class="fa-sharp fa-solid fa-user"></i
+            ></a>
+            <div class="dropdown-content right">
+              <ul>
+                <li><a href="./user/userLogin.html">Customer Login</a></li>
+                <li><a href="./login.html">Organizer Login</a></li>
+                <li><a href="./admin/index.html">Admin Login</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
       </div>
     </header>
 
-    <!-- ----------------- Main Section ---------------------- -->
+    <!-- ----------------- Summary Detal Section ---------------------- -->
 
-    <main class="restaurants container">
-      <section class="wrapper restaurants-section-head">
-        <div class="restaurants-name flex-left gap">
-          <h1>Centaurus Mall</h1>
+    <main class="ticket flex container wrapper">
+      <section class="ticketDetail summaryDetail">
+        <div class="ticketDetail-head flex">
+          <span>2</span>
+          <h2>Contact Details</h2>
         </div>
 
-        <div class="restaurants-mid flex-left padd">
-          <div class="review flex-left gap-small">
-            <div class="rating flex">
-              <span>
-                <i class="fa-regular fa-circle fill" aria-hidden="true"></i
-              ></span>
-              <span>
-                <i class="fa-regular fa-circle fill" aria-hidden="true"></i
-              ></span>
-              <span>
-                <i class="fa-regular fa-circle fill" aria-hidden="true"></i
-              ></span>
-              <span>
-                <i class="fa-regular fa-circle fill" aria-hidden="true"></i
-              ></span>
-              <span>
-                <i class="fa-regular fa-circle" aria-hidden="true"></i
-              ></span>
-            </div>
-            <p class="light">210 Reviews</p>
-          </div>
+        <p class="ticketDetail-info">
+          We'll use this information to send you confirmation and updates about
+          your booking.
+        </p>
 
-          <div class="restaurant-city border">
-            <p class="light">Experience in Islamabad</p>
-          </div>
-          <!-- 
-          <div class="restaurant-type border">
-            <p class="light">Continental, Desi, Fine Dining</p>
-          </div> -->
-        </div>
+        <div class="ticketDetail-form">
+          <h3 class="contactDetail-heading">SoulFest 2024</h3>
+          <form action="" method="post" class="contactForm">
+            <section class="flex contactDetail gap">
+              <div class="form-control">
+                <label for="fname">First Name</label>
+                <input
+                  type="text"
+                  name="fname"
+                  id="fname"
+                  placeholder="Enter your First Name"
+                  value=""
+                />
+              </div>
 
-        <div class="restaurant-address flex-left padd">
-          <div class="address flex-left gap-small">
-            <i class="fa-solid fa-location-dot"></i>
-            <p class="light">4 Jinnah Avenue, F 8/4 F-8, Islamabad</p>
-          </div>
+              <div class="form-control">
+                <label for="lname">Last Name</label>
+                <input
+                  type="text"
+                  name="lname"
+                  id="lname"
+                  placeholder="Enter your Last Name"
+                  value=""
+                />
+              </div>
+            </section>
 
-          <div class="phone flex-left gap-small border">
-            <i class="fa-solid fa-phone"></i>
-            <p class="light">0423592165</p>
-          </div>
+            <section class="flex contactDetail gap">
+              <div class="form-control">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Enter your Email"
+                  value=""
+                />
+              </div>
 
-          <div class="timming flex-left gap-small border">
-            <i class="fa-solid fa-clock"></i>
-            <p class="light">12 pm - 10 pm</p>
-          </div>
-        </div>
-      </section>
+              <div class="form-control">
+                <label for="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  placeholder="Enter your Phone #"
+                  value=""
+                />
+              </div>
+            </section>
 
-      <!-- ----------------- Images Section ------------------- -->
-
-      <section class="restaurant-gallery flex gap wrapper">
-        <div class="rest-img">
-          <img src="./images/monal1.png" alt="" />
-        </div>
-      </section>
-
-      <!-- ------------------------- Detail Section --------------- -->
-
-      <section class="restaurant-detail wrapper">
-        <div class="flex detail-head"><h2>Details</h2></div>
-        <div class="detail-body flex gap-small">
-          <div class="detail-row row1" style="width: 100% !important">
-            <h3>About</h3>
-            <p>
-              The Centaurus is a mixed use real estate development in the city
-              of Islamabad, Pakistan. The project includes a 36-floor hotel,
-              three 23-floor residential and office towers, and a four-floor
-              shopping mall. Construction Designed by British architectural firm
-              WS Atkins, it consists of a four-story shopping mall, a five-star
-              hotel, two residential towers, a corporate tower, three
-              skyscrapers containing corporate offices, residential apartments,
-              and a hotel. Centaurus Mövenpick Hotel is under construction and
-              was expected to open in the first quarter of 2018.
-            </p>
-          </div>
+            <button class="next-btn">Continue</button>
+          </form>
         </div>
       </section>
     </main>
-
-    <!-- ----------------- Call to Action Section ---------------------- -->
-
-    <section class="CTA">
-      <div class="news">
-        <h2>NEWSLETTER SIGN UP</h2>
-        <p>Get latest updates on things to do in Pakistan</p>
-        <input type="text" placeholder="Your E-Mail Address" />
-        <button>Subscribe</button>
-      </div>
-    </section>
 
     <!-- ----------------- Footer Section ---------------------- -->
 

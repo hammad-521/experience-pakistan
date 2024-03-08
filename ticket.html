@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book a Tickets</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Nanum+Gothic:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/sample.css" />
+    <link rel="stylesheet" href="./styles/ticket.css" />
+
+    <script
+      src="https://kit.fontawesome.com/9d779ebc01.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- ----------------- Header ---------------------- -->
+    <header class="container flex gap">
+      <div class="bar menu-toggle" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <div class="flex flex-center">
+        <img
+          class="header-logo tablet-logo"
+          src="./images/newlogo.png"
+          alt=""
+          hidden
+        />
+      </div>
+
+      <nav class="primary-nav flex gap menu" style="left: -1500px">
+        <img
+          class="header-logo laptop-logo"
+          src="./images/newlogo.png"
+          alt="Experience Pakistan Logo"
+        />
+        <ul class="flex gap menu-nav">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./artists.html">Artist</a></li>
+          <li><a href="./partners.html">Partners</a></li>
+          <!-- <li><a href="./restaurants.html">Foods & Drinks </a></li> -->
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Things to Do</a>
+            <div class="dropdown-content">
+              <ul>
+                <li><a href="#">Food & Drink</a></li>
+                <li><a href="#">Cinemas</a></li>
+                <li><a href="#">Fun House</a></li>
+                <li><a href="#">Gaming Arenas</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Events</a>
+            <div class="dropdown-content">
+              <ul>
+                <li><a href="#">Karachi</a></li>
+                <li><a href="#">Lahore</a></li>
+                <li><a href="#">Islamabad</a></li>
+              </ul>
+            </div>
+          </li>
+          <!-- <li><a href="./events.html">Events</a></li> -->
+          <span class="actionButtons hidden gap">
+            <a class="actionButtons-1" href="./signup.html">
+              Become an Organizer</a
+            >
+
+            <li class="actionButtons-3 dropdown">
+              <a href="#" class="dropbtn">
+                <i class="fa-sharp fa-solid fa-user"></i
+              ></a>
+              <div class="dropdown-content right bottom">
+                <ul>
+                  <li><a href="./user/userLogin.html">Customer Login</a></li>
+                  <li><a href="./login.html">Organizer Login</a></li>
+                  <li><a href="./admin/index.html">Admin Login</a></li>
+                </ul>
+              </div>
+            </li>
+          </span>
+        </ul>
+      </nav>
+
+      <div class="actionButtons flex menu-2">
+        <a class="actionButtons-1" href="./signup.html"> Become an Organizer</a>
+
+        <ul>
+          <li class="actionButtons-3 dropdown">
+            <a href="#" class="dropbtn">
+              <i class="fa-sharp fa-solid fa-user"></i
+            ></a>
+            <div class="dropdown-content right">
+              <ul>
+                <li><a href="./user/userLogin.html">Customer Login</a></li>
+                <li><a href="./login.html">Organizer Login</a></li>
+                <li><a href="./admin/index.html">Admin Login</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- ----------------- Ticket Section ---------------------- -->
+
+    <main class="ticket flex container wrapper">
+      <section class="ticketDetail">
+        <div class="ticketDetail-head flex">
+          <span>1</span>
+          <h2>Ticket Details</h2>
+        </div>
+
+        <p class="ticketDetail-info">
+          We'll use this information to send you confirmation and updates about
+          your booking.
+        </p>
+
+        <div class="ticketDetail-form">
+          <h3>SoulFest 2024</h3>
+          <form action="./ticketDetail.html" method="post">
+            <div>
+              <section class="flex form-section">
+                <div class="ticket-info">
+                  <input
+                    type="text"
+                    id="ticket-name-1"
+                    class="ticket-name"
+                    value="Standard Ticket"
+                    disabled
+                  />
+                </div>
+                <div>
+                  <label for="ticket-price-1">PKR</label>
+                  <input
+                    type="text"
+                    id="ticket-price-1"
+                    class="ticket-price"
+                    value="1500"
+                    placeholder="1500"
+                  />
+                </div>
+                <div class="flex gap-small">
+                  <button
+                    type="button"
+                    onclick="minusTicket(1)"
+                    class="minus-btn ticket-btn"
+                  >
+                    -
+                  </button>
+                  <input
+                    type="number"
+                    id="ticket-quantity-1"
+                    min="0"
+                    value="1"
+                    class="ticket-quantity"
+                  />
+                  <button
+                    type="button"
+                    onclick="plusTicket(1)"
+                    class="plus-btn ticket-btn"
+                  >
+                    +
+                  </button>
+                </div>
+              </section>
+
+              <section class="flex form-section">
+                <div class="ticket-info">
+                  <input
+                    type="text"
+                    id="ticket-name-2"
+                    class="ticket-name"
+                    value="Premium Ticket"
+                    disabled
+                  />
+                </div>
+                <div>
+                  <label for="ticket-price-2">PKR</label>
+                  <input
+                    type="text"
+                    id="ticket-price-2"
+                    class="ticket-price"
+                    value="1500"
+                    placeholder="1500"
+                  />
+                </div>
+                <div class="flex gap-small">
+                  <button
+                    type="button"
+                    onclick="minusTicket(2)"
+                    class="minus-btn ticket-btn"
+                  >
+                    -
+                  </button>
+                  <input
+                    type="number"
+                    id="ticket-quantity-2"
+                    min="0"
+                    value="1"
+                    class="ticket-quantity"
+                  />
+                  <button
+                    type="button"
+                    onclick="plusTicket(2)"
+                    class="plus-btn ticket-btn"
+                  >
+                    +
+                  </button>
+                </div>
+              </section>
+
+              <section class="flex form-section">
+                <div class="ticket-info">
+                  <input
+                    type="text"
+                    id="ticket-name-3"
+                    class="ticket-name"
+                    value="First Class Ticket"
+                    disabled
+                  />
+                </div>
+                <div>
+                  <label for="ticket-price-3">PKR</label>
+                  <input
+                    type="text"
+                    id="ticket-price-3"
+                    class="ticket-price"
+                    value="1000"
+                    placeholder="1000"
+                  />
+                </div>
+                <div class="flex gap-small">
+                  <button
+                    type="button"
+                    onclick="minusTicket(3)"
+                    class="minus-btn ticket-btn"
+                  >
+                    -
+                  </button>
+                  <input
+                    type="number"
+                    id="ticket-quantity-3"
+                    min="0"
+                    value="1"
+                    class="ticket-quantity"
+                  />
+                  <button
+                    type="button"
+                    onclick="plusTicket(3)"
+                    class="plus-btn ticket-btn"
+                  >
+                    +
+                  </button>
+                </div>
+              </section>
+
+              <section class="flex form-section">
+                <div class="ticket-info">
+                  <input
+                    type="text"
+                    id="ticket-name-4"
+                    class="ticket-name"
+                    value="Executive Ticket"
+                    disabled
+                  />
+                </div>
+                <div>
+                  <label for="ticket-price-4">PKR</label>
+                  <input
+                    type="text"
+                    id="ticket-price-4"
+                    class="ticket-price"
+                    value="3500"
+                    placeholder="3500"
+                  />
+                </div>
+                <div class="flex gap-small">
+                  <button
+                    type="button"
+                    onclick="minusTicket(4)"
+                    class="minus-btn ticket-btn"
+                  >
+                    -
+                  </button>
+                  <input
+                    type="number"
+                    id="ticket-quantity-4"
+                    min="0"
+                    value="1"
+                    class="ticket-quantity"
+                  />
+                  <button
+                    type="button"
+                    onclick="plusTicket(4)"
+                    class="plus-btn ticket-btn"
+                  >
+                    +
+                  </button>
+                </div>
+              </section>
+            </div>
+
+            <button class="next-btn">Continue</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="eventDetail">
+        <h3>SoulFest 2024</h3>
+        <div class="flex flex-start gap">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Lahore</p>
+        </div>
+
+        <div class="flex flex-start gap">
+          <i class="fa-regular fa-clock"></i>
+          <p>6pm Onwards</p>
+        </div>
+
+        <div class="flex flex-start gap">
+          <i class="fa-regular fa-user"></i>
+          <p>18+</p>
+        </div>
+
+        <div class="flex flex-start gap">
+          <i class="fa-regular fa-calendar"></i>
+          <p>26th May - 28th May</p>
+        </div>
+
+        <div>
+          <p class="detail-phone">For Assistance</p>
+          <div class="flex flex-start gap">
+            <i class="fa-solid fa-phone"></i>
+            <p>+92 1234567</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ----------------- Footer Section ---------------------- -->
+
+    <footer>
+      <div class="container">
+        <div class="footer-main flex container gap">
+          <div class="about-us">
+            <ul>
+              <h2>About US</h2>
+              <li>
+                Experience Pakistan is a Platform for all type of events and
+                entertainment
+              </li>
+              <li>
+                <a href="">
+                  <img class="google" src="./images/google.png" alt="" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="helpful-links">
+            <ul>
+              <h2>Helpful Links</h2>
+              <li><a href="">Experience Pakistan</a></li>
+              <li><a href="">Search By City</a></li>
+              <li><a href="">About Us</a></li>
+              <li><a href="">Contact Us</a></li>
+              <li><a href="">Articles</a></li>
+              <li><a href="">Frequently Asked Questions</a></li>
+            </ul>
+          </div>
+
+          <div class="eventsByCity">
+            <ul>
+              <h2>Events By City</h2>
+              <li><a href="">Lahore</a></li>
+              <li><a href="">Karachi</a></li>
+              <li><a href="">Islamabad</a></li>
+            </ul>
+          </div>
+
+          <div class="useful-links">
+            <ul>
+              <h2>Useful Links</h2>
+              <li><a href="">Submit a Complaint</a></li>
+              <li><a href="">Give a Suggestion</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="container footer-secondary flex gap">
+          <div class="copyright">
+            <p class="">
+              <img src="./images/Copyright.png" alt="" />2023 Experience
+              Pakistan. All Rights Reserved
+            </p>
+          </div>
+
+          <div class="external-link flex wrapper">
+            <a href="">Terms & Conditions</a>
+            <a href="">Privacy Policy</a>
+            <a href="">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ----------------- Scripts ---------------------- -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="./scripts/menu.js"></script>
+
+    <script>
+      function plusTicket(row) {
+        let ticketQuantity = document.getElementById("ticket-quantity-" + row);
+        let ticketPrice = document.getElementById("ticket-price-" + row);
+        let newQuantity = parseInt(ticketQuantity.value);
+        let cost = parseInt(ticketPrice.placeholder);
+        ticketQuantity.value = newQuantity + 1;
+        ticketPrice.value = cost * ticketQuantity.value;
+      }
+
+      function minusTicket(row) {
+        let ticketQuantity = document.getElementById("ticket-quantity-" + row);
+        let ticketPrice = document.getElementById("ticket-price-" + row);
+        let newQuantity = parseInt(ticketQuantity.value);
+        let cost = parseInt(ticketPrice.placeholder);
+        if (newQuantity > 0) {
+          ticketQuantity.value = newQuantity - 1;
+          ticketPrice.value = cost * ticketQuantity.value;
+        } else {
+          ticketQuantity.value = 0;
+        }
+      }
+    </script>
+  </body>
+</html>

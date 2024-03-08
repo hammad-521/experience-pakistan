@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Experience</title>
+    <title>Organizer Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -11,8 +11,8 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="./styles/sample.css" />
-    <link rel="stylesheet" href="./styles/selectedRestaurant.css" />
+    <link rel="stylesheet" href="./styles/organizersDashboard.css" />
+    <link rel="stylesheet" href="./styles/signup.css" />
 
     <script
       src="https://kit.fontawesome.com/9d779ebc01.js"
@@ -42,16 +42,11 @@
           alt="Experience Pakistan Logo"
         />
         <ul class="flex gap menu-nav">
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./artists.html">Artist</a></li>
-          <li><a href="./partners.html">Partners</a></li>
-          <li><a href="./restaurants.html">Foods & Drinks </a></li>
-          <li><a href="./events.html">Events</a></li>
-          <span class="actionButtons hidden gap">
-            <a class="actionButtons-1" href="./signup.html">
-              Become an Organizer</a
-            >
+          <li><a href="./organizersDashboard.html">Home</a></li>
 
+          <li><a href="./organizeEvent.html">Organize an Event</a></li>
+          <li><a href="./eventList.html">View Events List</a></li>
+          <span class="actionButtons hidden gap">
             <li class="actionButtons-2">
               <i class="fa-solid fa-magnifying-glass"></i>
             </li>
@@ -60,120 +55,153 @@
                 <i class="fa-sharp fa-solid fa-user"></i
               ></a>
             </li>
+            <a class="actionButtons-1" href="./signup.html"> Logout</a>
           </span>
         </ul>
       </nav>
 
       <div class="actionButtons flex menu-2">
-        <a class="actionButtons-1" href="./signup.html"> Become an Organizer</a>
-
         <button class="actionButtons-2">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
         <button class="actionButtons-3">
           <a href="./login.html"> <i class="fa-sharp fa-solid fa-user"></i></a>
         </button>
+        <a class="actionButtons-1" href="./signup.html"> Logout</a>
       </div>
     </header>
+    <!-- ----------------- Hero Section ---------------------- -->
+    <main>
+      <div class="container">
+        <section class="organizer">
+          <h1>Edit Detail</h1>
+        </section>
 
-    <!-- ----------------- Main Section ---------------------- -->
+        <section class="container wrapper">
+          <form action="" method="post">
+            <div class="main-form">
+              <span class="width-small">
+                <label for="fname">First Name</label><br />
+                <input
+                  class="width-small"
+                  type="text"
+                  name="fname"
+                  id=""
+                  placeholder="First"
+                  required
+              /></span>
 
-    <main class="restaurants container">
-      <section class="wrapper restaurants-section-head">
-        <div class="restaurants-name flex-left gap">
-          <h1>Centaurus Mall</h1>
-        </div>
-
-        <div class="restaurants-mid flex-left padd">
-          <div class="review flex-left gap-small">
-            <div class="rating flex">
-              <span>
-                <i class="fa-regular fa-circle fill" aria-hidden="true"></i
-              ></span>
-              <span>
-                <i class="fa-regular fa-circle fill" aria-hidden="true"></i
-              ></span>
-              <span>
-                <i class="fa-regular fa-circle fill" aria-hidden="true"></i
-              ></span>
-              <span>
-                <i class="fa-regular fa-circle fill" aria-hidden="true"></i
-              ></span>
-              <span>
-                <i class="fa-regular fa-circle" aria-hidden="true"></i
-              ></span>
+              <span class="width-small">
+                <label for="lname">Last Name</label><br />
+                <input
+                  class="width-small"
+                  type="text"
+                  name="lname"
+                  id=""
+                  placeholder="Last"
+                  required
+              /></span>
             </div>
-            <p class="light">210 Reviews</p>
-          </div>
 
-          <div class="restaurant-city border">
-            <p class="light">Experience in Islamabad</p>
-          </div>
-          <!-- 
-          <div class="restaurant-type border">
-            <p class="light">Continental, Desi, Fine Dining</p>
-          </div> -->
-        </div>
+            <div class="main-form">
+              <span class="width-small">
+                <label for="organization">Organization Name</label>
+                <br />
+                <input
+                  class="width-small"
+                  type="text"
+                  name="organization"
+                  id="organization"
+                  placeholder="Organization Name"
+                  required
+                />
+              </span>
 
-        <div class="restaurant-address flex-left padd">
-          <div class="address flex-left gap-small">
-            <i class="fa-solid fa-location-dot"></i>
-            <p class="light">4 Jinnah Avenue, F 8/4 F-8, Islamabad</p>
-          </div>
+              <span class="width-small">
+                <label for="email">Email</label>
+                <br />
+                <input
+                  class="width-small"
+                  type="text"
+                  name="email"
+                  id=""
+                  placeholder="Email"
+                  required
+                />
+              </span>
+            </div>
 
-          <div class="phone flex-left gap-small border">
-            <i class="fa-solid fa-phone"></i>
-            <p class="light">0423592165</p>
-          </div>
+            <div class="main-form">
+              <span class="width-small">
+                <label for="logo">Organization Logo</label><br />
+                <input
+                  type="file"
+                  id="logo"
+                  class="width-small"
+                  name="logo"
+                  accept="image/*"
+                  required
+                />
+              </span>
 
-          <div class="timming flex-left gap-small border">
-            <i class="fa-solid fa-clock"></i>
-            <p class="light">12 pm - 10 pm</p>
-          </div>
-        </div>
-      </section>
+              <span class="width-small">
+                <label for="phone">Phone Number</label>
+                <br />
+                <input
+                  class="width-small"
+                  type="tel"
+                  name="phone"
+                  id=""
+                  placeholder="Phone Number"
+                  required
+                />
+              </span>
+            </div>
 
-      <!-- ----------------- Images Section ------------------- -->
+            <label for="description">Organization Description</label>
+            <br />
+            <textarea
+              id="description"
+              class="width margin"
+              name="description"
+              rows="4"
+              cols="50"
+              placeholder="Organization Description in two sentances only."
+              required
+            ></textarea>
 
-      <section class="restaurant-gallery flex gap wrapper">
-        <div class="rest-img">
-          <img src="./images/monal1.png" alt="" />
-        </div>
-      </section>
+            <br />
 
-      <!-- ------------------------- Detail Section --------------- -->
+            <!-- <label for="password">Password</label><br />
+            <input
+              class="width margin-less"
+              type="text"
+              name="password"
+              id=""
+              placeholder="Password"
+              required
+            /><br />
+            <input
+              class="width"
+              type="text"
+              name="cpassword"
+              id=""
+              placeholder="Confirm Password"
+              required
+            /> -->
 
-      <section class="restaurant-detail wrapper">
-        <div class="flex detail-head"><h2>Details</h2></div>
-        <div class="detail-body flex gap-small">
-          <div class="detail-row row1" style="width: 100% !important">
-            <h3>About</h3>
-            <p>
-              The Centaurus is a mixed use real estate development in the city
-              of Islamabad, Pakistan. The project includes a 36-floor hotel,
-              three 23-floor residential and office towers, and a four-floor
-              shopping mall. Construction Designed by British architectural firm
-              WS Atkins, it consists of a four-story shopping mall, a five-star
-              hotel, two residential towers, a corporate tower, three
-              skyscrapers containing corporate offices, residential apartments,
-              and a hotel. Centaurus Mövenpick Hotel is under construction and
-              was expected to open in the first quarter of 2018.
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- ----------------- Call to Action Section ---------------------- -->
-
-    <section class="CTA">
-      <div class="news">
-        <h2>NEWSLETTER SIGN UP</h2>
-        <p>Get latest updates on things to do in Pakistan</p>
-        <input type="text" placeholder="Your E-Mail Address" />
-        <button>Subscribe</button>
+            <div class="main-form form-btn">
+              <input
+                class="submit-btn"
+                type="submit
+                "
+                placeholder="Submit"
+              />
+            </div>
+          </form>
+        </section>
       </div>
-    </section>
+    </main>
 
     <!-- ----------------- Footer Section ---------------------- -->
 

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tickets</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/adminNavbar.css" />
+    <link rel="stylesheet" href="../styles/adminPanel.css" />
+    <script
+      src="https://kit.fontawesome.com/9d779ebc01.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section class="flex container flexStart">
+      <nav class="navbar">
+        <a href="" class="">
+          <img class="Logo flex" src="../images/newlogo-trans.png" alt="" />
+        </a>
+        <div class="main-nav">
+          <ul>
+            <a href="../adminPanel.html"
+              ><li><i class="fa-solid fa-desktop"></i>Dashboard</li></a
+            >
+            <a href="./adminEvent.html" class="active"
+              ><li><i class="fa-solid fa-campground"></i>Events</li></a
+            >
+            <a href="./adminPartner.html">
+              <li><i class="fa-solid fa-rug"></i>Partners</li>
+            </a>
+            <a href="./adminArtist.html"
+              ><li><i class="fa-solid fa-people-group"></i>Artists</li></a
+            >
+            <a href="./adminRestaurant.html"
+              ><li><i class="fa-solid fa-utensils"></i>Restaurants</li>
+            </a>
+            <a href="./adminSettings.html"
+              ><li><i class="fa-solid fa-gear"></i>Settings</li></a
+            >
+          </ul>
+        </div>
+      </nav>
+
+      <main>
+        <section class="dashboard-head flex">
+          <div class="dashboard-head-primary flex">
+            <i class="fa-solid fa-bars-staggered"></i>
+            <h1>Tickets</h1>
+          </div>
+
+          <div class="dashboard-head-secondary flex gap">
+            <input class="searchBox" type="text" placeholder="Search" />
+            <div class="head-img">
+              <img
+                id="profileIcon"
+                onclick="toggleProfileCard()"
+                src="../images/young-man.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </section>
+
+        <div id="profileCard">
+          <div class="head-detail">
+            <img src="../images/young-man.jpg" alt="" />
+            <p>Muhammad Hammad</p>
+            <button>Logout</button>
+          </div>
+        </div>
+
+        <section class="dashboard">
+          <div class="userList">
+            <table>
+              <thead>
+                <tr>
+                  <th>Ticket #</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Phone #</th>
+                  <th>Ticket Type</th>
+                  <th>Total Tickets</th>
+                  <th>Total Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Hammad</td>
+                  <td>hammad@email.com</td>
+                  <td>123456789</td>
+                  <td>Gold, Platinum</td>
+                  <td>7</td>
+                  <td>1400</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Hammad</td>
+                  <td>hammad@email.com</td>
+                  <td>123456789</td>
+                  <td>Gold, Platinum</td>
+                  <td>7</td>
+                  <td>1400</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </section>
+    <script src="../scripts/admin.js"></script>
+  </body>
+</html>

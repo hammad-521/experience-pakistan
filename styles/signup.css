@@ -232,6 +232,7 @@ form > * {
   color: white;
   padding: 0.8em 0;
   margin-top: 1rem;
+  cursor: pointer;
 }
 
 .submit-btn::placeholder {
@@ -268,6 +269,12 @@ textarea:focus {
 .width-small {
   width: 90%;
   /* padding: 0.4em 0; */
+}
+
+.form-btn {
+  width: 20%;
+  margin: auto;
+  margin-bottom: 2rem;
 }
 
 /* ******************** Call-to-Action Section *********************** */
@@ -553,5 +560,21 @@ footer img {
     flex-wrap: wrap;
     /* align-items: center; */
     justify-content: center;
+  }
+
+  .main-form {
+    flex-direction: column;
+  }
+
+  .width-small {
+    width: 100%;
+  }
+
+  form {
+    padding: 0 0.4em;
+  }
+
+  .form-btn {
+    width: 30%;
   }
 }

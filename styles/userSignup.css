@@ -70,6 +70,10 @@ button {
   gap: 1.4rem;
 }
 
+.gap-small {
+  gap: 1rem;
+}
+
 .hidden {
   display: none;
 }
@@ -203,7 +207,7 @@ header {
 .centers p {
   font-size: 0.875rem;
   margin-bottom: 1.5rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   text-align: center;
 }
 
@@ -212,6 +216,24 @@ header {
   color: var(--primary-color);
   font-weight: 700;
   text-decoration: underline;
+}
+
+.google-btn {
+  text-decoration: none !important;
+  font-size: 0.875rem !important;
+  color: inherit !important;
+  font-weight: normal !important;
+  width: fit-content !important;
+  margin: auto;
+  border: 1px solid #e4e7ec;
+  padding: 0.3em 0.6em;
+}
+
+.Continue {
+  margin-bottom: 1rem !important;
+  margin-top: 1.5rem !important;
+  font-weight: bold;
+  color: #5e5e5e !important;
 }
 
 form > * {
