@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Organizer Dashboard</title>
+    <title>Users Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,8 +12,13 @@
     />
 
     <!-- <link rel="stylesheet" href="../styles/organizersDashboard.css" /> -->
-    <link rel="stylesheet" href="../styles/userDashboard.css" />
 
+    <link rel="stylesheet" type="text/css" href="../slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css" />
+
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/userDashboard.css" />
+    <link rel="stylesheet" href="../styles/slider.css" />
     <script
       src="https://kit.fontawesome.com/9d779ebc01.js"
       crossorigin="anonymous"
@@ -42,11 +47,22 @@
           alt="Experience Pakistan Logo"
         />
         <ul class="flex gap menu-nav">
-          <li><a href="./organizersDashboard.html">Profile</a></li>
+          <li><a href="./userDashboard.html">Profile</a></li>
 
-          <li><a href="#">Tickets</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">Reviews</a></li>
+          <li><a href="./userTickets.html">Tickets</a></li>
+          <li><a href="./userEvents.html">Events</a></li>
+          <li><a href="./userReviews.html">Reviews</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Things to Do</a>
+            <div class="dropdown-content">
+              <ul>
+                <li><a href="#">Food & Drink</a></li>
+                <li><a href="#">Cinemas</a></li>
+                <li><a href="#">Fun House</a></li>
+                <li><a href="#">Gaming Arenas</a></li>
+              </ul>
+            </div>
+          </li>
           <span class="actionButtons hidden gap">
             <li class="actionButtons-2">
               <i class="fa-solid fa-magnifying-glass"></i>
@@ -65,9 +81,7 @@
         <button class="actionButtons-2">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
-        <button class="actionButtons-3">
-          <a href="./login.html"> <i class="fa-sharp fa-solid fa-user"></i></a>
-        </button>
+
         <a class="actionButtons-1" href="./userLogin.html"> Logout</a>
       </div>
     </header>
@@ -84,7 +98,7 @@
           </div>
 
           <div class="organizer-info flex">
-            <div class="organizer-info-head flex">
+            <div class="organizer-info-head">
               <h2>Muhammad Wasif Shahid</h2>
             </div>
 
@@ -114,6 +128,137 @@
         </section>
       </div>
     </main>
+
+    <section class="user-review container">
+      <h2>To Review</h2>
+      <div class="slider-1 slider">
+        <div>
+          <img src="../images/annurals.jpeg" alt="" />
+          <h3>Soul Fest</h3>
+          <p>Liyari Beach</p>
+          <p>23 March 2024</p>
+          <button class="review-btn">
+            <i class="fa-solid fa-star"></i> Give Review
+          </button>
+        </div>
+        <div>
+          <img src="../images/cagatay.png" alt="" />
+          <h3>Soul Fest</h3>
+          <p>Liyari Beach</p>
+          <p>23 March 2024</p>
+          <button class="review-btn">
+            <i class="fa-solid fa-star"></i> Give Review
+          </button>
+        </div>
+        <div>
+          <img src="../images/coke studio.jpg" alt="" />
+          <h3>Soul Fest</h3>
+          <p>Liyari Beach</p>
+          <p>23 March 2024</p>
+          <button class="review-btn">
+            <i class="fa-solid fa-star"></i> Give Review
+          </button>
+        </div>
+        <div>
+          <img src="../images/coke studio.jpg" alt="" />
+          <h3>Soul Fest</h3>
+          <p>Liyari Beach</p>
+          <p>23 March 2024</p>
+          <button class="review-btn">
+            <i class="fa-solid fa-star"></i> Give Review
+          </button>
+        </div>
+        <div>
+          <img src="../images/coke studio.jpg" alt="" />
+          <h3>Soul Fest</h3>
+          <p>Liyari Beach</p>
+          <p>23 March 2024</p>
+          <button class="review-btn">
+            <i class="fa-solid fa-star"></i> Give Review
+          </button>
+        </div>
+        <div>
+          <img src="../images/coke studio.jpg" alt="" />
+          <h3>Soul Fest</h3>
+          <p>Liyari Beach</p>
+          <p>23 March 2024</p>
+          <button class="review-btn">
+            <i class="fa-solid fa-star"></i> Give Review
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="user-recommendation container">
+      <h2>Recommendations</h2>
+
+      <div>
+        <p>
+          You can get Recommendations for Event based on your Interest. Click
+          Below Button to Get Recommendations
+        </p>
+        <button class="review-btn">
+          <i class="fa-solid fa-magnet"></i> Get Recommendations
+        </button>
+      </div>
+      <div class="slider-1 slider">
+        <div>
+          <img src="../images/pepsi battleofbamds.jpeg" alt="" />
+          <h3>Soul Fest</h3>
+          <p>Liyari Beach</p>
+          <p>23 March 2024</p>
+          <button class="review-btn">
+            <i class="fa-solid fa-receipt"></i> View Details
+          </button>
+        </div>
+        <div>
+          <img src="../images/nescafe basement.png" alt="" />
+          <h3>Soul Fest</h3>
+          <p>Liyari Beach</p>
+          <p>23 March 2024</p>
+          <button class="review-btn">
+            <i class="fa-solid fa-receipt"></i> View Details
+          </button>
+        </div>
+        <div>
+          <img src="../images/event1.png" alt="" />
+          <h3>Soul Fest</h3>
+          <p>Liyari Beach</p>
+          <p>23 March 2024</p>
+          <button class="review-btn">
+            <i class="fa-solid fa-receipt"></i> View Details
+          </button>
+        </div>
+        <div>
+          <img src="../images/coke studio.jpg" alt="" />
+          <h3>Soul Fest</h3>
+          <p>Liyari Beach</p>
+          <p>23 March 2024</p>
+          <button class="review-btn">
+            <i class="fa-solid fa-receipt"></i> View Details
+          </button>
+        </div>
+        <div>
+          <img src="../images/coke studio.jpg" alt="" />
+          <h3>Soul Fest</h3>
+          <p>Liyari Beach</p>
+          <p>23 March 2024</p>
+          <button class="review-btn">
+            <i class="fa-solid fa-receipt"></i> View Details
+          </button>
+        </div>
+        <div>
+          <img src="../images/coke studio.jpg" alt="" />
+          <h3>Soul Fest</h3>
+          <p>Liyari Beach</p>
+          <p>23 March 2024</p>
+          <button class="review-btn">
+            <i class="fa-solid fa-receipt"></i> View Details
+          </button>
+        </div>
+      </div>
+    </section>
+
     <!-- ----------------- Scripts ---------------------- -->
     <script
       type="module"
@@ -125,5 +270,62 @@
     ></script>
 
     <script src="../scripts/menu.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.1/jquery-migrate.min.js"
+      integrity="sha512-KgffulL3mxrOsDicgQWA11O6q6oKeWcV00VxgfJw4TcM8XRQT8Df9EsrYxDf7tpVpfl3qcYD96BpyPvA4d1FDQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="../slick/slick.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".slider-1").slick({
+          dots: true,
+          infinite: false,
+          speed: 300,
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true,
+              },
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+              },
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+          ],
+        });
+      });
+    </script>
   </body>
 </html>

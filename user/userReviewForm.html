@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users Review Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Nanum+Gothic:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- <link rel="stylesheet" href="../styles/organizersDashboard.css" /> -->
+
+    <link rel="stylesheet" type="text/css" href="../slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css" />
+
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/userDashboard.css" />
+    <link rel="stylesheet" href="../styles/slider.css" />
+    <script
+      src="https://kit.fontawesome.com/9d779ebc01.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- ----------------- Header ---------------------- -->
+    <header class="container flex gap">
+      <div class="bar menu-toggle" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <div class="flex flex-center">
+        <img
+          class="header-logo tablet-logo"
+          src="../images/newlogo.png"
+          alt=""
+          hidden
+        />
+      </div>
+
+      <nav class="primary-nav flex gap menu" style="left: -1500px">
+        <img
+          class="header-logo laptop-logo"
+          src="../images/newlogo.png"
+          alt="Experience Pakistan Logo"
+        />
+        <ul class="flex gap menu-nav">
+          <li><a href="./userDashboard.html">Profile</a></li>
+
+          <li><a href="./userTickets.html">Tickets</a></li>
+          <li><a href="./userEvents.html">Events</a></li>
+          <li><a href="./userReviews.html">Reviews</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Things to Do</a>
+            <div class="dropdown-content">
+              <ul>
+                <li><a href="#">Food & Drink</a></li>
+                <li><a href="#">Cinemas</a></li>
+                <li><a href="#">Fun House</a></li>
+                <li><a href="#">Gaming Arenas</a></li>
+              </ul>
+            </div>
+          </li>
+          <span class="actionButtons hidden gap">
+            <li class="actionButtons-2">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </li>
+            <li class="actionButtons-3">
+              <a href="./userDashboard.html">
+                <i class="fa-sharp fa-solid fa-user"></i
+              ></a>
+            </li>
+            <a class="actionButtons-1" href="./userLogin.html"> Logout</a>
+          </span>
+        </ul>
+      </nav>
+
+      <div class="actionButtons flex menu-2">
+        <button class="actionButtons-2">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
+        <a class="actionButtons-1" href="./userLogin.html"> Logout</a>
+      </div>
+    </header>
+
+    <main class="title">
+      <h2>Review Form</h2>
+
+      <section class="">
+        <img src="../images/event1.png" alt="" />
+        <h3>Soul Fest</h3>
+
+        <form id="reviewForm">
+          <div class="rating">
+            <span class="star" data-rating="1">&#9733;</span>
+            <span class="star" data-rating="2">&#9733;</span>
+            <span class="star" data-rating="3">&#9733;</span>
+            <span class="star" data-rating="4">&#9733;</span>
+            <span class="star" data-rating="5">&#9733;</span>
+          </div>
+          <input type="text" id="review" value="Rating: 0" disabled />
+          <textarea
+            name="review"
+            placeholder="Write your review here..."
+          ></textarea>
+          <input type="submit" value="Submit Review" />
+        </form>
+      </section>
+    </main>
+    <!-- ----------------- Scripts ---------------------- -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="../scripts/menu.js"></script>
+
+    <script>
+      const stars = document.querySelectorAll(".star");
+      const reviewForm = document.getElementById("reviewForm");
+      const reviewInput = document.getElementById("review");
+
+      stars.forEach((star) => {
+        star.addEventListener("mouseover", highlightStars);
+        star.addEventListener("click", selectRating);
+      });
+
+      function highlightStars(e) {
+        const selectedRating = parseInt(e.target.getAttribute("data-rating"));
+        for (let i = 0; i < stars.length; i++) {
+          stars[i].classList.remove("colored");
+          if (stars[i].dataset.rating <= selectedRating) {
+            stars[i].classList.add("colored");
+          }
+        }
+      }
+
+      function selectRating(e) {
+        const selectedRating = parseInt(e.target.getAttribute("data-rating"));
+        reviewInput.value = " ";
+        reviewInput.value = "Rating: " + selectedRating + "\n";
+
+        stars.forEach((star) => star.classList.remove("selected"));
+        e.target.classList.add("selected");
+      }
+
+      reviewForm.addEventListener("submit", function (event) {
+        const selectedRating = document.querySelector(".selected");
+        if (selectedRating) {
+          const ratingValue = parseInt(
+            selectedRating.getAttribute("data-rating")
+          );
+          // Send ratingValue to server using AJAX or include it in form submission
+          console.log("Rating:", ratingValue);
+        } else {
+          // Handle no rating selected scenario (optional)
+          console.warn("Please select a rating before submitting!");
+        }
+        // Prevent default form submission for demonstration purposes
+        event.preventDefault();
+      });
+    </script>
+  </body>
+</html>

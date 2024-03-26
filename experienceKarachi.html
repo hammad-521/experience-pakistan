@@ -12,7 +12,7 @@
     />
 
     <link rel="stylesheet" href="./styles/experienceKarachi.css" />
-
+    <link rel="stylesheet" href="./styles/homeheader.css" />
     <script
       src="https://kit.fontawesome.com/9d779ebc01.js"
       crossorigin="anonymous"
@@ -44,20 +44,45 @@
           <li><a href="./index.html">Home</a></li>
           <li><a href="./artists.html">Artist</a></li>
           <li><a href="./partners.html">Partners</a></li>
-          <li><a href="./restaurants.html">Foods & Drinks </a></li>
-          <li><a href="./events.html">Events</a></li>
+          <!-- <li><a href="./restaurants.html">Foods & Drinks </a></li> -->
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Things to Do</a>
+            <div class="dropdown-content">
+              <ul>
+                <li><a href="#">Food & Drink</a></li>
+                <li><a href="#">Cinemas</a></li>
+                <li><a href="#">Fun House</a></li>
+                <li><a href="#">Gaming Arenas</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Events</a>
+            <div class="dropdown-content">
+              <ul>
+                <li><a href="#">Karachi</a></li>
+                <li><a href="#">Lahore</a></li>
+                <li><a href="#">Islamabad</a></li>
+              </ul>
+            </div>
+          </li>
+          <!-- <li><a href="./events.html">Events</a></li> -->
           <span class="actionButtons hidden gap">
             <a class="actionButtons-1" href="./signup.html">
               Become an Organizer</a
             >
 
-            <li class="actionButtons-2">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </li>
-            <li class="actionButtons-3">
-              <a href="./login.html">
+            <li class="actionButtons-3 dropdown">
+              <a href="#" class="dropbtn">
                 <i class="fa-sharp fa-solid fa-user"></i
               ></a>
+              <div class="dropdown-content right bottom">
+                <ul>
+                  <li><a href="./user/userLogin.html">Customer Login</a></li>
+                  <li><a href="./login.html">Organizer Login</a></li>
+                  <li><a href="./admin/index.html">Admin Login</a></li>
+                </ul>
+              </div>
             </li>
           </span>
         </ul>
@@ -66,12 +91,20 @@
       <div class="actionButtons flex menu-2">
         <a class="actionButtons-1" href="./signup.html"> Become an Organizer</a>
 
-        <button class="actionButtons-2">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-        <button class="actionButtons-3">
-          <a href="./login.html"> <i class="fa-sharp fa-solid fa-user"></i></a>
-        </button>
+        <ul>
+          <li class="actionButtons-3 dropdown">
+            <a href="#" class="dropbtn">
+              <i class="fa-sharp fa-solid fa-user"></i
+            ></a>
+            <div class="dropdown-content right">
+              <ul>
+                <li><a href="./user/userLogin.html">Customer Login</a></li>
+                <li><a href="./login.html">Organizer Login</a></li>
+                <li><a href="./admin/index.html">Admin Login</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
       </div>
     </header>
     <!-- ----------------- Hero Section ---------------------- -->
@@ -88,7 +121,7 @@
         <a class="explore-btn" href="">Explore More</a>
       </div>
       <div class="hero-img">
-        <img src="./images/coke studio.jpg" alt="" />
+        <img src="./images/exp-karachi.png" alt="" />
       </div>
     </section>
 
@@ -477,399 +510,6 @@
                   </div>
                 </div>
               </div>
-              <div class="event1">
-                <div class="event-img">
-                  <img src="./images/event1.png" alt="" />
-                </div>
-                <div class="event1-body flex">
-                  <div class="event-left">
-                    <span class="date">
-                      <h3>24</h3>
-                      <p>
-                        Nov <br />
-                        2023
-                      </p>
-                    </span>
-                    <span>
-                      <h3>29</h3>
-                      <p>
-                        Nov <br />
-                        2023
-                      </p>
-                    </span>
-                  </div>
-                  <div class="event-right">
-                    <h3>SoulFest</h3>
-                    <span>Layari Beach</span>
-
-                    <p>
-                      06:00 PM <br />
-                      Onwards
-                    </p>
-
-                    <a href="./eventinfo.html">Book Tickets</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Events 2 -->
-              <div class="event1">
-                <div class="event-img">
-                  <img src="./images/event1.png" alt="" />
-                </div>
-                <div class="event1-body flex">
-                  <div class="event-left">
-                    <span class="date">
-                      <h3>24</h3>
-                      <p>
-                        Nov <br />
-                        2023
-                      </p>
-                    </span>
-                    <span>
-                      <h3>29</h3>
-                      <p>
-                        Nov <br />
-                        2023
-                      </p>
-                    </span>
-                  </div>
-                  <div class="event-right">
-                    <h3>SoulFest</h3>
-                    <span>Layari Beach</span>
-
-                    <p>
-                      06:00 PM <br />
-                      Onwards
-                    </p>
-
-                    <a href="./eventinfo.html">Book Tickets</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Events 3 -->
-              <div class="event1">
-                <div class="event-img">
-                  <img src="./images/event1.png" alt="" />
-                </div>
-                <div class="event1-body flex">
-                  <div class="event-left">
-                    <span class="date">
-                      <h3>24</h3>
-                      <p>
-                        Nov <br />
-                        2023
-                      </p>
-                    </span>
-                    <span>
-                      <h3>29</h3>
-                      <p>
-                        Nov <br />
-                        2023
-                      </p>
-                    </span>
-                  </div>
-                  <div class="event-right">
-                    <h3>SoulFest</h3>
-                    <span>Layari Beach</span>
-
-                    <p>
-                      06:00 PM <br />
-                      Onwards
-                    </p>
-
-                    <a href="./eventinfo.html">Book Tickets</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Events 3 -->
-              <div class="event1">
-                <div class="event-img">
-                  <img src="./images/event1.png" alt="" />
-                </div>
-                <div class="event1-body flex">
-                  <div class="event-left">
-                    <span class="date">
-                      <h3>24</h3>
-                      <p>
-                        Nov <br />
-                        2023
-                      </p>
-                    </span>
-                    <span>
-                      <h3>29</h3>
-                      <p>
-                        Nov <br />
-                        2023
-                      </p>
-                    </span>
-                  </div>
-                  <div class="event-right">
-                    <h3>SoulFest</h3>
-                    <span>Layari Beach</span>
-
-                    <p>
-                      06:00 PM <br />
-                      Onwards
-                    </p>
-
-                    <a href="./eventinfo.html">Book Tickets</a>
-                  </div>
-                </div>
-              </div>
-              <div class="event1">
-                <div class="event-img">
-                  <img src="./images/event1.png" alt="" />
-                </div>
-                <div class="event1-body flex">
-                  <div class="event-left">
-                    <span class="date">
-                      <h3>24</h3>
-                      <p>
-                        Nov <br />
-                        2023
-                      </p>
-                    </span>
-                    <span>
-                      <h3>29</h3>
-                      <p>
-                        Nov <br />
-                        2023
-                      </p>
-                    </span>
-                  </div>
-                  <div class="event-right">
-                    <h3>SoulFest</h3>
-                    <span>Layari Beach</span>
-
-                    <p>
-                      06:00 PM <br />
-                      Onwards
-                    </p>
-
-                    <a href="./eventinfo.html">Book Tickets</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Events 2 -->
-              <div class="event1">
-                <div class="event-img">
-                  <img src="./images/event1.png" alt="" />
-                </div>
-                <div class="event1-body flex">
-                  <div class="event-left">
-                    <span class="date">
-                      <h3>24</h3>
-                      <p>
-                        Nov <br />
-                        2023
-                      </p>
-                    </span>
-                    <span>
-                      <h3>29</h3>
-                      <p>
-                        Nov <br />
-                        2023
-                      </p>
-                    </span>
-                  </div>
-                  <div class="event-right">
-                    <h3>SoulFest</h3>
-                    <span>Layari Beach</span>
-
-                    <p>
-                      06:00 PM <br />
-                      Onwards
-                    </p>
-
-                    <a href="./eventinfo.html">Book Tickets</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Events 3 -->
-              <div class="event1">
-                <div class="event-img">
-                  <img src="./images/event-main.png" alt="" />
-                </div>
-                <div class="event1-body flex">
-                  <div class="event-left">
-                    <span class="date">
-                      <h3>24</h3>
-                      <p>
-                        Nov <br />
-                        2023
-                      </p>
-                    </span>
-                    <span>
-                      <h3>29</h3>
-                      <p>
-                        Nov <br />
-                        2023
-                      </p>
-                    </span>
-                  </div>
-                  <div class="event-right">
-                    <h3>SoulFest</h3>
-                    <span>Layari Beach</span>
-
-                    <p>
-                      06:00 PM <br />
-                      Onwards
-                    </p>
-
-                    <a href="./eventinfo.html">Book Tickets</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Events 3 -->
-              <div class="event1">
-                <div class="event-img">
-                  <img src="./images/event-main.png" alt="" />
-                </div>
-                <div class="event1-body flex">
-                  <div class="event-left">
-                    <span class="date">
-                      <h3>24</h3>
-                      <p>
-                        Nov <br />
-                        2023
-                      </p>
-                    </span>
-                    <span>
-                      <h3>29</h3>
-                      <p>
-                        Nov <br />
-                        2023
-                      </p>
-                    </span>
-                  </div>
-                  <div class="event-right">
-                    <h3>SoulFest</h3>
-                    <span>Layari Beach</span>
-
-                    <p>
-                      06:00 PM <br />
-                      Onwards
-                    </p>
-
-                    <a href="./eventinfo.html">Book Tickets</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="event1">
-                <div class="event-img">
-                  <img src="./images/event1.png" alt="" />
-                </div>
-                <div class="event1-body flex">
-                  <div class="event-left">
-                    <span class="date">
-                      <h3>24</h3>
-                      <p>
-                        Nov <br />
-                        2023
-                      </p>
-                    </span>
-                    <span>
-                      <h3>29</h3>
-                      <p>
-                        Nov <br />
-                        2023
-                      </p>
-                    </span>
-                  </div>
-                  <div class="event-right">
-                    <h3>SoulFest</h3>
-                    <span>Layari Beach</span>
-
-                    <p>
-                      06:00 PM <br />
-                      Onwards
-                    </p>
-
-                    <a href="./eventinfo.html">Book Tickets</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Events 2 -->
-              <div class="event1">
-                <div class="event-img">
-                  <img src="./images/event1.png" alt="" />
-                </div>
-                <div class="event1-body flex">
-                  <div class="event-left">
-                    <span class="date">
-                      <h3>24</h3>
-                      <p>
-                        Nov <br />
-                        2023
-                      </p>
-                    </span>
-                    <span>
-                      <h3>29</h3>
-                      <p>
-                        Nov <br />
-                        2023
-                      </p>
-                    </span>
-                  </div>
-                  <div class="event-right">
-                    <h3>SoulFest</h3>
-                    <span>Layari Beach</span>
-
-                    <p>
-                      06:00 PM <br />
-                      Onwards
-                    </p>
-
-                    <a href="./eventinfo.html">Book Tickets</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Events 3 -->
-              <div class="event1">
-                <div class="event-img">
-                  <img src="./images/event1.png" alt="" />
-                </div>
-                <div class="event1-body flex">
-                  <div class="event-left">
-                    <span class="date">
-                      <h3>24</h3>
-                      <p>
-                        Nov <br />
-                        2023
-                      </p>
-                    </span>
-                    <span>
-                      <h3>29</h3>
-                      <p>
-                        Nov <br />
-                        2023
-                      </p>
-                    </span>
-                  </div>
-                  <div class="event-right">
-                    <h3>SoulFest</h3>
-                    <span>Layari Beach</span>
-
-                    <p>
-                      06:00 PM <br />
-                      Onwards
-                    </p>
-
-                    <a href="./eventinfo.html">Book Tickets</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Events 3 -->
               <div class="event1">
                 <div class="event-img">
                   <img src="./images/event1.png" alt="" />

@@ -67,12 +67,22 @@ button {
   align-items: center;
 }
 
+.flex-start {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
 .gap {
   gap: 1.4rem;
 }
 
 .gap-large {
   gap: 2rem;
+}
+
+.gap-small {
+  gap: 1rem;
 }
 
 .hidden {
@@ -101,20 +111,22 @@ header {
   -webkit-box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.26);
   -moz-box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.26);
 }
+
 .bar {
   display: none;
 }
+
 .header-logo {
   width: 100px;
 }
 
 .primary-nav {
-  max-width: 620px;
+  max-width: 675px;
   width: 100%;
 }
 
 .primary-nav ul {
-  max-width: 460px;
+  max-width: 530px;
   width: 100%;
 }
 
@@ -123,15 +135,17 @@ header {
   font-weight: 700;
   text-transform: uppercase;
 }
+
 .primary-nav li a {
   color: #000;
 }
+
 .primary-nav li a:visited {
   color: #000;
 }
 
 .actionButtons {
-  max-width: 240px;
+  max-width: 160px;
   width: 100%;
   /* margin-right: 2.5rem; */
 }
@@ -151,9 +165,11 @@ header {
   border-radius: 15px;
   font-family: "Nanum Gothic", sans-serif;
 }
+
 .actionButtons-1 a {
   color: #fff;
 }
+
 .actionButtons-1 a:visited {
   color: #fff;
 }
@@ -164,6 +180,7 @@ header {
   font-size: 1.8rem !important;
   background-color: #fff;
 }
+
 .actionButtons-2 a:visited,
 .actionButtons-3 a:visited {
   color: #000;
@@ -178,10 +195,10 @@ header {
 
 .profile-image img {
   max-height: 100%;
-  height: 380px;
-  width: 380px;
+  height: 300px;
+  width: 300px;
   object-fit: cover;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   border: 2px solid var(--primary-color);
 }
 
@@ -192,7 +209,7 @@ header {
 }
 
 .organizer-info {
-  width: 70%;
+  width: 90%;
   flex-direction: column;
   align-items: start;
   justify-content: space-between;
@@ -202,7 +219,7 @@ header {
 .organizer-info-head {
   width: 100%;
   margin-bottom: 1.5rem;
-  /* justify-content: space-between; */
+  text-align: center;
 }
 
 .organizer-interest p {
@@ -250,6 +267,7 @@ header {
 
 .organizer-details {
   margin: 4rem 0;
+  flex-direction: column;
 }
 
 .decor-line {
@@ -277,4 +295,294 @@ header {
 
 .editBtn i {
   margin-right: 0.5rem;
+}
+
+/* -------------------------------- To Review -------------------------- */
+
+.user-review,
+.user-recommendation {
+  width: 81%;
+  margin: auto;
+  margin-bottom: 5rem;
+}
+
+.slider-1 {
+  text-align: center;
+}
+.slider-1 h3 {
+  margin-top: 1rem;
+}
+
+.slider-1 p {
+  margin-top: 0.4rem;
+}
+
+.review-btn {
+  margin-top: 1rem;
+  padding: 0.6em 1em;
+  color: #fff;
+  background-color: var(--primary-color);
+  border-radius: 15px;
+  border: none;
+  font-size: 0.875rem;
+}
+
+.review-btn i {
+  margin-right: 0.35rem;
+}
+
+.user-recommendation {
+  padding: 4em 0;
+  border-top: 1px solid black;
+}
+
+.user-recommendation h2 {
+  margin-bottom: 2rem;
+}
+
+/* ----------------------- Events Page ------------------------ */
+
+.title {
+  width: 90%;
+  margin: auto;
+  /* border: 1px solid black; */
+}
+
+.title h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--primary-color);
+  margin-top: 4rem;
+}
+
+/* Event Stats */
+
+.event-stats {
+  gap: 4rem;
+  margin: 3rem 0;
+}
+
+.event-stats > a {
+  padding: 1em 1.5em;
+  border: 1px solid var(--primary-color);
+  text-align: center;
+  border-radius: 15px;
+  color: black;
+  transition: background-color 0.3s ease all;
+}
+
+.event-stats > a:visited {
+  color: black;
+}
+
+.event-stats > a:hover,
+.event-stats > a:hover i {
+  background-color: var(--primary-color);
+  color: white !important;
+}
+
+.event-stats h3 {
+  font-size: 2.5rem;
+}
+.event-stats p {
+  font-size: 1rem;
+}
+
+.event-stats i {
+  font-size: 2rem;
+  color: #ea8324;
+}
+
+/* Event Lists */
+
+.event-active {
+  background-color: var(--primary-color);
+}
+
+.event-active > * {
+  color: white !important;
+}
+.lists {
+  margin: 3rem 0;
+}
+
+.lists-head {
+  margin: 6rem 0 2rem 0;
+  gap: 1rem;
+}
+
+.lists-head i {
+  font-size: 1.5rem;
+  align-items: baseline;
+}
+
+.lists h2 {
+  text-align: left;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #000;
+  margin-top: 0;
+}
+
+.lists > div {
+  margin-bottom: 2rem;
+}
+
+.event-list {
+  padding: 0.8em 1.2em;
+  border: 1px solid #ea8324;
+  border-left: none;
+  border-right: none;
+}
+
+.event-image {
+  width: 210px;
+  height: 135px;
+}
+
+.event-image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.event-detail {
+  margin-right: auto;
+}
+
+.event-detail h3 {
+  font-size: 2rem;
+}
+
+.event-city {
+  font-size: 1.3rem;
+  margin-top: 0.3rem;
+  margin-bottom: 1.2rem;
+}
+
+.event-dateTime {
+  font-size: 1.125rem;
+  gap: 1rem;
+}
+.line {
+  display: block;
+  width: 1px;
+  height: 15px;
+  background-color: #000;
+}
+
+.event-actionBtns {
+  display: flex;
+
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-btn {
+  padding: 0.5em 0.8em;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+}
+
+/* ---------------- Ticket Page ---------------- */
+
+.ticket-list {
+  border: 1px solid var(--primary-color);
+  width: 100%;
+  background-color: #ffe6ce;
+  background-image: url("https://www.transparenttextures.com/patterns/checkered-light-emboss.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  border-radius: 5px;
+}
+
+.ticket-location {
+  margin-bottom: 0.6rem;
+}
+
+.ticket-price {
+  height: 100%;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-left: 2px dashed var(--primary-color);
+}
+.ticket-price h3 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.ticket-price p {
+  font-size: 1.25rem;
+}
+
+.ticket-info {
+  padding: 1em;
+}
+
+.ticket-btn {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ---------------- Review Page ----------------- */
+
+.review-img {
+  width: 30%;
+  height: 100%;
+  min-height: 200px;
+}
+
+.review-img img {
+  object-fit: fill;
+  height: 230px;
+}
+
+.review-detail {
+  width: 80%;
+  padding: 1rem;
+}
+
+.review-description {
+  line-height: 150%;
+  text-align: justify;
+}
+
+.event-btn i {
+  margin-right: 0.5rem;
+}
+
+/* --------------- Review Form ------------- */
+.rating {
+  unicode-bidi: bidi-override;
+  direction: ltr; /* Corrected direction to left-to-right */
+}
+
+.star {
+  display: inline-block;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.star:hover {
+  color: orange;
+}
+
+.star.colored {
+  color: orange;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  margin-top: 10px;
+}
+
+input[type="submit"] {
+  display: block;
+  margin-top: 10px;
 }

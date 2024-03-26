@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="./styles/restaurants.css" />
     <link rel="stylesheet" href="./styles/entertainment.css" />
+    <link rel="stylesheet" href="./styles/homeheader.css" />
 
     <script
       src="https://kit.fontawesome.com/9d779ebc01.js"
@@ -52,20 +53,45 @@
           <li><a href="./index.html">Home</a></li>
           <li><a href="./artists.html">Artist</a></li>
           <li><a href="./partners.html">Partners</a></li>
-          <li><a href="./restaurants.html">Foods & Drinks </a></li>
-          <li><a href="./events.html">Events</a></li>
+          <!-- <li><a href="./restaurants.html">Foods & Drinks </a></li> -->
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Things to Do</a>
+            <div class="dropdown-content">
+              <ul>
+                <li><a href="#">Food & Drink</a></li>
+                <li><a href="#">Cinemas</a></li>
+                <li><a href="#">Fun House</a></li>
+                <li><a href="#">Gaming Arenas</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Events</a>
+            <div class="dropdown-content">
+              <ul>
+                <li><a href="#">Karachi</a></li>
+                <li><a href="#">Lahore</a></li>
+                <li><a href="#">Islamabad</a></li>
+              </ul>
+            </div>
+          </li>
+          <!-- <li><a href="./events.html">Events</a></li> -->
           <span class="actionButtons hidden gap">
             <a class="actionButtons-1" href="./signup.html">
               Become an Organizer</a
             >
 
-            <li class="actionButtons-2">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </li>
-            <li class="actionButtons-3">
-              <a href="./login.html">
+            <li class="actionButtons-3 dropdown">
+              <a href="#" class="dropbtn">
                 <i class="fa-sharp fa-solid fa-user"></i
               ></a>
+              <div class="dropdown-content right bottom">
+                <ul>
+                  <li><a href="./user/userLogin.html">Customer Login</a></li>
+                  <li><a href="./login.html">Organizer Login</a></li>
+                  <li><a href="./admin/index.html">Admin Login</a></li>
+                </ul>
+              </div>
             </li>
           </span>
         </ul>
@@ -74,12 +100,20 @@
       <div class="actionButtons flex menu-2">
         <a class="actionButtons-1" href="./signup.html"> Become an Organizer</a>
 
-        <button class="actionButtons-2">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-        <button class="actionButtons-3">
-          <a href="./login.html"> <i class="fa-sharp fa-solid fa-user"></i></a>
-        </button>
+        <ul>
+          <li class="actionButtons-3 dropdown">
+            <a href="#" class="dropbtn">
+              <i class="fa-sharp fa-solid fa-user"></i
+            ></a>
+            <div class="dropdown-content right">
+              <ul>
+                <li><a href="./user/userLogin.html">Customer Login</a></li>
+                <li><a href="./login.html">Organizer Login</a></li>
+                <li><a href="./admin/index.html">Admin Login</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
       </div>
     </header>
     <!-- ----------------- Restaurants Section ---------------------- -->

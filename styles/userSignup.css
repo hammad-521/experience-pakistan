@@ -311,6 +311,37 @@ input:focus {
   /* padding: 0.4em 0; */
 }
 
+/* ----------------- Email Verification Section ------------------- */
+
+.email-response {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.email-response img {
+  width: 150px;
+}
+
+.email-response h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 3rem 0 1rem;
+}
+.email-response p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
+.ok-btn {
+  padding: 0.8em 1.8em;
+  font-size: 1.25rem;
+  font-weight: 500;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+
 /* ******************** Media Query  *********************** */
 
 @media screen and (max-width: 1023px) {
