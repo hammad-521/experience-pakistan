@@ -179,6 +179,7 @@ header {
   border: none;
   font-size: 1.8rem !important;
   background-color: #fff;
+  color: var(--primary-color);
 }
 
 .actionButtons-2 a:visited,
@@ -557,32 +558,97 @@ header {
 }
 
 /* --------------- Review Form ------------- */
-.rating {
-  unicode-bidi: bidi-override;
-  direction: ltr; /* Corrected direction to left-to-right */
-}
-
-.star {
-  display: inline-block;
-  font-size: 2em;
-  cursor: pointer;
-}
-
-.star:hover {
-  color: orange;
-}
-
-.star.colored {
-  color: orange;
+.review-form {
+  margin-top: 5rem;
+  text-align: center;
 }
 
 textarea {
-  width: 100%;
-  height: 100px;
-  margin-top: 10px;
+  width: 50vw;
+  height: 150px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding: 1em;
+  font-size: 1.25rem;
 }
 
 input[type="submit"] {
   display: block;
   margin-top: 10px;
+}
+
+[data-star-rating] {
+  justify-content: center;
+}
+
+.review-form h3 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0.5rem 0 1rem 0;
+}
+
+/* ----------- Interest --------------- */
+
+.interest {
+  margin: 3rem;
+  padding: 3em 2.5em;
+  background-color: #ffb987;
+  background-image: url("https://www.transparenttextures.com/patterns/blizzard.png");
+  border-radius: 5px;
+}
+.interest p,
+.setting p {
+  font-size: 1.35rem;
+  margin: 1rem 0;
+  line-height: 154%;
+}
+
+.interest label {
+  font-size: 1.25rem;
+
+  color: black;
+  font-weight: 600;
+}
+
+.interest input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+.interest .form-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+/* --------------- Settings ---------------- */
+.setting {
+  margin: 3rem;
+  padding: 3em 4em;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+}
+
+.list label {
+  font-weight: bold;
+  font-size: 1.125rem;
+  display: inline-block;
+  width: 220px !important;
+  line-height: 24px;
+}
+
+.form-control {
+  margin: 2rem auto;
+}
+
+.form-control input,
+.form-control textarea,
+.form-control select {
+  background-color: #ffdbba;
+  padding: 0.6em 1.2em;
+  font-size: 1.125rem;
+  border: none;
+  border-radius: 15px;
+  width: 40%;
 }

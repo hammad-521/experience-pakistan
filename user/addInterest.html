@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users Review Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Nanum+Gothic:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- <link rel="stylesheet" href="../styles/organizersDashboard.css" /> -->
+
+    <link rel="stylesheet" type="text/css" href="../slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css" />
+    <link href="../styles/star-rating.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/userDashboard.css" />
+    <link rel="stylesheet" href="../styles/slider.css" />
+    <script
+      src="https://kit.fontawesome.com/9d779ebc01.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- ----------------- Header ---------------------- -->
+    <header class="container flex gap">
+      <div class="bar menu-toggle" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <div class="flex flex-center">
+        <img
+          class="header-logo tablet-logo"
+          src="../images/newlogo.png"
+          alt=""
+          hidden
+        />
+      </div>
+
+      <nav class="primary-nav flex gap menu" style="left: -1500px">
+        <img
+          class="header-logo laptop-logo"
+          src="../images/newlogo.png"
+          alt="Experience Pakistan Logo"
+        />
+        <ul class="flex gap menu-nav">
+          <li><a href="./userDashboard.html">Profile</a></li>
+
+          <li><a href="./userTickets.html">Tickets</a></li>
+          <li><a href="./userEvents.html">Events</a></li>
+          <li><a href="./userReviews.html">Reviews</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Things to Do</a>
+            <div class="dropdown-content">
+              <ul>
+                <li><a href="#">Food & Drink</a></li>
+                <li><a href="#">Cinemas</a></li>
+                <li><a href="#">Fun House</a></li>
+                <li><a href="#">Gaming Arenas</a></li>
+              </ul>
+            </div>
+          </li>
+          <span class="actionButtons hidden gap">
+            <li class="actionButtons-2">
+              <i class="fa-solid fa-gear"></i>
+            </li>
+            <li class="actionButtons-3">
+              <a href="./userDashboard.html">
+                <i class="fa-sharp fa-solid fa-user"></i
+              ></a>
+            </li>
+            <a class="actionButtons-1" href="./userLogin.html"> Logout</a>
+          </span>
+        </ul>
+      </nav>
+
+      <div class="actionButtons flex menu-2">
+        <button class="actionButtons-2">
+          <i class="fa-solid fa-gear"></i>
+        </button>
+
+        <a class="actionButtons-1" href="./userLogin.html"> Logout</a>
+      </div>
+    </header>
+
+    <main class="title container">
+      <h2>Your Interests</h2>
+
+      <section class="lists interest">
+        <form id="interestForm">
+          <h2>Select Your Interests</h2>
+
+          <p>
+            <strong>NOTE:</strong> Please select at least one interest below.
+            Your selections will help us provide personalized recommendations.
+          </p>
+
+          <div class="form-control">
+            <input
+              type="checkbox"
+              id="interest1"
+              name="interest[]"
+              value="Reading"
+            />
+            <label for="interest1">Reading</label><br />
+          </div>
+
+          <div class="form-control">
+            <input
+              type="checkbox"
+              id="interest2"
+              name="interest[]"
+              value="Traveling"
+            />
+            <label for="interest2">Traveling</label><br />
+          </div>
+
+          <div class="form-control">
+            <input
+              type="checkbox"
+              id="interest3"
+              name="interest[]"
+              value="Cooking"
+            />
+            <label for="interest3">Cooking</label><br />
+          </div>
+
+          <div class="form-control">
+            <input
+              type="checkbox"
+              id="interest4"
+              name="interest[]"
+              value="Gardening"
+            />
+            <label for="interest4">Gardening</label><br />
+          </div>
+          <div class="form-control">
+            <input
+              type="checkbox"
+              id="interest5"
+              name="interest[]"
+              value="Photography"
+            />
+            <label for="interest5">Photography</label><br />
+          </div>
+          <br />
+          <button class="event-btn">Add Interests</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- ----------------- Scripts ---------------------- -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="../scripts/menu.js"></script>
+  </body>
+</html>

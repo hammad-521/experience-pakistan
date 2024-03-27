@@ -15,6 +15,7 @@
 
     <link rel="stylesheet" type="text/css" href="../slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css" />
+    <link href="../styles/star-rating.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="../styles/header.css" />
     <link rel="stylesheet" href="../styles/userDashboard.css" />
@@ -65,7 +66,7 @@
           </li>
           <span class="actionButtons hidden gap">
             <li class="actionButtons-2">
-              <i class="fa-solid fa-magnifying-glass"></i>
+              <i class="fa-solid fa-gear"></i>
             </li>
             <li class="actionButtons-3">
               <a href="./userDashboard.html">
@@ -79,37 +80,54 @@
 
       <div class="actionButtons flex menu-2">
         <button class="actionButtons-2">
-          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-gear"></i>
         </button>
 
         <a class="actionButtons-1" href="./userLogin.html"> Logout</a>
       </div>
     </header>
 
-    <main class="title">
+    <main class="title container">
       <h2>Review Form</h2>
 
-      <section class="">
+      <section class="lists review-form">
         <img src="../images/event1.png" alt="" />
         <h3>Soul Fest</h3>
 
         <form id="reviewForm">
-          <div class="rating">
-            <span class="star" data-rating="1">&#9733;</span>
-            <span class="star" data-rating="2">&#9733;</span>
-            <span class="star" data-rating="3">&#9733;</span>
-            <span class="star" data-rating="4">&#9733;</span>
-            <span class="star" data-rating="5">&#9733;</span>
+          <div class="form-field" style="direction: ltr">
+            <span class="gl-star-rating gl-star-rating--rtl" data-star-rating=""
+              ><select id="glsr-rtl" class="star-rating-old">
+                <option value="">Select a rating</option>
+                <option value="5">5 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="3">3 Stars</option>
+                <option value="2">2 Stars</option>
+                <option value="1">1 Star</option></select
+              ><span
+                class="gl-star-rating--stars s0"
+                role="tooltip"
+                data-rating="0"
+                aria-label="Select a Rating"
+                ><span data-index="0" data-value="1" class=""></span
+                ><span data-index="1" data-value="2" class=""></span
+                ><span data-index="2" data-value="3" class=""></span
+                ><span data-index="3" data-value="4" class=""></span
+                ><span data-index="4" data-value="5" class=""></span></span
+            ></span>
           </div>
-          <input type="text" id="review" value="Rating: 0" disabled />
+
           <textarea
             name="review"
+            id="review"
             placeholder="Write your review here..."
           ></textarea>
-          <input type="submit" value="Submit Review" />
+          <br />
+          <button class="event-btn">Submit Review</button>
         </form>
       </section>
     </main>
+
     <!-- ----------------- Scripts ---------------------- -->
     <script
       type="module"
@@ -122,7 +140,7 @@
 
     <script src="../scripts/menu.js"></script>
 
-    <script>
+    <!-- <script>
       const stars = document.querySelectorAll(".star");
       const reviewForm = document.getElementById("reviewForm");
       const reviewInput = document.getElementById("review");
@@ -166,6 +184,49 @@
         // Prevent default form submission for demonstration purposes
         event.preventDefault();
       });
+    </script> -->
+
+    <script src="../scripts/star-rating.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"
+      integrity="sha512-YBk7HhgDZvBxmtOfUdvX0z8IH2d10Hp3aEygaMNhtF8fSOvBZ16D/1bXZTJV6ndk/L/DlXxYStP8jrF77v2MIg=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js"
+      integrity="sha512-zc7WDnCM3aom2EziyDIRAtQg1mVXLdILE09Bo+aE1xk0AM2c2cVLfSW9NrxE5tKTX44WBY0Z2HClZ05ur9vB6A=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="dist/star-rating.min.js?ver=4.3.0"></script>
+    <script>
+      var destroyed = false;
+      var starratingPrebuilt = new StarRating(".star-rating-prebuilt", {
+        prebuilt: true,
+        maxStars: 5,
+      });
+      var starrating = new StarRating(".star-rating", {
+        stars: function (el, item, index) {
+          el.innerHTML =
+            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect class="gl-star-full" width="19" height="19" x="2.5" y="2.5"/><polygon fill="#FFF" points="12 5.375 13.646 10.417 19 10.417 14.665 13.556 16.313 18.625 11.995 15.476 7.688 18.583 9.333 13.542 5 10.417 10.354 10.417"/></svg>';
+        },
+      });
+      var starratingOld = new StarRating(".star-rating-old");
+      document
+        .querySelector(".toggle-star-rating")
+        .addEventListener("click", function () {
+          if (!destroyed) {
+            starrating.destroy();
+            starratingOld.destroy();
+            starratingPrebuilt.destroy();
+            destroyed = true;
+          } else {
+            starrating.rebuild();
+            starratingOld.rebuild();
+            starratingPrebuilt.rebuild();
+            destroyed = false;
+          }
+        });
     </script>
   </body>
 </html>
