@@ -17,6 +17,8 @@
       src="https://kit.fontawesome.com/9d779ebc01.js"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <section class="flex container flexStart">
@@ -47,23 +49,7 @@
           </ul>
         </div>
 
-        <div class="secondary-nav">
-          <!-- <div class="second-nav-head flex flex-center">
-            <div class="head-img">
-              <img src="./images/profile.svg" alt="" />
-            </div>
-
-            <div class="head-detail">
-              <p>Muhammad Hammad</p>
-              <button>Logout</button>
-            </div>
-          </div> -->
-
-          <!-- <div class="second-nav-body">
-            <p>Copyright 2023 Experience Pakistan</p>
-            <p>All rights Reserved.</p>
-          </div> -->
-        </div>
+        <div class="secondary-nav"></div>
       </nav>
 
       <main>
@@ -162,20 +148,90 @@
           </div>
         </section>
 
-        <section>
-          <!-- <script src="https://cdn.lordicon.com/lordicon.js"></script>
-          <lord-icon
-            src="https://cdn.lordicon.com/abwrkdvl.json"
-            trigger="loop"
-            delay="1500"
-            state="in-growth"
-            colors="primary:#c74b16,secondary:#ff601c"
-            style="width: 250px; height: 250px"
-          >
-          </lord-icon> -->
+        <section class="chart">
+          <div class="chart-container-1">
+            <canvas id="myChart"></canvas>
+          </div>
+          <div class="chart-container-2">
+            <canvas id="myChart2"></canvas>
+          </div>
         </section>
       </main>
     </section>
     <script src="./scripts/admin.js"></script>
+    <script>
+      var ctx = document.getElementById("myChart").getContext("2d");
+      var ctx2 = document.getElementById("myChart2").getContext("2d");
+
+      var myChart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: ["Revenue", "Ticket", "Events"],
+          datasets: [
+            {
+              label: "Experience Pakistan",
+              data: [3430, 2034, 3022],
+              backgroundColor: [
+                "rgba(255, 96, 28, 0.8)",
+                "rgba(255, 185, 135, 0.8)",
+                "rgba(246, 173, 85, 0.8)",
+              ],
+              borderColor: [
+                "rgba(255, 96, 28, 3)",
+                "rgba(255, 185, 135, 3)",
+                "rgba(246, 173, 85, 3)",
+              ],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            yAxes: [
+              {
+                ticks: {
+                  beginAtZero: true,
+                },
+              },
+            ],
+          },
+        },
+      });
+
+      var myChart2 = new Chart(ctx2, {
+        type: "doughnut",
+        data: {
+          labels: ["Organizers", "Users", "Artists"],
+          datasets: [
+            {
+              label: "Experience Pakistan",
+              data: [120, 2034, 86],
+              backgroundColor: [
+                "rgba(255, 96, 28, 0.8)",
+                "rgba(255, 185, 135, 0.8)",
+                "rgba(246, 173, 85, 0.8)",
+              ],
+              borderColor: [
+                "rgba(255, 96, 28, 1)",
+                "rgba(255, 185, 135, 1)",
+                "rgba(246, 173, 85, 1)",
+              ],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            yAxes: [
+              {
+                ticks: {
+                  beginAtZero: true,
+                },
+              },
+            ],
+          },
+        },
+      });
+    </script>
   </body>
 </html>

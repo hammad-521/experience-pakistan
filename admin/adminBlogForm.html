@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogs</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/adminNavbar.css" />
+    <link rel="stylesheet" href="../styles/adminPanel.css" />
+    <link rel="stylesheet" href="../styles/adminEvent.css" />
+    <script
+      src="https://kit.fontawesome.com/9d779ebc01.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/trix@2.0.8/dist/trix.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm//trix/dist/trix.min.css"
+      crossorigin="anonymous"
+    />
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"
+    ></script>
+  </head>
+  <body>
+    <section class="flex container flexStart">
+      <nav class="navbar">
+        <a href="" class="">
+          <img class="Logo flex" src="../images/newlogo-trans.png" alt="" />
+        </a>
+        <div class="main-nav">
+          <ul>
+            <a href="../adminPanel.html"
+              ><li><i class="fa-solid fa-desktop"></i>Dashboard</li></a
+            >
+            <a href="./adminEvent.html"
+              ><li><i class="fa-solid fa-campground"></i>Events</li></a
+            >
+            <a href="./adminPartner.html">
+              <li><i class="fa-solid fa-rug"></i>Partners</li>
+            </a>
+            <a href="./adminArtist.html"
+              ><li><i class="fa-solid fa-people-group"></i>Artists</li></a
+            >
+            <a href="./adminRestaurant.html"
+              ><li><i class="fa-solid fa-utensils"></i>Restaurants</li>
+            </a>
+            <a href="./adminBlogs.html" class="active"
+              ><li><i class="fa-solid fa-utensils"></i>Blogs</li>
+            </a>
+            <a href="./adminSettings.html"
+              ><li><i class="fa-solid fa-gear"></i>Settings</li></a
+            >
+          </ul>
+        </div>
+      </nav>
+
+      <main>
+        <section class="dashboard-head flex">
+          <div class="dashboard-head-primary flex">
+            <i class="fa-solid fa-bars-staggered"></i>
+            <h1>New Blog</h1>
+          </div>
+
+          <div class="dashboard-head-secondary flex gap">
+            <input class="searchBox" type="text" placeholder="Search" />
+            <div class="head-img">
+              <img
+                id="profileIcon"
+                onclick="toggleProfileCard()"
+                src="https://i.pinimg.com/736x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </section>
+
+        <div id="profileCard">
+          <div class="head-detail">
+            <img src="../images/young-man.jpg" alt="" />
+            <p>Muhammad Hammad</p>
+            <button>Logout</button>
+          </div>
+        </div>
+
+        <section class="dashboard list">
+          <form
+            class="product-form"
+            action="/add-event"
+            method="POST"
+            id="eventForm"
+          >
+            <div class="form-control">
+              <label for="name">Blog Title:</label>
+              <input class="width" type="text" name="name" id="name" />
+            </div>
+
+            <div class="form-control">
+              <label for="imageURL">Blog's Banner Image:</label>
+              <input class="width" type="file" accept="image/*" required="" />
+            </div>
+
+            <div class="form-control">
+              <label for="address">Author Name:</label>
+              <input class="width" type="text" name="address" id="address" />
+            </div>
+
+            <div class="form-control desc">
+              <label for="description">Description:</label>
+              <div class="desc-box">
+                <input id="content" type="hidden" name="content" />
+                <trix-editor input="content" class="trix-content"></trix-editor>
+              </div>
+            </div>
+
+            <div class="confirmBtn">
+              <button class="addBtn" id="confirm" type="submit">Submit</button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </section>
+    <script src="../scripts/admin.js"></script>
+  </body>
+</html>

@@ -5,7 +5,7 @@
 }
 
 :root {
-  --primary-color: #ff601c;
+  --primary-color: rgb(255, 96, 28);
   --secondary-color: #fff;
 }
 
@@ -229,6 +229,16 @@ button {
 .addBtn i {
   margin-left: 0.45rem;
 }
+
+.approve-btn {
+  background-color: #fff;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.approve-btn:hover {
+  background-color: #ffdbba;
+}
 .artist {
   margin-bottom: 2rem;
   border: 1px solid var(--primary-color);
@@ -243,6 +253,12 @@ button {
 .artist img {
   width: 140px;
   border-radius: 27px;
+}
+
+.organizer-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
 }
 
 .artistDetail h2 {
@@ -486,12 +502,12 @@ th {
 }
 
 .userList::-webkit-scrollbar-thumb {
-  background-color: var(--primary-color); /* Color of the scrollbar thumb */
+  background-color: var(--primary-color);
   border-radius: 5px;
 }
 
 .userList::-webkit-scrollbar-track {
-  background-color: #ddd; /* Color of the scrollbar track */
+  background-color: #ddd;
   border-radius: 5px;
 }
 
@@ -540,4 +556,74 @@ th {
   display: flex;
   justify-self: start;
   align-items: center;
+}
+
+.widthFull {
+  width: fit-content !important;
+}
+
+.eventCount {
+  text-align: center;
+  font-size: 1.125rem;
+}
+
+.eventCount span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-right: 0.65rem;
+}
+
+.desc-box {
+  max-width: 655px;
+}
+
+/* -------- Pending Partner Info Page ------ */
+
+.companyLogo,
+.companyLogo h3 {
+  display: block !important;
+}
+
+.companyLogo img {
+  padding: 1em;
+  text-align: center;
+  width: 400px;
+  object-fit: cover;
+}
+
+.companyLogo section {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+/*  Chart JS Styling */
+
+.chart-container-1 {
+  width: 450px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.chart-container-2 {
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.chartjs-title {
+  font-size: 18px;
+}
+
+.chartjs-legend {
+  font-size: 14px;
+}
+
+.chart {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  /* gap: 1.5rem; */
 }

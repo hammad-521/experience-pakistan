@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Partners</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/adminNavbar.css" />
+    <link rel="stylesheet" href="../styles/adminPanel.css" />
+    <link rel="stylesheet" href="../styles/adminEvent.css" />
+    <script
+      src="https://kit.fontawesome.com/9d779ebc01.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section class="flex container flexStart">
+      <nav class="navbar">
+        <a href="" class="">
+          <img class="Logo flex" src="../images/newlogo-trans.png" alt="" />
+        </a>
+        <div class="main-nav">
+          <ul>
+            <a href="../adminPanel.html"
+              ><li><i class="fa-solid fa-desktop"></i>Dashboard</li></a
+            >
+            <a href="./adminEvent.html"
+              ><li><i class="fa-solid fa-campground"></i>Events</li></a
+            >
+            <a href="./adminPartner.html" class="active">
+              <li><i class="fa-solid fa-rug"></i>Partners</li>
+            </a>
+            <a href="./adminArtist.html"
+              ><li><i class="fa-solid fa-people-group"></i>Artists</li></a
+            >
+            <a href="./adminRestaurant.html"
+              ><li><i class="fa-solid fa-utensils"></i>Restaurants</li>
+            </a>
+            <a href="./adminSettings.html"
+              ><li><i class="fa-solid fa-gear"></i>Settings</li></a
+            >
+          </ul>
+        </div>
+      </nav>
+      <main>
+        <section class="dashboard-head flex">
+          <div class="dashboard-head-primary flex">
+            <i class="fa-solid fa-bars-staggered"></i>
+            <h1>Partners</h1>
+          </div>
+
+          <div class="dashboard-head-secondary flex gap">
+            <input class="searchBox" type="text" placeholder="Search" />
+            <div class="head-img">
+              <img
+                id="profileIcon"
+                onclick="toggleProfileCard()"
+                src="https://i.pinimg.com/736x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </section>
+
+        <div id="profileCard">
+          <div class="head-detail">
+            <img src="../images/young-man.jpg" alt="" />
+            <p>Muhammad Hammad</p>
+            <button>Logout</button>
+          </div>
+        </div>
+
+        <section class="flex dashboard-info">
+          <div class="addBtn eventCount">
+            <span> 5 </span>
+
+            Pending Partners
+          </div>
+        </section>
+        <section class="dashboard">
+          <div class="userList">
+            <table>
+              <thead>
+                <tr>
+                  <th>Organization Logo</th>
+                  <th>Organization Name</th>
+                  <th>Owner Name</th>
+                  <th>Email Address</th>
+                  <th>Phone #</th>
+                  <th>More Info</th>
+                  <th>Reject</th>
+                  <th>Approve</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img
+                      class="organizer-img"
+                      src="../images/coke studio.jpg"
+                      alt="coke studio"
+                    />
+                  </td>
+                  <td>Coke Studio</td>
+                  <td>Ali Zafar</td>
+                  <td>cokestudio@email.com</td>
+                  <td>123456789</td>
+                  <td class="actionBtns">
+                    <button
+                      class="viewBtn"
+                      onclick="window.location.href = './adminPartnerInfo.html'"
+                    >
+                      See All
+                    </button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="deleteBtns">Reject</button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="editBtn widthFull">Approve</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <img
+                      class="organizer-img"
+                      src="../images/coke studio.jpg"
+                      alt="coke studio"
+                    />
+                  </td>
+                  <td>Coke Studio</td>
+                  <td>Ali Zafar</td>
+                  <td>cokestudio@email.com</td>
+                  <td>123456789</td>
+                  <td class="actionBtns">
+                    <button
+                      class="viewBtn"
+                      onclick="window.location.href = './adminPartnerInfo.html'"
+                    >
+                      See All
+                    </button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="deleteBtns">Reject</button>
+                  </td>
+                  <td class="actionBtns">
+                    <button class="editBtn widthFull">Approve</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </section>
+
+    <script src="../scripts/admin.js"></script>
+  </body>
+</html>

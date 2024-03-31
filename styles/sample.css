@@ -6,8 +6,8 @@
 
 :root {
   --primary-color: #f47725; /* Set your desired color value */
-  --secondary-color: #ffb987; /* Set your desired color value */
-  --tertiary-color: #f6ad55;
+  --secondary-color: rgb(255, 185, 135); /* Set your desired color value */
+  --tertiary-color: rgb(246, 173, 85);
   --contrast-color: #ffdbba; /* Set your desired color value */
 }
 
