@@ -479,6 +479,25 @@ footer img {
   .external-link a:last-child {
     margin-right: 0 !important;
   }
+
+  /*  --------------------------- Contact US page  ____________________ */
+  .contact {
+    margin-top: 4rem;
+  }
+
+  .contact-form,
+  .contact-info {
+    width: 90%;
+  }
+  .contact-info {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+
+  .suggest-form {
+    padding: 2rem;
+  }
 }
 
 @media screen and (max-width: 514px) {

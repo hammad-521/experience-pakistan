@@ -339,4 +339,21 @@
   .ent-head {
     margin-bottom: 15rem;
   }
+  .food-body-head a {
+    margin-right: 0;
+  }
+  .food-body h2,
+  .filter h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .carousel-details {
+    padding-left: 1em;
+    padding-right: 1em;
+    /* text-align: justify; */
+  }
+  .carousel-item {
+    margin-bottom: 1rem;
+  }
 }

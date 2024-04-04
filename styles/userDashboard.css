@@ -446,10 +446,17 @@ header {
 .event-image img {
   width: 100%;
   object-fit: cover;
+  padding-left: 1em;
 }
 
 .event-detail {
   margin-right: auto;
+  /* width: 55%; */
+}
+
+.event-info {
+  justify-content: space-between;
+  width: 82%;
 }
 
 .event-detail h3 {
@@ -465,17 +472,19 @@ header {
 .event-dateTime {
   font-size: 1.125rem;
   gap: 1rem;
+  justify-content: start;
+  line-height: 1.5;
 }
 .line {
   display: block;
   width: 1px;
-  height: 15px;
+  height: 25px;
   background-color: #000;
 }
 
 .event-actionBtns {
   display: flex;
-
+  flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
   align-items: center;
@@ -523,6 +532,7 @@ header {
 
 .ticket-info {
   padding: 1em;
+  width: 90%;
 }
 
 .ticket-btn {
@@ -651,4 +661,232 @@ input[type="submit"] {
   border: none;
   border-radius: 15px;
   width: 40%;
+}
+
+@media screen and (max-width: 1023px) {
+  header {
+    gap: 0 !important;
+    z-index: 445 !important;
+  }
+
+  .hero-img {
+    display: none;
+  }
+
+  .menu-2 {
+    display: none !important;
+  }
+
+  .hidden {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-nav {
+    margin-bottom: 10rem;
+    height: 62%;
+  }
+
+  .menu {
+    position: fixed;
+    top: 110px;
+    left: -1500px;
+    width: 100vw;
+    height: 100%;
+    background-color: #f5f5f5;
+    transition: left 0.3s ease;
+    z-index: 3;
+  }
+
+  .primary-nav ul,
+  .actionButtons {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .primary-nav {
+    max-width: 100%;
+  }
+
+  .laptop-logo {
+    display: none;
+  }
+
+  .tablet-logo {
+    display: block;
+    margin: 0.8rem;
+  }
+
+  .header-logo {
+    width: 100px;
+  }
+
+  .flex-center {
+    display: flex;
+  }
+
+  .bar {
+    display: block;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .bar i {
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .main-right {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .center {
+    margin: 0 auto;
+    width: 85%;
+  }
+
+  .width-small {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 769px) {
+  /* ---------------Ticket Page ------------------- */
+  .ticket-list,
+  .event-list {
+    flex-direction: column;
+    gap: 0;
+  }
+  .ticket-info {
+    width: 100%;
+  }
+  .event-image img {
+    padding-left: 0;
+    height: 220px;
+    object-fit: contain;
+  }
+  .event-image {
+    width: 90%;
+    height: auto;
+    margin-top: 1rem;
+  }
+
+  .ticket-price {
+    padding: 1em;
+  }
+  .event-detail {
+    margin-right: 0;
+    padding: 1em;
+  }
+  /* ------------------ Event Page ----------- */
+  .event-info {
+    width: 100%;
+  }
+
+  .event-stats {
+    flex-wrap: wrap;
+    row-gap: 1rem;
+  }
+
+  #review {
+    width: 75vw;
+  }
+  .setting {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .form-control input {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+@media screen and (max-width: 514px) {
+  header {
+    padding: 0 1.5rem;
+  }
+  .organizer-info {
+    width: 100%;
+  }
+  .editBtn {
+    padding: 0.5em 0.8em;
+    font-size: 0.8rem;
+  }
+  .organizer-interest {
+    justify-content: space-evenly;
+  }
+  .organizer-interest p {
+    font-size: 1rem;
+  }
+  .review-btn {
+    margin-bottom: 1rem;
+  }
+
+  /* ---------------Ticket Page ------------------- */
+  .ticket-info {
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .ticket-price {
+    border-left: none;
+    border-top: 2px dashed var(--primary-color);
+    width: 100%;
+  }
+
+  /* ---------------Event Page ------------------- */
+  .event-info {
+    flex-direction: column;
+  }
+  .event-list {
+    padding: 0;
+    padding-bottom: 1em;
+  }
+  .event-actionBtns {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .event-dateTime {
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+  }
+  .event-dateTime p {
+    text-align: left;
+    border-left: 2px solid var(--tertiary-color);
+    padding-left: 0.6em;
+  }
+
+  .review-description {
+    border-left: none !important;
+  }
+  .line {
+    display: none;
+  }
+  .event-stats {
+    margin: 2rem 0;
+  }
+  .lists-head {
+    margin-top: 3rem;
+  }
+
+  .review-detail {
+    width: 100%;
+  }
+  .event-name-btn {
+    flex-direction: column-reverse;
+    gap: 0.8rem;
+  }
+  #review {
+    width: 85vw;
+  }
+  .setting {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
 }
