@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Users Tickets</title>
+    <title>Ticket Details</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,8 +17,10 @@
     <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css" />
 
     <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/ticket.css" />
     <link rel="stylesheet" href="../styles/userDashboard.css" />
     <link rel="stylesheet" href="../styles/slider.css" />
+
     <script
       src="https://kit.fontawesome.com/9d779ebc01.js"
       crossorigin="anonymous"
@@ -87,135 +89,61 @@
     </header>
 
     <main class="title">
-      <h2>Tickets</h2>
+      <h2>Ticket Detail</h2>
+      <section class="eventDetail ticketEvent">
+        <h3>SoulFest 2024</h3>
+        <div class="flex flex-start gap">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <p>Lahore</p>
+        </div>
 
+        <div class="flex flex-start gap">
+          <i class="fa-regular fa-clock" aria-hidden="true"></i>
+          <p>6pm Onwards</p>
+        </div>
+
+        <div class="flex flex-start gap">
+          <i class="fa-regular fa-user" aria-hidden="true"></i>
+          <p>18+</p>
+        </div>
+
+        <div class="flex flex-start gap">
+          <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+          <p>26th May - 28th May</p>
+        </div>
+      </section>
       <section class="lists">
-        <div class="ticket-list flex gap">
-          <div class="event-image">
-            <img src="../images/event1.png" alt="" />
-          </div>
-          <div class="ticket-info flex gap">
-            <div class="event-detail">
-              <h3>Soul Fest</h3>
-              <p class="event-city">By Eclipse Holdings</p>
+        <div class="ticketDetail-form">
+          <h3>Order Summary</h3>
 
-              <div class="event-dateTime">
-                <p class="ticket-location">Islamabad</p>
-                <p>22 March 2024 - 26 March 2024</p>
-              </div>
-            </div>
+          <table>
+            <thead>
+              <tr class="table-head">
+                <th>Ticket</th>
+                <th>Qty</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-body">
+                <td>Standard</td>
+                <td>2</td>
+                <td>PKR 1500</td>
+              </tr>
+              <tr class="table-body">
+                <td>Standard</td>
+                <td>2</td>
+                <td>PKR 1500</td>
+              </tr>
 
-            <div class="ticket-price flex">
-              <h3>PKR 2500</h3>
-              <p>Total Tickets: 10</p>
-              <div class="flex gap-small ticket-btn">
-                <button
-                  class="event-btn"
-                  onclick="window.location.href='./ticketDetail.html'"
-                >
-                  Ticket Details
-                </button>
+              <!-- Total Row -->
+              <tr class="table-body table-foot">
+                <td colspan="2">Total</td>
 
-                <button class="event-btn">Event Details</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="ticket-list flex gap">
-          <div class="event-image">
-            <img src="../images/event1.png" alt="" />
-          </div>
-          <div class="ticket-info flex gap">
-            <div class="event-detail">
-              <h3>Soul Fest</h3>
-              <p class="event-city">By Eclipse Holdings</p>
-
-              <div class="event-dateTime">
-                <p class="ticket-location">Islamabad</p>
-                <p>22 March 2024 - 26 March 2024</p>
-              </div>
-            </div>
-
-            <div class="ticket-price flex">
-              <h3>PKR 2500</h3>
-              <p>Total Tickets: 10</p>
-              <div class="flex gap-small ticket-btn">
-                <button
-                  class="event-btn"
-                  onclick="window.location.href='./ticketDetail.html'"
-                >
-                  Ticket Details
-                </button>
-
-                <button class="event-btn">Event Details</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="ticket-list flex gap">
-          <div class="event-image">
-            <img src="../images/event1.png" alt="" />
-          </div>
-          <div class="ticket-info flex gap">
-            <div class="event-detail">
-              <h3>Soul Fest</h3>
-              <p class="event-city">By Eclipse Holdings</p>
-
-              <div class="event-dateTime">
-                <p class="ticket-location">Islamabad</p>
-                <p>22 March 2024 - 26 March 2024</p>
-              </div>
-            </div>
-
-            <div class="ticket-price flex">
-              <h3>PKR 2500</h3>
-              <p>Total Tickets: 10</p>
-              <div class="flex gap-small ticket-btn">
-                <button
-                  class="event-btn"
-                  onclick="window.location.href='./ticketDetail.html'"
-                >
-                  Ticket Details
-                </button>
-
-                <button class="event-btn">Event Details</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="ticket-list flex gap">
-          <div class="event-image">
-            <img src="../images/event1.png" alt="" />
-          </div>
-          <div class="ticket-info flex gap">
-            <div class="event-detail">
-              <h3>Soul Fest</h3>
-              <p class="event-city">By Eclipse Holdings</p>
-
-              <div class="event-dateTime">
-                <p class="ticket-location">Islamabad</p>
-                <p>22 March 2024 - 26 March 2024</p>
-              </div>
-            </div>
-
-            <div class="ticket-price flex">
-              <h3>PKR 2500</h3>
-              <p>Total Tickets: 10</p>
-              <div class="flex gap-small ticket-btn">
-                <button
-                  class="event-btn"
-                  onclick="window.location.href='./ticketDetail.html'"
-                >
-                  Ticket Details
-                </button>
-
-                <button class="event-btn">Event Details</button>
-              </div>
-            </div>
-          </div>
+                <td>PKR 3000</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
     </main>

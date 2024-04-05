@@ -494,10 +494,6 @@ footer img {
     margin: auto;
     margin-bottom: 2rem;
   }
-
-  .suggest-form {
-    padding: 2rem;
-  }
 }
 
 @media screen and (max-width: 514px) {
@@ -515,5 +511,15 @@ footer img {
     flex-wrap: wrap;
     /* align-items: center; */
     justify-content: center;
+  }
+
+  .contact {
+    padding: 0;
+  }
+  .contact-form {
+    padding: 2rem 1rem;
+  }
+  .contact-desc {
+    font-size: 1.125rem;
   }
 }

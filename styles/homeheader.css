@@ -12,9 +12,7 @@ header {
   -webkit-box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.26);
   -moz-box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.26);
 }
-.bar {
-  display: none;
-}
+
 .header-logo {
   width: 100px;
 }

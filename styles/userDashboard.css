@@ -632,6 +632,15 @@ input[type="submit"] {
   margin: 1rem 0;
 }
 
+/*  --------------- Ticke Detail Page --------------- */
+.ticketEvent {
+  min-width: 340px;
+  width: 50%;
+  padding: 1em 2em;
+  display: block !important;
+  margin: 2rem auto;
+}
+
 /* --------------- Settings ---------------- */
 .setting {
   margin: 3rem;

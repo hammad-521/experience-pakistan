@@ -514,4 +514,44 @@ footer img {
     /* align-items: center; */
     justify-content: center;
   }
+
+  /*  ---- About US Page ----- */
+
+  .about {
+    padding: 0;
+  }
+  .about-sections {
+    flex-direction: column;
+    margin-bottom: 4rem !important;
+  }
+
+  .about-sections > div {
+    width: 90% !important;
+  }
+  .reverse {
+    flex-direction: column-reverse;
+  }
+
+  .about h1 {
+    margin: 5rem auto;
+  }
+  .about h2 {
+    font-size: 2rem;
+    margin-bottom: 1.25rem !important;
+  }
+
+  /*  ---- FAQs Page ----- */
+  .faq {
+    padding: 0;
+  }
+  .faq h1 {
+    font-size: 2rem;
+    padding: 0 2%;
+  }
+  .faq-question,
+  .faq-answer {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1.125rem;
+  }
 }
